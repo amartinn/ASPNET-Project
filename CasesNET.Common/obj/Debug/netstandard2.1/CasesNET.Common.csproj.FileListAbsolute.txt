@@ -1,0 +1,9 @@
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\bin\Debug\netstandard2.1\CasesNET.Common.deps.json
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\bin\Debug\netstandard2.1\CasesNET.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\bin\Debug\netstandard2.1\CasesNET.Common.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.csprojAssemblyReference.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.AssemblyInfoInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.AssemblyInfo.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\CasesNET.Common\obj\Debug\netstandard2.1\CasesNET.Common.pdb

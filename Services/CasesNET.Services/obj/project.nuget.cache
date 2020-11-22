@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LeWlcPq07QD1vMxHaSYAtbc8PhM8ADolgtnmalHM4cSv9TTGDb7ddd1UHtrTwXRjkNt2k4brKRZSPTeO71Cu3Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services\\CasesNET.Services.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,16 @@
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.deps.json
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Data.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Data.Models.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Data.Models.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Data.Common.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csprojAssemblyReference.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.AssemblyInfoInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.AssemblyInfo.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CopyComplete
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
