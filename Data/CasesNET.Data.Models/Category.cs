@@ -1,15 +1,13 @@
 ﻿namespace CasesNET.Data.Models
 {
-    using System;
     using System.Collections.Generic;
 
     using CasesNET.Data.Common.Models;
 
-    public class Brand : BaseDeletableModel<string>
+    public class Category : BaseModel<int>
     {
-        public Brand()
+        public Category()
         {
-            this.Id = Guid.NewGuid().ToString();
             this.Cases = new HashSet<Case>();
         }
 

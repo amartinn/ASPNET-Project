@@ -1,6 +1,7 @@
 ﻿namespace CasesNET.Data.Models
 {
     using System;
+    using System.ComponentModel.DataAnnotations;
 
     using CasesNET.Data.Common.Models;
 
@@ -11,9 +12,20 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
-        public string ImageUrl { get; set; }
+        [Required]
+        public string ImageId { get; set; }
+
+        public Image Image { get; set; }
+
+        [Required]
+        public string BrandId { get; set; }
 
         public Brand Brand { get; set; }
+
+        [Required]
+        public int CategoryId { get; set; }
+
+        public Category Category { get; set; }
 
         public decimal Price { get; set; }
 
