@@ -4,11 +4,12 @@
     using System.Linq;
     using System.Threading.Tasks;
 
-    using CasesNET.Common;
     using CasesNET.Data.Models;
 
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.DependencyInjection;
+
+    using static CasesNET.Common.GlobalConstants.Domain;
 
     internal class RolesSeeder : ISeeder
     {
@@ -16,7 +17,7 @@
         {
             var roleManager = serviceProvider.GetRequiredService<RoleManager<ApplicationRole>>();
 
-            await SeedRoleAsync(roleManager, GlobalConstants.AdministratorRoleName);
+            await SeedRoleAsync(roleManager, AdministratorRoleName);
         }
 
         private static async Task SeedRoleAsync(RoleManager<ApplicationRole> roleManager, string roleName)

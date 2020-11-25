@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasesNET.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201122202104_initial-create")]
+    [Migration("20201124004254_initial-create")]
     partial class initialcreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -141,44 +141,14 @@ namespace CasesNET.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
-            modelBuilder.Entity("CasesNET.Data.Models.Brand", b =>
-                {
-                    b.Property<string>("Id")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<DateTime>("CreatedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<DateTime?>("ModifiedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("IsDeleted");
-
-                    b.ToTable("Brands");
-                });
-
             modelBuilder.Entity("CasesNET.Data.Models.Case", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("BrandId")
+                    b.Property<string>("CategoryId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
-
-                    b.Property<int>("CategoryId")
-                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
@@ -189,9 +159,12 @@ namespace CasesNET.Data.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("ImageId")
+                    b.Property<string>("DeviceId")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ImageId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
@@ -204,9 +177,11 @@ namespace CasesNET.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BrandId");
-
                     b.HasIndex("CategoryId");
+
+                    b.HasIndex("DeviceId");
+
+                    b.HasIndex("ImageId");
 
                     b.HasIndex("IsDeleted");
 
@@ -215,13 +190,14 @@ namespace CasesNET.Data.Migrations
 
             modelBuilder.Entity("CasesNET.Data.Models.Category", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ImageId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
@@ -231,7 +207,34 @@ namespace CasesNET.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("ImageId");
+
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.Device", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("ManufacturerId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ManufacturerId");
+
+                    b.ToTable("Devices");
                 });
 
             modelBuilder.Entity("CasesNET.Data.Models.Image", b =>
@@ -240,7 +243,9 @@ namespace CasesNET.Data.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("CaseId")
-                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CategoryId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -257,10 +262,38 @@ namespace CasesNET.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CaseId")
-                        .IsUnique();
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("CategoryId");
 
                     b.ToTable("Images");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.Manufacturer", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Manufacturers");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -369,15 +402,35 @@ namespace CasesNET.Data.Migrations
 
             modelBuilder.Entity("CasesNET.Data.Models.Case", b =>
                 {
-                    b.HasOne("CasesNET.Data.Models.Brand", "Brand")
-                        .WithMany("Cases")
-                        .HasForeignKey("BrandId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
-
                     b.HasOne("CasesNET.Data.Models.Category", "Category")
                         .WithMany("Cases")
                         .HasForeignKey("CategoryId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CasesNET.Data.Models.Device", "Device")
+                        .WithMany("Cases")
+                        .HasForeignKey("DeviceId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("CasesNET.Data.Models.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.Category", b =>
+                {
+                    b.HasOne("CasesNET.Data.Models.Image", "Image")
+                        .WithMany()
+                        .HasForeignKey("ImageId");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.Device", b =>
+                {
+                    b.HasOne("CasesNET.Data.Models.Manufacturer", "Manufactorer")
+                        .WithMany("Devices")
+                        .HasForeignKey("ManufacturerId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
                 });
@@ -385,10 +438,12 @@ namespace CasesNET.Data.Migrations
             modelBuilder.Entity("CasesNET.Data.Models.Image", b =>
                 {
                     b.HasOne("CasesNET.Data.Models.Case", "Case")
-                        .WithOne("Image")
-                        .HasForeignKey("CasesNET.Data.Models.Image", "CaseId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("CaseId");
+
+                    b.HasOne("CasesNET.Data.Models.Category", "Category")
+                        .WithMany()
+                        .HasForeignKey("CategoryId");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

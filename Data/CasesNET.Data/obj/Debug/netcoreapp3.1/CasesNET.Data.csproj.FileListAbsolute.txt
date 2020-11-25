@@ -13,8 +13,10 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\bin\Debu
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\obj\Debug\netcoreapp3.1\CasesNET.Data.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\bin\Debug\netcoreapp3.1\CasesNET.Services.Mapping.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data\bin\Debug\netcoreapp3.1\CasesNET.Services.Mapping.pdb

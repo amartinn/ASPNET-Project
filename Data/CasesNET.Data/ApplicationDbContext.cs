@@ -26,7 +26,9 @@
 
         public DbSet<Case> Cases { get; set; }
 
-        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Manufacturer> Manufacturers { get; set; }
+
+        public DbSet<Device> Devices { get; set; }
 
         public DbSet<Image> Images { get; set; }
 
