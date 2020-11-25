@@ -91,3 +91,9 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\obj\Debug\net
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\obj\Debug\netcoreapp3.1\Sandbox.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.ViewModels.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

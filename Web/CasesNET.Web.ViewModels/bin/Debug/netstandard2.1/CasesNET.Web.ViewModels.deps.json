@@ -373,6 +373,7 @@
       "CasesNET.Data.Models/1.0.0": {
         "dependencies": {
           "CasesNET.Data.Common": "1.0.0",
+          "CasesNET.Services.Mapping": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.9"
         },
         "runtime": {

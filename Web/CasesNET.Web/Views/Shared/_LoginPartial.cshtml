@@ -1,6 +1,6 @@
-﻿@using CasesNET.Common
-@using CasesNET.Data.Models
+﻿@using CasesNET.Data.Models
 @using Microsoft.AspNetCore.Identity
+@using static CasesNET.Common.GlobalConstants.Domain;
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
@@ -10,7 +10,7 @@
         <li class="nav-item">
             <a class="nav-link text-dark" asp-area="Identity" asp-page="/Account/Manage/Index" title="Manage">Hello @(this.User.Identity.Name)!</a>
         </li>
-        if (this.User.IsInRole(GlobalConstants.AdministratorRoleName))
+        if (this.User.IsInRole(AdministratorRoleName))
         {
             <li class="nav-item">
                 <a class="nav-link text-dark" asp-area="Administration" asp-controller="Dashboard" asp-action="Index" title="Admin">Admin</a>

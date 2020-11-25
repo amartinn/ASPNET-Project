@@ -10,7 +10,9 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CoreCompileInputs.cache

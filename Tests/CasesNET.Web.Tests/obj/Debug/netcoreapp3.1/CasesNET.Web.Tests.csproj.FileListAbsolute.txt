@@ -52,7 +52,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bi
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
@@ -529,3 +528,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\ob
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll

@@ -1,9 +1,107 @@
 ﻿@using CasesNET.Common
+@using CasesNET.Web.ViewModels.Home
+@model IndexViewModel;
 @{
     this.ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome to @GlobalConstants.SystemName!</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="container carousel-container mt-4">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="~/Images/slide-2.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/Images/slide-2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="~/Images/slide-2.jpg" alt="Third slide">
+            </div>
+
+
+            <a class="carousel-control-prev" href="#carousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+
+    </div>
+</div>
+<div class="container menu mt-4">
+    <div class="d-md-flex justify-content-between">
+        <div class="dropdown dropdown-menu-wrapper">
+            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center " href="#" role="button" id="brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
+            <ul class="dropdown-menu" aria-labelledby="brand-dropdown">
+                @foreach (var brand in Model.Manufacturers)
+                {
+                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
+                }
+            </ul>
+        </div>
+        <div class="dropdown dropdown-menu-wrapper">
+            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="#" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <ul class="dropdown-menu text-center m-auto" aria-labelledby="category-dropdown">
+
+                @foreach (var category in Model.Categories)
+                {
+                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">@category.Name</a></li>
+                }
+            </ul>
+        </div>
+        <a asp-area="" asp-controller="Cases" asp-action="WithEmoji" class="hoverable list-group-item list-group-item-action text-center">Cases with Emoji</a>
+        <a asp-area="" asp-controller="Cases" asp-action="OurSelection" class="hoverable list-group-item list-group-item-action text-center">Our selection</a>
+        <a asp-area="" asp-controller="Cases" asp-action="WithPhoto" class="hoverable list-group-item list-group-item-action text-center">Cases with Photo</a>
+    </div>
+
+</div>
+
+<div class="category-selection-wrapper container">
+    <h1 class="text-center mt-4 text-uppercase">most-sold categories</h1>
+    <div class="row">
+        @foreach (var category in Model.MostSoldCategories)
+        {
+            <div class="col-6 col-md-6 col-lg-4 col-xl-3 text-center p-0">
+                <div class="card">
+                    <a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">
+                        <img class="card-img-top" src="~/Images/@category.ImageUrl" alt="Card image">
+                    </a>
+                    <div class="card-body">
+                        <a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">
+                            <p class="card-text text-uppercase text-weight">@category.Name</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<div class="bestsellers-wrapper mt-4 container">
+    <h1 class="text-center text-uppercase text-weight mt-4">our bestsellers</h1>
+    <div class="row">
+        @foreach (var phoneCase in Model.BestSellersCases)
+        {
+            <div class="col-6 col-md-6 col-lg-4 col-xl-3 text-center">
+                <div class="card card-case">
+                    <a asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@phoneCase.Id"><img class="card-img-top m-auto" src="~/Images/@phoneCase.ImageUrl" alt="Card image"></a>
+                    <div class="card-body">
+                        <h2 class="card-title text-uppercase">@phoneCase.BrandName</h2>
+                        <h6 class="card-title text-uppercase">@phoneCase.DeviceName</h6>
+                        <p class="card-text price-text">@phoneCase.Price</p>
+                        <div class="btn-group" role="group">
+                            <form method="Post" asp-area="Api" asp-controller="Cart" asp-action="addItem" asp-route-id="@phoneCase.Id" class="form-inline shopping-cart-form">
+                                <button  type="submit" class="hoverable btn btn-utility"><i class="fas fa-shopping-cart"></i></button>
+                            </form>
+                        </div>
+                        <div class="mt-2">
+                            <button asp-controller="Cases" asp-action="Details" asp-route-id="@phoneCase.Id" class="btn look-btn">Take a look</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
 </div>

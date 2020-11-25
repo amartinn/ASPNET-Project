@@ -38,6 +38,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
@@ -153,6 +157,9 @@
             "projectReferences": {
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
               }
             }
           }
@@ -250,6 +257,10 @@
               "target": "Package",
               "version": "[3.1.9, )"
             },
+            "Microsoft.EntityFrameworkCore.Proxies": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[3.1.9, )"
@@ -321,6 +332,9 @@
               },
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj"
               }
             }
           }
@@ -334,6 +348,10 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Http.Features": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
               "suppressParent": "All",
@@ -653,6 +671,73 @@
               "privateAssets": "none"
             },
             "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
+        "projectName": "CasesNET.Web.ViewModels",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
+        "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web.ViewModels\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
               "privateAssets": "all"
             }
           },

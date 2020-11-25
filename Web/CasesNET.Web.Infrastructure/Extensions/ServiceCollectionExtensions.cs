@@ -21,6 +21,7 @@
          IConfiguration configuration)
          => services
              .AddDbContext<ApplicationDbContext>(options => options
+                 .UseLazyLoadingProxies()
                  .UseSqlServer(configuration.GetDefaultConnectionString()));
 
         public static IServiceCollection AddIdentity(this IServiceCollection services)
@@ -37,7 +38,9 @@
             .AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
             .AddScoped<IDbQueryRunner, DbQueryRunner>()
             .AddTransient<IEmailSender, NullMessageSender>()
-            .AddTransient<ISettingsService, SettingsService>();
+            .AddTransient<ISettingsService, SettingsService>()
+            .AddTransient<ICaseService, CaseService>()
+            .AddTransient<ICategoryService, CategoryService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {
@@ -45,6 +48,7 @@
             {
                 options.Filters.Add(new AutoValidateAntiforgeryTokenAttribute());
             }).AddRazorRuntimeCompilation();
+            services.AddControllers();
             services.AddRazorPages();
             return services;
         }

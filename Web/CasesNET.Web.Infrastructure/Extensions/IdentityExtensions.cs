@@ -2,11 +2,11 @@
 {
     using System.Security.Claims;
 
-    using CasesNET.Common;
+    using static CasesNET.Common.GlobalConstants.Domain;
 
     public static class IdentityExtensions
     {
         public static bool IsAdmin(this ClaimsPrincipal user)
-            => user.IsInRole(GlobalConstants.AdministratorRoleName);
+            => user.IsInRole(AdministratorRoleName);
     }
 }

@@ -10,3 +10,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\o
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Data\CasesNET.Data.Models\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.pdb

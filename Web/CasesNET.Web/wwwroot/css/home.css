@@ -1,0 +1,55 @@
+.carousel-button-wrapper {
+    position: absolute;
+}
+.dropdown-menu {
+    margin: auto!important;
+}
+
+.category-selection-wrapper .card-body p {
+    font-size: 1.3rem;
+}
+
+.upper {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.lower {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.price-text {
+    font-size: 1.7rem;
+}
+
+.font-shadow {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-shadow: 5px 5px 16px black;
+    color: rgb(255, 255, 255)!important;
+}
+
+li.dropdown-item a {
+    color: black!important;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+#wrapper a {
+    font-size: 1.3rem;
+}
+
+.dropdown-menu-wrapper:hover {
+    background: none;
+}
+
+.shadow {
+    -moz-box-shadow: 3px 3px 5px 6px rgb(0, 191, 255);
+    -webkit-box-shadow: 3px 3px 5px 6px rgb(0, 191, 255);
+    box-shadow: 3px 3px 5px 6px rgb(0, 191, 255);
+}

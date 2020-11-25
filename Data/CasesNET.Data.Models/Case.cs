@@ -2,6 +2,7 @@
 {
     using System;
     using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using CasesNET.Data.Common.Models;
 
@@ -12,20 +13,21 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
-        [Required]
+        [ForeignKey("Image")]
         public string ImageId { get; set; }
 
-        public Image Image { get; set; }
+        public virtual Image Image { get; set; }
 
         [Required]
-        public string BrandId { get; set; }
+        public string DeviceId { get; set; }
 
-        public Brand Brand { get; set; }
+        public virtual Device Device { get; set; }
 
         [Required]
-        public int CategoryId { get; set; }
+        [ForeignKey("Category")]
+        public string CategoryId { get; set; }
 
-        public Category Category { get; set; }
+        public virtual Category Category { get; set; }
 
         public decimal Price { get; set; }
 

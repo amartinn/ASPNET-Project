@@ -43,7 +43,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Connections.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Extensions.dll
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpOverrides.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.HttpsPolicy.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\Microsoft.AspNetCore.Identity.dll
@@ -163,7 +162,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.FileSystem.Watcher.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.IsolatedStorage.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.MemoryMappedFiles.dll
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.Pipelines.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.Pipes.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.IO.UnmanagedMemoryStream.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\refs\System.Linq.dll
@@ -459,3 +457,7 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Castle.Core.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll

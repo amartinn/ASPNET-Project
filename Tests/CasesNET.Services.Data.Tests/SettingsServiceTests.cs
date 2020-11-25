@@ -1,5 +1,6 @@
 ﻿namespace CasesNET.Services.Data.Tests
 {
+    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
@@ -33,19 +34,9 @@
         }
 
         [Fact]
-        public async Task GetCountShouldReturnCorrectNumberUsingDbContext()
+        public void GetCountShouldReturnCorrectNumberUsingDbContext()
         {
-            var options = new DbContextOptionsBuilder<ApplicationDbContext>()
-                .UseInMemoryDatabase(databaseName: "SettingsTestDb").Options;
-            using var dbContext = new ApplicationDbContext(options);
-            dbContext.Settings.Add(new Setting());
-            dbContext.Settings.Add(new Setting());
-            dbContext.Settings.Add(new Setting());
-            await dbContext.SaveChangesAsync();
-
-            using var repository = new EfDeletableEntityRepository<Setting>(dbContext);
-            var service = new SettingsService(repository);
-            Assert.Equal(3, service.GetCount());
+            throw new NotImplementedException();
         }
     }
 }
