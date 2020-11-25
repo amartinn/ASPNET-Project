@@ -1,0 +1,22 @@
+﻿@model CasesNET.Web.ViewModels.Home.CaseViewModel  
+
+
+
+<div class="col-6 col-md-6 col-lg-4 col-xl-3 text-center">
+    <div class="card card-case">
+        <a asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@Model.Id"><img class="card-img-top m-auto" src="~/Images/@Model.ImageUrl" alt="Card image"></a>
+        <div class="card-body">
+            <h2 class="card-title text-uppercase">@Model.BrandName</h2>
+            <h6 class="card-title text-uppercase">@Model.DeviceName</h6>
+            <p class="card-text price-text">@Model.Price</p>
+            <div class="btn-group" role="group">
+                <form method="Post" asp-area="Api" asp-controller="Cart" asp-action="addItem" asp-route-id="@Model.Id" class="form-inline shopping-cart-form">
+                    <button type="submit" class="hoverable btn btn-utility"><i class="fas fa-shopping-cart"></i></button>
+                </form>
+            </div>
+            <div class="mt-2">
+                <a type="button" asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@Model.Id" class="btn look-btn">Take a look</a>
+            </div>
+        </div>
+    </div>
+</div>

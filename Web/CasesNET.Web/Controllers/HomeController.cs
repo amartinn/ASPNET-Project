@@ -36,8 +36,6 @@
             {
                 BestSellersCases = this.caseService.GetBestSellers<CaseViewModel>(),
                 MostSoldCategories = this.categoryService.GetMostSold<CategoryViewModel>(),
-                Manufacturers = this.manufacturerRepository.AllAsNoTracking().To<ManufacturerListingViewModel>().ToList(),
-                Categories = this.categoryService.GetAll<CategoryViewModel>(),
             };
             return this.View(model);
         }

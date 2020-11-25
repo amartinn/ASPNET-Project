@@ -5,6 +5,7 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using CasesNET.Data.Common.Models;
+    using CasesNET.Data.Models.Enum;
 
     public class Case : BaseDeletableModel<string>
     {
@@ -32,5 +33,7 @@
         public decimal Price { get; set; }
 
         public string Description { get; set; }
+
+        public CaseType CaseType { get; set; }
     }
 }

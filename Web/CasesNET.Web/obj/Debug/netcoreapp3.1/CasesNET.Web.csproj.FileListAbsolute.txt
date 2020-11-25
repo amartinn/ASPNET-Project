@@ -461,3 +461,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Proxies.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CasePartial.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SubmenuPartial.cshtml.g.cs

@@ -37,8 +37,9 @@
 
         <ul class="navbar-nav flex-row search-wrapper mr-xl-4">
             <li class="nav-item">
-                <input id="search-input" class="input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
-
+                <form method="post" asp-controller="Search" asp-action="ByTerm">
+                    <input name="search" id="search-input" class="input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
+                </form>
             </li>
         </ul>
         <button class="hamburger d-xl-none d-block navbar-right" id="hamburger" type="button" data-toggle="collapse" data-target="#nav-collapsed" aria-controls="nav-collapsed" aria-expanded="false" aria-label="Toggle navigation">

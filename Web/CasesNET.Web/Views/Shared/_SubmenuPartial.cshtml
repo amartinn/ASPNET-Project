@@ -1,0 +1,43 @@
+﻿@using CasesNET.Data.Common.Repositories
+@using System.Linq;
+@using CasesNET.Data.Models
+@inject IRepository<Manufacturer> Brands
+@inject IRepository<Category> Categories
+@{ 
+    var brands = Brands.AllAsNoTracking().Select(x => new
+    {
+        Name = x.Name,
+        Id = x.Id
+    });
+    var categories = Categories.AllAsNoTracking().Select(x => new
+    {
+        Name = x.Name,
+        Id = x.Id
+    });
+}
+<div class="container menu mt-4">
+    <div class="d-md-flex justify-content-between">
+        <div class="dropdown dropdown-menu-wrapper">
+            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center " href="#" role="button" id="brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
+            <ul class="dropdown-menu" aria-labelledby="brand-dropdown">
+                @foreach (var brand in brands)
+                {
+                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
+                }
+            </ul>
+        </div>
+        <div class="dropdown dropdown-menu-wrapper">
+            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="#" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <ul class="dropdown-menu text-center m-auto" aria-labelledby="category-dropdown">
+
+                @foreach (var category in categories)
+                {
+                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">@category.Name</a></li>
+                }
+            </ul>
+        </div>
+        <a asp-area="" asp-controller="Cases" asp-action="WithEmoji" class="hoverable list-group-item list-group-item-action text-center">Cases with Emoji</a>
+        <a asp-area="" asp-controller="Cases" asp-action="OurSelection" class="hoverable list-group-item list-group-item-action text-center">Our selection</a>
+        <a asp-area="" asp-controller="Cases" asp-action="WithPhoto" class="hoverable list-group-item list-group-item-action text-center">Cases with Photo</a>
+    </div>
+    </div>

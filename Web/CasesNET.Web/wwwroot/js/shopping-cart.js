@@ -1,8 +1,9 @@
+
 $(document).ready(function () {
 
     $('.shopping-cart-form').submit(async function (e) {
         e.preventDefault();
-        const url = $(this).attr('action')
+        const url = $(this).attr('action');
         const antiForgerytoken = $(this.elements['__RequestVerificationToken']).val();
         await $.ajax({
             url,
@@ -20,9 +21,9 @@ $(document).ready(function () {
     
 })
 async function GetCount() {
-    const url = 'api/cart/count';
+    const url = 'https://localhost:44319/api/cart/count';
     const data = await $.get({
-        url,
+        url: url,
         method: "GET",
         headers: {
             "Accept": "application/json",

@@ -31,33 +31,8 @@
 
     </div>
 </div>
-<div class="container menu mt-4">
-    <div class="d-md-flex justify-content-between">
-        <div class="dropdown dropdown-menu-wrapper">
-            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center " href="#" role="button" id="brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
-            <ul class="dropdown-menu" aria-labelledby="brand-dropdown">
-                @foreach (var brand in Model.Manufacturers)
-                {
-                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
-                }
-            </ul>
-        </div>
-        <div class="dropdown dropdown-menu-wrapper">
-            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="#" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-            <ul class="dropdown-menu text-center m-auto" aria-labelledby="category-dropdown">
 
-                @foreach (var category in Model.Categories)
-                {
-                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">@category.Name</a></li>
-                }
-            </ul>
-        </div>
-        <a asp-area="" asp-controller="Cases" asp-action="WithEmoji" class="hoverable list-group-item list-group-item-action text-center">Cases with Emoji</a>
-        <a asp-area="" asp-controller="Cases" asp-action="OurSelection" class="hoverable list-group-item list-group-item-action text-center">Our selection</a>
-        <a asp-area="" asp-controller="Cases" asp-action="WithPhoto" class="hoverable list-group-item list-group-item-action text-center">Cases with Photo</a>
-    </div>
-
-</div>
+    @await Html.PartialAsync("../Shared/_SubmenuPartial.cshtml")
 
 <div class="category-selection-wrapper container">
     <h1 class="text-center mt-4 text-uppercase">most-sold categories</h1>
@@ -84,24 +59,7 @@
     <div class="row">
         @foreach (var phoneCase in Model.BestSellersCases)
         {
-            <div class="col-6 col-md-6 col-lg-4 col-xl-3 text-center">
-                <div class="card card-case">
-                    <a asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@phoneCase.Id"><img class="card-img-top m-auto" src="~/Images/@phoneCase.ImageUrl" alt="Card image"></a>
-                    <div class="card-body">
-                        <h2 class="card-title text-uppercase">@phoneCase.BrandName</h2>
-                        <h6 class="card-title text-uppercase">@phoneCase.DeviceName</h6>
-                        <p class="card-text price-text">@phoneCase.Price</p>
-                        <div class="btn-group" role="group">
-                            <form method="Post" asp-area="Api" asp-controller="Cart" asp-action="addItem" asp-route-id="@phoneCase.Id" class="form-inline shopping-cart-form">
-                                <button  type="submit" class="hoverable btn btn-utility"><i class="fas fa-shopping-cart"></i></button>
-                            </form>
-                        </div>
-                        <div class="mt-2">
-                            <button asp-controller="Cases" asp-action="Details" asp-route-id="@phoneCase.Id" class="btn look-btn">Take a look</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+           @await Html.PartialAsync("../Shared/_CasePartial.cshtml",phoneCase)
         }
     </div>
 </div>
