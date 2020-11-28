@@ -2,6 +2,8 @@
 {
     using System.Collections.Generic;
 
+    using CasesNET.Web.ViewModels.Shared;
+
     public class IndexViewModel
     {
         public IEnumerable<CategoryViewModel> MostSoldCategories { get; set; }

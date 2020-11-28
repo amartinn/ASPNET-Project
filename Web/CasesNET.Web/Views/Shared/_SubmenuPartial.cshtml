@@ -34,12 +34,12 @@
             </ul>
         </div>
         <div class="dropdown dropdown-menu-wrapper">
-            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="#" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <a class="hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="/Category" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
             <ul class="dropdown-menu text-center m-auto" aria-labelledby="category-dropdown">
 
                 @foreach (var category in categories)
                 {
-                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">@category.Name</a></li>
+                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@category.Id">@category.Name</a></li>
                 }
             </ul>
         </div>

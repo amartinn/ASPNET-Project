@@ -463,3 +463,8 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CasePartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SubmenuPartial.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CategoryPartial.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Category\All.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\ByCategory.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Search\ByTerm.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Facebook.dll

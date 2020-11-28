@@ -1,20 +1,11 @@
 .card-case .btn-utility i {
     font-size: 1.3rem;
-    color: lightblue!important;
+    color: black!important;
 }
-
-.card-case .btn-utility i:hover {
-    color: rgb(200, 0, 0)!important;
-    transition: 0.3s;
+.card{
+    border:none!important;
 }
-
-.card-case:hover .card-text {
-    color: lightblue!important;
-    background: none;
-    transition: 0.3s;
-}
-
-.look-btn {
+.add-to-cart-btn {
     background-color: lightblue;
     border: 1px solid lightblue!important;
     font-size: 1.2rem;
@@ -22,8 +13,8 @@
     text-transform: uppercase;
 }
 
-.look-btn:hover {
-    border: 1px solid black!important;
+.add-to-cart-btn:hover {
+    border: 1px solid black !important;
 }
 
 .card-case .btn-group {

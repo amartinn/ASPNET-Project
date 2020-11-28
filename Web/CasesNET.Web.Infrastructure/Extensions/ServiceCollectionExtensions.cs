@@ -41,7 +41,8 @@
             .AddTransient<ISettingsService, SettingsService>()
             .AddTransient<ICaseService, CaseService>()
             .AddTransient<ICategoryService, CategoryService>()
-            .AddTransient<ICartService, CartService>();
+            .AddTransient<ICartService, CartService>()
+            .AddTransient<ISearchService, SearchService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {
@@ -54,6 +55,17 @@
             return services;
         }
 
+        public static IServiceCollection AddThirdPartyAuthentication(this IServiceCollection services,IConfiguration configuration)
+        {
+            services.AddAuthentication()
+                .AddFacebook(opt =>
+                {
+                    opt.AppId = configuration["ThirdPartyLogins:Facebook:AppId"];
+                    opt.AppSecret = configuration["ThirdPartyLogins:Facebook:AppSecret"];
+                });
+
+            return services;
+        }
         public static IServiceCollection ConfigureCookies(this IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(

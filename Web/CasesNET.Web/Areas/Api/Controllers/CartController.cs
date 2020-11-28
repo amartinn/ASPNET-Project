@@ -32,6 +32,7 @@
                 Path = "/",
                 HttpOnly = true,
                 Expires = DateTime.UtcNow.AddDays(CookieExpiresInDays),
+                Secure = true,
             };
         }
 
@@ -62,6 +63,8 @@
                     // deletes cookie if user is logged in
                     this.Response.Cookies.Append(CookieName, string.Empty, new CookieOptions
                     {
+                        SameSite = SameSiteMode.None,
+                        Secure = true,
                         Expires = DateTime.UtcNow.AddDays(-1),
                     });
                     return this.Ok();

@@ -1,13 +1,11 @@
 ﻿namespace CasesNET.Web.Controllers
 {
     using System.Diagnostics;
-    using System.Linq;
 
-    using CasesNET.Data.Common.Repositories;
-    using CasesNET.Data.Models;
     using CasesNET.Services.Data;
     using CasesNET.Web.ViewModels;
     using CasesNET.Web.ViewModels.Home;
+    using CasesNET.Web.ViewModels.Shared;
     using Microsoft.AspNetCore.Mvc;
 
     public class HomeController : BaseController

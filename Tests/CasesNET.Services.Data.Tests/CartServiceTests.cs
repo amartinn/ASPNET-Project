@@ -1,12 +1,10 @@
 ﻿namespace CasesNET.Services.Data.Tests
 {
-    using System;
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Text;
     using System.Threading.Tasks;
-    using AutoMapper;
+
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
@@ -24,7 +22,7 @@
         {
             // Arrange
             var cartList = new List<Cart>();
-            var caseList = new List<Case> { new Case { Id = caseId } };
+            var caseList = new List<Case> { new Case { Id = this.caseId } };
 
             var cartRepo = new Mock<IDeletableEntityRepository<Cart>>();
             var caseRepo = new Mock<IDeletableEntityRepository<Case>>();
@@ -89,7 +87,7 @@
             AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
 
             // Act
-            var cartService = new CartService(null, cartRepo.Object ,null);
+            var cartService = new CartService(null, cartRepo.Object, null);
 
             var items = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId);
 
@@ -98,12 +96,38 @@
         }
 
         [Fact]
+        public void GetItemsCountByUserIdMethodShouldReturnZeroIfNoItemsInCart()
+        {
+            // Arrange
+            var fakeCart = new List<Cart>()
+            {
+                new Cart
+                {
+                    UserId = this.userId,
+                },
+            };
+            var cartRepo = new Mock<IDeletableEntityRepository<Cart>>();
+
+            cartRepo.Setup(s => s.All())
+                .Returns(fakeCart.AsQueryable());
+
+            // Act
+            var service = new CartService(null, cartRepo.Object, null);
+
+            var count = service.GetItemsCountByUserId(this.userId);
+
+            // Assert
+            Assert.Equal(0, count);
+        }
+
+        [Fact]
         public async Task RemoveItemByIdAndUserIdAsyncMethodShouldRemoveTheItem()
         {
             // Arrange
             var fakeCart = new List<CartItem>()
             {
-                        new CartItem{
+                        new CartItem
+                        {
                             CaseId = this.caseId,
                             Cart = new Cart
                             {

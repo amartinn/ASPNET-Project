@@ -47,5 +47,12 @@
             => this.caseRepository
             .AllAsNoTracking()
             .Count();
+
+        public IEnumerable<T> GetAllByCategory<T>(string categoryId)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .Where(x => x.CategoryId == categoryId)
+            .To<T>()
+            .ToList();
     }
 }

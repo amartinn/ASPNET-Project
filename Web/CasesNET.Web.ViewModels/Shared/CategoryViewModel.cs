@@ -1,4 +1,4 @@
-﻿namespace CasesNET.Web.ViewModels.Home
+﻿namespace CasesNET.Web.ViewModels.Shared
 {
     using AutoMapper;
     using CasesNET.Data.Models;

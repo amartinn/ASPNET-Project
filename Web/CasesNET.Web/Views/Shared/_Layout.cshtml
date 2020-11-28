@@ -24,11 +24,11 @@
     <title>@this.ViewData["Title"] - @SystemName</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="~/css/reset.css">
-    <link href="~/css/nav.css?version=2" rel="stylesheet" />
+    <link rel="stylesheet" href="~/css/reset.css?version=1">
+    <link href="~/css/nav.css?version=3" rel="stylesheet" />
     <link href="~/css/footer.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/css/card.css" rel="stylesheet" />
+    <link href="~/css/card.css?version=2" rel="stylesheet" />
     <link href="~/css/home.css" rel="stylesheet" />
 </head>
 <body>
@@ -37,8 +37,8 @@
 
         <ul class="navbar-nav flex-row search-wrapper mr-xl-4">
             <li class="nav-item">
-                <form method="post" asp-controller="Search" asp-action="ByTerm">
-                    <input name="search" id="search-input" class="input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
+                <form method="post" asp-area="" asp-controller="Search" asp-action="ByTerm">
+                    <input name="term" id="term search-input" class="term input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
                 </form>
             </li>
         </ul>
@@ -57,9 +57,11 @@
                     <div class="dropdown">
                         <a class="nav-link text-center dropdown-toggle mr-xl-4 shop-title" style="cursor:pointer" data-toggle="dropdown" id="shop-dropdown-menu" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu bg-white text-center" aria-labelledby="#shop-dropdown-menu">
+                            <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All">All Categories</a></li>
+
                             @foreach (var category in categories)
                             {
-                                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" asp-route-id="@category.Id">@category.Name</a></li>
+                                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@category.Id">@category.Name</a></li>
                             }
                         </ul>
                     </div>
@@ -101,10 +103,11 @@
     </nav>
 
     <div class="container mt-5">
-        <partial name="_CookieConsentPartial" />
+
         <main role="main" class="pb-3">
             @this.RenderBody()
         </main>
+
     </div>
 
 
@@ -131,16 +134,10 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">Our Selections</a>
+                            <a asp-area="" asp-controller="Cases" asp-action="OurSelection">Our Selections</a>
                         </li>
                         <li>
-                            <a href="#!">Cases with Photo</a>
-                        </li>
-                        <li>
-                            <a href="#!">Cases with name and text</a>
-                        </li>
-                        <li>
-                            <a href="#!">Cases with emoji</a>
+                            <a asp-area="" asp-controller="Category" asp-action="All">Categories</a>
                         </li>
                     </ul>
 
@@ -150,16 +147,10 @@
 
                     <ul class="list-unstyled">
                         <li>
-                            <a href="#!">My account</a>
-                        </li>
-                        <li>
-                            <a href="#!">Order</a>
+                            <a asp-area="Identity" asp-page="/Account/Manage/Index">My account</a>
                         </li>
                         <li>
                             <a href="#!">Shopping Cart</a>
-                        </li>
-                        <li>
-                            <a href="#!">Wishlist</a>
                         </li>
                     </ul>
 
@@ -171,7 +162,7 @@
             <a href="#"> @SystemName</a>
         </div>
     </footer>
-
+    <partial name="_CookieConsentPartial" />
 
 
 
@@ -180,7 +171,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js " integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM " crossorigin="anonymous"></script>
     <script type="text/javascript" src="~/js/pseudo.js"></script>
     <script type="text/javascript" src="~/js/nav.js?version=1"></script>
-    <script type="text/javascript" src="~/js/shopping-cart.js?versiin=1"></script>
+    <script type="text/javascript" src="~/js/shopping-cart.js"></script>
     <script defer>
         $(document).ready(function () {
             // updates on cart quantity on load

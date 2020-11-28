@@ -14,5 +14,7 @@
         int Count();
 
         IEnumerable<T> GetBestSellers<T>(int count = 4);
+
+        IEnumerable<T> GetAllByCategory<T>(string categoryId);
     }
 }

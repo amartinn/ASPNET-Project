@@ -36,13 +36,15 @@
             };
             foreach (var categoryName in categories)
             {
+                var url = categoryName.Replace(' ', '-');
+                url += "-category";
                 var category = new Category
                 {
                     Name = categoryName,
                     Image = new Image
                     {
                         Extension = "jpg",
-                        Url = "swag-cat-min",
+                        Url = url,
                     },
                 };
                 await dbContext.Categories.AddAsync(category);

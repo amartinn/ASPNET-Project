@@ -1,4 +1,4 @@
-﻿namespace CasesNET.Web
+﻿    namespace CasesNET.Web
 {
     using System.Reflection;
 
@@ -27,6 +27,7 @@
             services
             .AddDatabase(this.configuration)
             .AddIdentity()
+            .AddThirdPartyAuthentication(this.configuration)
             .ConfigureCookies()
             .ApplyControllerRules()
             .AddApplicationServices(this.configuration);

@@ -20,7 +20,10 @@
     display: block;
     position: absolute;
 }
-
+nav li form input{
+    border:none!important;
+}
+}
 .search-form {
     order: 2!important;
 }
@@ -74,6 +77,9 @@ nav {
     cursor: pointer;
 }
 
+.hamburger{
+    border:none!important;
+}
 #hamburger.is-active .line:nth-child(2) {
     opacity: 0;
 }
