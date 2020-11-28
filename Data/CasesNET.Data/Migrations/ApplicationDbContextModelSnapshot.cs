@@ -68,6 +68,9 @@ namespace CasesNET.Data.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
                         .HasColumnType("nvarchar(max)");
@@ -126,6 +129,10 @@ namespace CasesNET.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CartId")
+                        .IsUnique()
+                        .HasFilter("[CartId] IS NOT NULL");
+
                     b.HasIndex("IsDeleted");
 
                     b.HasIndex("NormalizedEmail")
@@ -139,13 +146,82 @@ namespace CasesNET.Data.Migrations
                     b.ToTable("AspNetUsers");
                 });
 
+            modelBuilder.Entity("CasesNET.Data.Models.Cart", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("Carts");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.CartItem", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CaseId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId");
+
+                    b.HasIndex("CaseId");
+
+                    b.HasIndex("IsDeleted");
+
+                    b.ToTable("CartItems");
+                });
+
             modelBuilder.Entity("CasesNET.Data.Models.Case", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("CartItemId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("CaseType")
+                        .HasColumnType("int");
+
                     b.Property<string>("CategoryId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -174,6 +250,8 @@ namespace CasesNET.Data.Migrations
                         .HasColumnType("decimal(18,2)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CartItemId");
 
                     b.HasIndex("CategoryId");
 
@@ -398,13 +476,34 @@ namespace CasesNET.Data.Migrations
                     b.ToTable("AspNetUserTokens");
                 });
 
+            modelBuilder.Entity("CasesNET.Data.Models.ApplicationUser", b =>
+                {
+                    b.HasOne("CasesNET.Data.Models.Cart", "Cart")
+                        .WithOne("User")
+                        .HasForeignKey("CasesNET.Data.Models.ApplicationUser", "CartId")
+                        .OnDelete(DeleteBehavior.Restrict);
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.CartItem", b =>
+                {
+                    b.HasOne("CasesNET.Data.Models.Cart", "Cart")
+                        .WithMany("Items")
+                        .HasForeignKey("CartId");
+
+                    b.HasOne("CasesNET.Data.Models.Case", "Case")
+                        .WithMany()
+                        .HasForeignKey("CaseId");
+                });
+
             modelBuilder.Entity("CasesNET.Data.Models.Case", b =>
                 {
+                    b.HasOne("CasesNET.Data.Models.CartItem", "CartItem")
+                        .WithMany()
+                        .HasForeignKey("CartItemId");
+
                     b.HasOne("CasesNET.Data.Models.Category", "Category")
                         .WithMany("Cases")
-                        .HasForeignKey("CategoryId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("CategoryId");
 
                     b.HasOne("CasesNET.Data.Models.Device", "Device")
                         .WithMany("Cases")

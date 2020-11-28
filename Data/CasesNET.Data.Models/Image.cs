@@ -17,12 +17,12 @@
 
         public string Url { get; set; }
 
-        [ForeignKey("Case")]
+        [ForeignKey(nameof(Case))]
         public string CaseId { get; set; }
 
         public virtual Case Case { get; set; }
 
-        [ForeignKey("Category")]
+        [ForeignKey(nameof(Category))]
         public string CategoryId { get; set; }
 
         public virtual Category Category { get; set; }

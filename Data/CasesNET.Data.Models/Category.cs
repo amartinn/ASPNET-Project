@@ -18,7 +18,7 @@
 
         public virtual ICollection<Case> Cases { get; set; }
 
-        [ForeignKey("Image")]
+        [ForeignKey(nameof(Image))]
         public string ImageId { get; set; }
 
         public virtual Image Image { get; set; }

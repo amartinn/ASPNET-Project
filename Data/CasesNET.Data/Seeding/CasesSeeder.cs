@@ -33,7 +33,7 @@
                     Image = new Image
                     {
                         Extension = "jpg",
-                        Url = "~/images/test-case",
+                        Url = "test-case",
                     },
                 };
                 await dbContext.Cases.AddAsync(@case);

@@ -33,14 +33,15 @@
 
         public static IServiceCollection AddApplicationServices(this IServiceCollection services, IConfiguration configuration)
             => services
-                .AddSingleton(configuration)
+            .AddSingleton(configuration)
             .AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>))
             .AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
             .AddScoped<IDbQueryRunner, DbQueryRunner>()
             .AddTransient<IEmailSender, NullMessageSender>()
             .AddTransient<ISettingsService, SettingsService>()
             .AddTransient<ICaseService, CaseService>()
-            .AddTransient<ICategoryService, CategoryService>();
+            .AddTransient<ICategoryService, CategoryService>()
+            .AddTransient<ICartService, CartService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {

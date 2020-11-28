@@ -28,6 +28,11 @@
                 .HasForeignKey(e => e.UserId)
                 .IsRequired()
                 .OnDelete(DeleteBehavior.Restrict);
+            appUser
+                .HasOne(c => c.Cart)
+                .WithOne(u => u.User)
+                .HasForeignKey<ApplicationUser>(u => u.CartId)
+                .OnDelete(DeleteBehavior.Restrict); 
         }
     }
 }

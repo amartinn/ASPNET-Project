@@ -3,6 +3,7 @@ namespace CasesNET.Data.Models
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using CasesNET.Data.Common.Models;
 
@@ -33,5 +34,10 @@ namespace CasesNET.Data.Models
         public virtual ICollection<IdentityUserClaim<string>> Claims { get; set; }
 
         public virtual ICollection<IdentityUserLogin<string>> Logins { get; set; }
+
+        [ForeignKey(nameof(Cart))]
+        public string CartId { get; set; }
+
+        public virtual Cart Cart { get; set; }
     }
 }

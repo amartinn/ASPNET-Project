@@ -6,7 +6,6 @@
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Data;
-    using CasesNET.Services.Mapping;
     using CasesNET.Web.ViewModels;
     using CasesNET.Web.ViewModels.Home;
     using Microsoft.AspNetCore.Mvc;
@@ -15,19 +14,13 @@
     {
         private readonly ICaseService caseService;
         private readonly ICategoryService categoryService;
-        private readonly IRepository<Manufacturer> manufacturerRepository;
-        private readonly IRepository<Device> deviceRepository;
 
         public HomeController(
             ICaseService caseService,
-            ICategoryService categoryService,
-            IRepository<Manufacturer> manufacturerRepository,
-            IRepository<Device> deviceRepository)
+            ICategoryService categoryService)
         {
             this.caseService = caseService;
             this.categoryService = categoryService;
-            this.manufacturerRepository = manufacturerRepository;
-            this.deviceRepository = deviceRepository;
         }
 
         public IActionResult Index()

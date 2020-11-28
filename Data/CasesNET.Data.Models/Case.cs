@@ -14,7 +14,7 @@
             this.Id = Guid.NewGuid().ToString();
         }
 
-        [ForeignKey("Image")]
+        [ForeignKey(nameof(Image))]
         public string ImageId { get; set; }
 
         public virtual Image Image { get; set; }
@@ -24,8 +24,7 @@
 
         public virtual Device Device { get; set; }
 
-        [Required]
-        [ForeignKey("Category")]
+        [ForeignKey(nameof(Category))]
         public string CategoryId { get; set; }
 
         public virtual Category Category { get; set; }
@@ -35,5 +34,10 @@
         public string Description { get; set; }
 
         public CaseType CaseType { get; set; }
+
+        [ForeignKey(nameof(CartItem))]
+        public string CartItemId { get; set; }
+
+        public virtual CartItem CartItem { get; set; }
     }
 }

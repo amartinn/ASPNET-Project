@@ -42,7 +42,7 @@
                     Image = new Image
                     {
                         Extension = "jpg",
-                        Url = "https://case4you.bg/wp-content/uploads/2019/01/swag-cat-min.jpg",
+                        Url = "swag-cat-min",
                     },
                 };
                 await dbContext.Categories.AddAsync(category);

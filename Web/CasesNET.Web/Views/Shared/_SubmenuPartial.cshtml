@@ -7,7 +7,13 @@
     var brands = Brands.AllAsNoTracking().Select(x => new
     {
         Name = x.Name,
-        Id = x.Id
+        Id = x.Id,
+        Devices = x.Devices.Select(y=> new
+        {
+            Name = y.Name,
+            Id = y.Id,
+            
+        }),
     });
     var categories = Categories.AllAsNoTracking().Select(x => new
     {
@@ -22,7 +28,8 @@
             <ul class="dropdown-menu" aria-labelledby="brand-dropdown">
                 @foreach (var brand in brands)
                 {
-                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
+                    <li class="dropdown-items text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
+                
                 }
             </ul>
         </div>

@@ -23,4 +23,8 @@
     <ProjectReference Include="..\..\Services\CasesNET.Services.Mapping\CasesNET.Services.Mapping.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Api\" />
+  </ItemGroup>
+
 </Project>
