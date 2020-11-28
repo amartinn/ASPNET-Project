@@ -60,12 +60,18 @@
             services.AddAuthentication()
                 .AddFacebook(opt =>
                 {
-                    opt.AppId = configuration["ThirdPartyLogins:Facebook:AppId"];
-                    opt.AppSecret = configuration["ThirdPartyLogins:Facebook:AppSecret"];
+                    opt.AppId = configuration.GetThirdPartyAppId("Facebook");
+                    opt.AppSecret = configuration.GetThirdPartyAppSecret("Facebook");
+                })
+                .AddGoogle(opt =>
+                {
+                    opt.ClientId = configuration.GetThirdPartyAppId("Google");
+                    opt.ClientSecret = configuration.GetThirdPartyAppSecret("Google");
                 });
 
             return services;
         }
+
         public static IServiceCollection ConfigureCookies(this IServiceCollection services)
         {
             services.Configure<CookiePolicyOptions>(

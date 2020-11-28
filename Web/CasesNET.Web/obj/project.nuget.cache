@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "8XII4cYqokNnGM/qtsuLCSsgg9XMcN7+0vJCsePnDoipry8AIWpMQkV1QfHL5FaYZP8aqcYqv+QfQ2RqT2MGhA==",
+  "dgSpecHash": "MOUpJKTj9mIZcOYMhktRxXJjfhhMHf5cYppTxqu9F6dpj3xA5FQV5foWcajdnytDXfFvAamddDhE0UrtZdqYyg==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\Web\\CasesNET.Web\\CasesNET.Web.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\marto\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\3.1.9\\microsoft.aspnetcore.authentication.facebook.3.1.9.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\3.1.9\\microsoft.aspnetcore.authentication.google.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.diagnostics.entityframeworkcore\\3.1.9\\microsoft.aspnetcore.diagnostics.entityframeworkcore.3.1.9.nupkg.sha512",
