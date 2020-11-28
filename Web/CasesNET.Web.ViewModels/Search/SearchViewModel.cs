@@ -9,5 +9,7 @@
         public string SearchTerm { get; set; }
 
         public IEnumerable<CaseViewModel> Cases { get; set; }
+
+        public IEnumerable<CaseViewModel> BestSellerCases { get; set; }
     }
 }

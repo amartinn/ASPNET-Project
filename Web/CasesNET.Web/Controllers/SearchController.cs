@@ -8,10 +8,12 @@
     public class SearchController : Controller
     {
         private readonly ISearchService searchService;
+        private readonly ICaseService caseService;
 
-        public SearchController(ISearchService searchService)
+        public SearchController(ISearchService searchService,ICaseService caseService)
         {
             this.searchService = searchService;
+            this.caseService = caseService;
         }
 
         [HttpPost]
@@ -28,6 +30,7 @@
             {
                 SearchTerm = term,
                 Cases = casesMatchingSearchTerm,
+                BestSellerCases = this.caseService.GetBestSellers<CaseViewModel>(8),
             };
             return this.View(viewModel);
         }
