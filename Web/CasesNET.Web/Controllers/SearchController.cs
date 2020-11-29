@@ -10,7 +10,7 @@
         private readonly ISearchService searchService;
         private readonly ICaseService caseService;
 
-        public SearchController(ISearchService searchService,ICaseService caseService)
+        public SearchController(ISearchService searchService, ICaseService caseService)
         {
             this.searchService = searchService;
             this.caseService = caseService;

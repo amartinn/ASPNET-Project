@@ -54,5 +54,13 @@
             .Where(x => x.CategoryId == categoryId)
             .To<T>()
             .ToList();
+
+        public IEnumerable<T> GetLatest<T>(int count = 12)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .OrderBy(x => x.CreatedOn)
+            .Take(count)
+            .To<T>()
+            .ToList();
     }
 }

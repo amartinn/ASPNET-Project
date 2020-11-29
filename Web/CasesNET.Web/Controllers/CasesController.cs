@@ -29,7 +29,11 @@
 
         public IActionResult Latest()
         {
-            var model = string.Empty;
+            var model = new CaseListingViewModel
+            {
+                Cases = this.caseService.GetLatest<CaseViewModel>(),
+
+            };
             return this.View(model);
         }
     }
