@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CasesNET.Services.Data;
-using CasesNET.Web.ViewModels.Manufacturers;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CasesNET.Web.Controllers
+﻿namespace CasesNET.Web.Controllers
 {
+    using CasesNET.Services.Data;
+    using CasesNET.Web.ViewModels.Manufacturers;
+    using Microsoft.AspNetCore.Mvc;
+
     public class ManufacturersController : Controller
     {
         private readonly IManufacturerService manufacturerservice;
@@ -24,7 +20,7 @@ namespace CasesNET.Web.Controllers
                 Manufacturers = this.manufacturerservice
                 .GetAll<ManufacturerViewModel>(),
             };
-            return View(viewModel);
+            return this.View(viewModel);
         }
     }
 }

@@ -34,6 +34,7 @@
                 Cases = this.caseService.GetLatest<CaseViewModel>(),
 
             };
+
             return this.View(model);
         }
 
