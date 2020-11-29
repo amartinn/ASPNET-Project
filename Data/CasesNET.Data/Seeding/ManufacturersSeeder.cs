@@ -23,16 +23,20 @@
                 "Huawei",
                 "Xiaomi",
                 "Sony",
-                "Asus",
                 "Nokia",
                 "HTC",
-                "Motorola",
             };
 
             foreach (var manufacturerName in manufacturers)
             {
+                var url = manufacturerName + "-logo";
                 var manufacturer = new Manufacturer
                 {
+                    Image = new Image
+                    {
+                        Url = url,
+                        Extension = "jpg",
+                    },
                     Name = manufacturerName,
                 };
                 await dbContext.Manufacturers.AddAsync(manufacturer);
