@@ -18,5 +18,7 @@
         IEnumerable<T> GetAllByCategory<T>(string categoryId);
 
         IEnumerable<T> GetLatest<T>(int count = 12);
+
+        IEnumerable<T> GetByManufacturerId<T>(string id);
     }
 }

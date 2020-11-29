@@ -36,5 +36,17 @@
             };
             return this.View(model);
         }
+
+        public IActionResult ByManufacturer(string id)
+        {
+            var casesByManufacturer = this.caseService.GetByManufacturerId<CaseViewModel>(id);
+
+            var viewModel = new CasesByManufacturerViewModel
+            {
+                ManufacturerName = casesByManufacturer.First().BrandName,
+                Cases = casesByManufacturer,
+            };
+            return this.View(viewModel);
+        }
     }
 }

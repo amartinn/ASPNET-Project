@@ -62,5 +62,12 @@
             .Take(count)
             .To<T>()
             .ToList();
+
+        public IEnumerable<T> GetByManufacturerId<T>(string id)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .Where(x => x.Device.Manufactorer.Id == id)
+            .To<T>()
+            .ToList();
     }
 }

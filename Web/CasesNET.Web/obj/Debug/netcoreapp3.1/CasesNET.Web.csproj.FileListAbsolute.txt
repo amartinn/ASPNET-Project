@@ -441,7 +441,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewStart.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Index.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Home\Privacy.cshtml.g.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Settings\Index.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
@@ -470,3 +469,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Google.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Categories\All.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Manufacturers\All.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\ByManufacturer.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\Latest.cshtml.g.cs

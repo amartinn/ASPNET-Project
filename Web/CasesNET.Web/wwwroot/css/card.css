@@ -1,5 +1,4 @@
 .card-case .btn-utility i {
-    font-size: 1.3rem;
     color: black!important;
 }
 .card{
@@ -8,7 +7,6 @@
 .add-to-cart-btn {
     background-color: lightblue;
     border: 1px solid lightblue!important;
-    font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
 }

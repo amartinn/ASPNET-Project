@@ -28,8 +28,10 @@
     <link href="~/css/nav.css?version=3" rel="stylesheet" />
     <link href="~/css/footer.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/css/card.css?version=2" rel="stylesheet" />
+    <link href="~/css/card.css?version=3" rel="stylesheet" />
     <link href="~/css/home.css" rel="stylesheet" />
+    <style>
+    </style>
 </head>
 <body>
     <nav class="container-fluid shadow main-nav navbar navbar-expand-xl fixed-top bg-white">
@@ -102,6 +104,9 @@
 
     </nav>
 
+    <div class="fixed-top container submenu-container mt-xl-5 mt-lg-4 mt-md-4 d-none d-md-block">
+        @await Html.PartialAsync("../Shared/_SubmenuPartial.cshtml")
+    </div>
     <div class="container mt-5">
 
         <main role="main" class="pb-3">

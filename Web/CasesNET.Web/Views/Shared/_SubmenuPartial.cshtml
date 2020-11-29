@@ -24,18 +24,18 @@
 <div class="container menu mt-4">
     <div class="d-md-flex justify-content-between">
         <div class="dropdown">
-            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="Brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manufacturers</a>
+            <a class="border-0 dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="Brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manufacturers</a>
             <ul class="dropdown-menu text-center" aria-labelledby="brand-dropdown">
                 <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturers" asp-action="All">All Manufacturers</a></li>
 
                 @foreach (var brand in brands)
                 {
-                    <li class="dropdown-item text-uppercase"><a class="list-group-item-action hoverable" asp-area="" asp-controller="Manufacturers" asp-action="Byid" asp-route-id="@brand.Id">@brand.Name</a></li>
+                    <li class="dropdown-item text-uppercase"><a class="list-group-item-action hoverable" asp-area="" asp-controller="Cases" asp-action="ByManufacturer" asp-route-id="@brand.Id">@brand.Name</a></li>
                 }
             </ul>
         </div>
         <div class="dropdown">
-            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <a class="border-0 dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
             <ul class="dropdown-menu text-center" aria-labelledby="category-dropdown">
                 <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Categories" asp-action="All">All Categories</a></li>
 
@@ -45,8 +45,8 @@
                 }
             </ul>
         </div>
-        <a asp-area="" asp-controller="Cases" asp-action="WithEmoji" class="border-0 hoverable list-group-item list-group-item-action text-center">Cases with Emoji</a>
-        <a asp-area="" asp-controller="Cases" asp-action="OurSelection" class="border-0 hoverable list-group-item list-group-item-action text-center">Our selection</a>
-        <a asp-area="" asp-controller="Cases" asp-action="WithPhoto" class="border-0 hoverable list-group-item list-group-item-action text-center">Cases with Photo</a>
+        <a asp-area="" asp-controller="Cases" asp-action="WithEmoji" class="border-0  list-group-item list-group-item-action text-center">Cases with Emoji</a>
+        <a asp-area="" asp-controller="Cases" asp-action="OurSelection" class="border-0  list-group-item list-group-item-action text-center">Our selection</a>
+        <a asp-area="" asp-controller="Cases" asp-action="WithPhoto" class="border-0 list-group-item list-group-item-action text-center">Cases with Photo</a>
     </div>
     </div>

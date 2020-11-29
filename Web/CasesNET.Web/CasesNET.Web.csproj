@@ -35,8 +35,4 @@
     <ProjectReference Include="..\CasesNET.Web.Infrastructure\CasesNET.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\CasesNET.Web.ViewModels\CasesNET.Web.ViewModels.csproj" />
   </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Views\Shared\NewFolder\" />
-  </ItemGroup>
 </Project>

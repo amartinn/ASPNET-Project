@@ -1,0 +1,24 @@
+﻿@using  CasesNET.Web.ViewModels.Cases
+@using System.Linq
+@using System.Collections.Generic
+@model CasesByManufacturerViewModel
+@{
+    this.ViewData["title"] = Model.ManufacturerName;
+}
+
+<div class="cases-selection-wrapper container">
+    <h1 class="text-center m-5 text-uppercase">@Model.ManufacturerName</h1>
+    <div class="row ">
+        @foreach (var phoneCase in Model.Cases)
+        {
+
+            @await Html.PartialAsync("../Shared/_CasePartial.cshtml", phoneCase)
+
+        }
+    </div>
+</div>
+<style>
+    .cases-selection-wrapper {
+        margin-top: 200px;
+    }
+</style>
