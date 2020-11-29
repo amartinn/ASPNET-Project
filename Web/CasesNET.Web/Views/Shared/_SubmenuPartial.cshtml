@@ -23,24 +23,25 @@
 }
 <div class="container menu mt-4">
     <div class="d-md-flex justify-content-between">
-        <div class="dropdown dropdown-menu-wrapper">
-            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center " href="#" role="button" id="brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Brands</a>
-            <ul class="dropdown-menu" aria-labelledby="brand-dropdown">
+        <div class="dropdown">
+            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="Brand-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Manufacturers</a>
+            <ul class="dropdown-menu text-center" aria-labelledby="brand-dropdown">
+                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturers" asp-action="All">All Manufacturers</a></li>
+
                 @foreach (var brand in brands)
                 {
-                    <li class="dropdown-items text-uppercase"><a asp-area="" asp-controller="Manufacturer" asp-action="All" asp-route-id="@brand.Id">@brand.Name</a></li>
-                
+                    <li class="dropdown-item text-uppercase"><a class="list-group-item-action hoverable" asp-area="" asp-controller="Manufacturers" asp-action="Byid" asp-route-id="@brand.Id">@brand.Name</a></li>
                 }
             </ul>
         </div>
-        <div class="dropdown dropdown-menu-wrapper">
-            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action hoverable text-center" href="/Category" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
-            <ul class="dropdown-menu text-center m-auto" aria-labelledby="category-dropdown">
-                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All" >All Categories</a></li>
+        <div class="dropdown">
+            <a class="border-0 hoverable dropdown-toggle list-group-item list-group-item-action text-center" role="button" id="category-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</a>
+            <ul class="dropdown-menu text-center" aria-labelledby="category-dropdown">
+                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Categories" asp-action="All">All Categories</a></li>
 
                 @foreach (var category in categories)
                 {
-                    <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@category.Id">@category.Name</a></li>
+                    <li class="dropdown-item text-uppercase"><a class="list-group-item-action hoverable" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@category.Id">@category.Name</a></li>
                 }
             </ul>
         </div>

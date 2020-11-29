@@ -1,0 +1,25 @@
+﻿namespace CasesNET.Services.Data
+{
+    using System.Collections.Generic;
+    using System.Linq;
+
+    using CasesNET.Data.Common.Repositories;
+    using CasesNET.Data.Models;
+    using CasesNET.Services.Mapping;
+
+    public class ManufacturerService : IManufacturerService
+    {
+        private readonly IRepository<Manufacturer> manufacturerRepository;
+
+        public ManufacturerService(IRepository<Manufacturer> manufacturerRepository)
+        {
+            this.manufacturerRepository = manufacturerRepository;
+        }
+
+        public IEnumerable<T> GetAll<T>()
+            => this.manufacturerRepository
+            .AllAsNoTracking()
+            .To<T>()
+            .ToList();
+    }
+}

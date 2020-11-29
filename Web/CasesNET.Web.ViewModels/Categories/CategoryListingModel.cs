@@ -1,4 +1,4 @@
-﻿namespace CasesNET.Web.ViewModels.Category
+﻿namespace CasesNET.Web.ViewModels.Categories
 {
 
     using System.Collections.Generic;

@@ -1,15 +1,15 @@
 ﻿namespace CasesNET.Web.Controllers
 {
     using CasesNET.Services.Data;
-    using CasesNET.Web.ViewModels.Category;
+    using CasesNET.Web.ViewModels.Categories;
     using CasesNET.Web.ViewModels.Shared;
     using Microsoft.AspNetCore.Mvc;
 
-    public class CategoryController : Controller
+    public class CategoriesController : Controller
     {
         private readonly ICategoryService categoryService;
 
-        public CategoryController(
+        public CategoriesController(
             ICategoryService categoryService)
         {
             this.categoryService = categoryService;

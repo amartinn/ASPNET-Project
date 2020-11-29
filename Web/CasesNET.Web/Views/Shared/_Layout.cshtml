@@ -57,7 +57,7 @@
                     <div class="dropdown">
                         <a class="nav-link text-center dropdown-toggle mr-xl-4 shop-title" style="cursor:pointer" data-toggle="dropdown" id="shop-dropdown-menu" aria-haspopup="true" aria-expanded="false">Shop</a>
                         <ul class="dropdown-menu bg-white text-center" aria-labelledby="#shop-dropdown-menu">
-                            <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Category" asp-action="All">All Categories</a></li>
+                            <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Categories" asp-action="All">All Categories</a></li>
 
                             @foreach (var category in categories)
                             {
@@ -137,7 +137,7 @@
                             <a asp-area="" asp-controller="Cases" asp-action="OurSelection">Our Selections</a>
                         </li>
                         <li>
-                            <a asp-area="" asp-controller="Category" asp-action="All">Categories</a>
+                            <a asp-area="" asp-controller="Categories" asp-action="All">Categories</a>
                         </li>
                     </ul>
 

@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     using CasesNET.Data.Common.Models;
 
@@ -16,5 +17,10 @@
         public string Name { get; set; }
 
         public virtual ICollection<Device> Devices { get; set; }
+
+        [ForeignKey(nameof(Image))]
+        public string ImageUrl { get; set; }
+
+        public virtual Image Image { get; set; }
     }
 }

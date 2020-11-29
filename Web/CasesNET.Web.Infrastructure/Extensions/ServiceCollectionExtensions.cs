@@ -42,7 +42,8 @@
             .AddTransient<ICaseService, CaseService>()
             .AddTransient<ICategoryService, CategoryService>()
             .AddTransient<ICartService, CartService>()
-            .AddTransient<ISearchService, SearchService>();
+            .AddTransient<ISearchService, SearchService>()
+            .AddTransient<IManufacturerService, ManufacturerService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {

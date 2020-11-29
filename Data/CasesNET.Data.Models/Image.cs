@@ -26,5 +26,10 @@
         public string CategoryId { get; set; }
 
         public virtual Category Category { get; set; }
+
+        [ForeignKey(nameof(Manufacturer))]
+        public string ManufacturerId { get; set; }
+
+        public virtual Manufacturer Manufacturer { get; set; }
     }
 }
