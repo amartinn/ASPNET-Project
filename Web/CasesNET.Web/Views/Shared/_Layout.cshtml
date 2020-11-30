@@ -6,6 +6,7 @@
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
 @inject IRepository<Category> CategoryRepository
+@inject IRepository<Manufacturer> ManufacturerRepository
 @{
     var categories = CategoryRepository.AllAsNoTracking()
         .Select(x => new
@@ -14,7 +15,17 @@
             Name = x.Name,
         })
         .ToList();
+    var manufacturers = ManufacturerRepository.AllAsNoTracking().Select(x => new
+    {
+        Name = x.Name,
+        Id = x.Id,
+        Devices = x.Devices.Select(y => new
+        {
+            Name = y.Name,
+            Id = y.Id,
 
+        }),
+    }).ToList();
 }
 <!DOCTYPE html>
 <html>
@@ -35,7 +46,7 @@
 </head>
 <body>
     <nav class="container-fluid shadow main-nav navbar navbar-expand-xl fixed-top bg-white" style="z-index:1">
-        <a class="navbar-brand ml-lg-5" asp-area="" asp-controller="Home" asp-action="Index">Cases.NET</a>
+        <a class="navbar-brand ml-lg-5 d-sm-inline-block  d-none " asp-area="" asp-controller="Home" asp-action="Index">Cases.NET</a>
 
         <ul class="navbar-nav flex-row search-wrapper mr-xl-4">
             <li class="nav-item">
@@ -57,13 +68,26 @@
                 </li>
                 <li class="nav-item">
                     <div class="dropdown">
-                        <a class="nav-link text-center dropdown-toggle mr-xl-4 shop-title" style="cursor:pointer" data-toggle="dropdown" id="shop-dropdown-menu" aria-haspopup="true" aria-expanded="false">Shop</a>
+                        <a class="nav-link text-center dropdown-toggle mr-xl-4 shop-title" style="cursor:pointer" data-toggle="dropdown" id="shop-dropdown-menu" aria-haspopup="true" aria-expanded="false">Categories</a>
                         <ul class="dropdown-menu bg-white text-center" aria-labelledby="#shop-dropdown-menu">
                             <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Categories" asp-action="All">All Categories</a></li>
 
                             @foreach (var category in categories)
                             {
                                 <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@category.Id">@category.Name</a></li>
+                            }
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link text-center dropdown-toggle mr-xl-4 shop-title" style="cursor:pointer" data-toggle="dropdown" id="shop-dropdown-menu" aria-haspopup="true" aria-expanded="false">Manufacturers</a>
+                        <ul class="dropdown-menu bg-white text-center" aria-labelledby="#shop-dropdown-menu">
+                            <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Manufacturers" asp-action="All">All Manufacturers</a></li>
+
+                            @foreach (var brand in manufacturers)
+                            {
+                                <li class="dropdown-item text-uppercase"><a class="list-group-item-action hoverable" asp-area="" asp-controller="Cases" asp-action="ByManufacturer" asp-route-id="@brand.Id">@brand.Name</a></li>
                             }
                         </ul>
                     </div>
@@ -77,25 +101,33 @@
             </ul>
 
             <ul class="list-unstyled mt-xl-3 d-block d-xl-flex">
-                <li class="nav-item ">
+                
                     @if (this.User.IsInRole(AdministratorRoleName))
                     {
-
+                    <li class="nav-item ">
                         <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Administration" asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
+                    </li>
 
                     }
                     else if (this.SignInManager.IsSignedIn(this.User))
                     {
+            <li class="nav-item">
+                <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Manage/Index">My Account</a>
+            </li>
 
-                        <form class="form-inline justify-content-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
-                            <button type="submit" class=" border-0 hoverable btn sign-in nav-link text-center mr-xl-2" style=" font-size: 1.3rem;font-weight:bold">Logout</button>
-                        </form>
+            <li class="nav-item">
+                <form class="form-inline justify-content-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
+                    <button type="submit" class=" border-0 hoverable btn sign-in nav-link text-center mr-xl-2" style=" font-size: 1.3rem;font-weight:bold">Logout</button>
+                </form>
+            </li>
+                      
                     }
                     else
                     {
-                        <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+            <li class="nav-item">
+                <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+            </li>
                     }
-                </li>
                 <li class="nav-item ">
                     <a class="nav-link text-center mr-xl-2 shopping-bag " asp-area="API" asp-controller="ShoppingCart" asp-action="AllItems ">Bag</a>
                 </li>
@@ -103,13 +135,11 @@
         </div>
 
     </nav>
-
-    <div class="fixed-top container submenu-container mt-xl-5 mt-lg-4 mt-md-4 d-none d-md-block" style="z-index:1!important">
-        @await Html.PartialAsync("../Shared/_SubmenuPartial.cshtml")
+    <div class="container">
+        <main role="main" class="pb-3" style="margin-top:100px">
+            @this.RenderBody()
+        </main>
     </div>
-    <main role="main" class="pb-3" style="margin-top:100px">
-        @this.RenderBody()
-    </main>
 
 
     <footer class="page-footer font-small blue pt-4 container mt-4">
