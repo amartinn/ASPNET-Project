@@ -32,7 +32,6 @@
             var model = new CaseListingViewModel
             {
                 Cases = this.caseService.GetLatest<CaseViewModel>(),
-
             };
 
             return this.View(model);
@@ -47,6 +46,13 @@
                 ManufacturerName = casesByManufacturer.First().BrandName,
                 Cases = casesByManufacturer,
             };
+            return this.View(viewModel);
+        }
+
+        public IActionResult Details(string id)
+        {
+            var viewModel = this.caseService.GetById<CaseDetailsViewModel>(id);
+            viewModel.RelatedCases = this.caseService.GetAllByCategory<CaseViewModel>(viewModel.CategoryId).Take(4);
             return this.View(viewModel);
         }
     }

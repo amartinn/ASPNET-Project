@@ -5,7 +5,7 @@
 
 <div class="col-12 col-md-6 col-lg-4 col-xl-3 text-center">
     <div class="card card-case">
-        <a asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@Model.Id"><img class="card-img-top m-auto" src="~/Images/Cases/@Model.ImageUrl" alt="@Model.ImageUrl"></a>
+        <a class="img-fluid" asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@Model.Id"><img class="card-img-top m-auto" src="~/Images/Cases/@Model.ImageUrl" alt="@Model.ImageUrl"></a>
         <div class="card-body">
             <h2 class="card-title text-uppercase">@Model.BrandName</h2>
             <h6 class="card-title text-uppercase">@Model.DeviceName</h6>
