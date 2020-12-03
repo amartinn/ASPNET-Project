@@ -4,7 +4,7 @@
 
     using CasesNET.Web.ViewModels.Shared;
 
-    public class SearchViewModel
+    public class SearchViewModel : PagingViewModel
     {
         public string SearchTerm { get; set; }
 

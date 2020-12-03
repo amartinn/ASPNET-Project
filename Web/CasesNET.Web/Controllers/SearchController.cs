@@ -5,6 +5,7 @@
     using CasesNET.Web.ViewModels.Shared;
     using Microsoft.AspNetCore.Mvc;
 
+    using static CasesNET.Common.GlobalConstants.Shared;
     public class SearchController : Controller
     {
         private readonly ISearchService searchService;
@@ -16,22 +17,23 @@
             this.caseService = caseService;
         }
 
-        [HttpPost]
-        public IActionResult ByTerm(string term)
+        [HttpGet]
+        public IActionResult ByTerm(string term, int page = 1)
         {
-            if (string.IsNullOrWhiteSpace(term))
-            {
-                return this.Redirect(url: "/Home");
-            }
-
+            var tempdataValue = this.TempData["term"].ToString();
             var casesMatchingSearchTerm =
-                this.searchService.GetAllCasesBySearchTerm<CaseViewModel>(term);
+                this.searchService.GetAllCasesBySearchTerm<CaseViewModel>(term ?? tempdataValue, page);
             var viewModel = new SearchViewModel
             {
-                SearchTerm = term,
+                ItemsPerPage = ItemsPerPage,
+                CasesCount = this.searchService.GetCountBySearchTerm(term ?? tempdataValue),
+                PageNumber = page,
+                SearchTerm = term ?? tempdataValue,
                 Cases = casesMatchingSearchTerm,
                 BestSellerCases = this.caseService.GetBestSellers<CaseViewModel>(8),
             };
+            this.TempData["term"] = term ?? tempdataValue;
+            this.ViewData["id"] = term;
             return this.View(viewModel);
         }
     }
