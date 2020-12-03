@@ -1,9 +1,10 @@
 ﻿namespace CasesNET.Web
 {
     using Microsoft.AspNetCore.Hosting;
+    using Microsoft.Extensions.Configuration;
     using Microsoft.Extensions.Hosting;
 
-    public static class Program
+    public class Program
     {
         public static void Main(string[] args)
         {
@@ -15,6 +16,13 @@
                 .ConfigureWebHostDefaults(webBuilder =>
                     {
                         webBuilder.UseStartup<Startup>();
-                    });
+                    })
+                .ConfigureAppConfiguration((hostContext, builder) =>
+                {
+                    if (hostContext.HostingEnvironment.IsDevelopment())
+                    {
+                        builder.AddUserSecrets<Program>();
+                    }
+                });
     }
 }
