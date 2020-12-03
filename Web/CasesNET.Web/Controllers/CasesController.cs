@@ -10,20 +10,28 @@
     public class CasesController : Controller
     {
         private readonly ICaseService caseService;
+        private const int itemsPerPage = 12;
 
         public CasesController(ICaseService caseService)
         {
             this.caseService = caseService;
         }
 
-        public IActionResult ByCategory(string id)
+        public IActionResult ByCategory(string id, int page = 1)
         {
-            var cases = this.caseService.GetAllByCategory<CaseViewModel>(id);
+            var cases = this.caseService.GetAllByCategory<CaseViewModel>(id, page, itemsPerPage);
+
             var viewModel = new CasesByCategoryViewModel
             {
+                PageNumber = page,
+                ItemsPerPage = itemsPerPage,
+                CasesCount = this.caseService.CountByCategory(id),
                 Cases = cases,
                 CategoryName = cases.FirstOrDefault().CategoryName,
+                CategoryId = cases.FirstOrDefault().CategoryId,
             };
+            this.ViewData["id"] = viewModel.CategoryId;
+            this.ViewData["action"] = nameof(this.ByCategory);
             return this.View(viewModel);
         }
 
@@ -37,15 +45,21 @@
             return this.View(model);
         }
 
-        public IActionResult ByManufacturer(string id)
+        public IActionResult ByManufacturer(string id, int page = 1)
         {
             var casesByManufacturer = this.caseService.GetByManufacturerId<CaseViewModel>(id);
 
             var viewModel = new CasesByManufacturerViewModel
             {
-                ManufacturerName = casesByManufacturer.First().BrandName,
+                PageNumber = page,
+                ItemsPerPage = itemsPerPage,
+                CasesCount = this.caseService.CountByManufacturer(id),
+                ManufacturerName = casesByManufacturer.First().ManufacturerName,
+                ManufacturerId = casesByManufacturer.First().ManufacturerId,
                 Cases = casesByManufacturer,
             };
+            this.ViewData["id"] = viewModel.ManufacturerId;
+            this.ViewData["action"] = nameof(this.ByManufacturer);
             return this.View(viewModel);
         }
 

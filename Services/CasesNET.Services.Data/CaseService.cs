@@ -43,15 +43,19 @@
             .AllAsNoTracking()
             .Any(x => x.Id == id);
 
-        public int Count()
-            => this.caseRepository
-            .AllAsNoTracking()
-            .Count();
-
-        public IEnumerable<T> GetAllByCategory<T>(string categoryId)
+        public int CountByCategory(string categoryId)
             => this.caseRepository
             .AllAsNoTracking()
             .Where(x => x.CategoryId == categoryId)
+            .Count();
+
+        public IEnumerable<T> GetAllByCategory<T>(string categoryId, int page = 1, int itemsPerPage = 12)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .Where(x => x.CategoryId == categoryId)
+            .OrderByDescending(x => x.Id)
+            .Skip((page - 1) * itemsPerPage)
+            .Take(itemsPerPage)
             .To<T>()
             .ToList();
 
@@ -63,11 +67,20 @@
             .To<T>()
             .ToList();
 
-        public IEnumerable<T> GetByManufacturerId<T>(string id)
+        public IEnumerable<T> GetByManufacturerId<T>(string id, int page, int itemsPerPage = 12)
             => this.caseRepository
             .AllAsNoTracking()
             .Where(x => x.Device.Manufactorer.Id == id)
+            .OrderByDescending(x => x.Id)
+            .Skip((page - 1) * itemsPerPage)
+            .Take(itemsPerPage)
             .To<T>()
             .ToList();
+
+        public int CountByManufacturer(string manufacturerId)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .Where(x => x.Device.Manufactorer.Id == manufacturerId)
+            .Count();
     }
 }

@@ -8,7 +8,7 @@
 
     public class CasesSeeder : ISeeder
     {
-        private const int TotalSeededCases = 100;
+        private const int TotalSeededCases = 400;
         private static readonly Random Random = new Random();
 
         public async Task SeedAsync(ApplicationDbContext dbContext, IServiceProvider serviceProvider)

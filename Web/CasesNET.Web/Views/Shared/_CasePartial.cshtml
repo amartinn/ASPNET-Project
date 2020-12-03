@@ -7,7 +7,7 @@
     <div class="card card-case">
         <a class="img-fluid" asp-area="" asp-controller="Cases" asp-action="Details" asp-route-id="@Model.Id"><img class="card-img-top m-auto" src="~/Images/Cases/@Model.ImageUrl" alt="@Model.ImageUrl"></a>
         <div class="card-body">
-            <h2 class="card-title text-uppercase">@Model.BrandName</h2>
+            <h2 class="card-title text-uppercase">@Model.ManufacturerName</h2>
             <h6 class="card-title text-uppercase">@Model.DeviceName</h6>
             <p class="card-text ">$@Model.Price</p>
             <form method="Post" asp-area="Api" asp-controller="Cart" asp-action="addItem" asp-route-id="@Model.Id" class="form shopping-cart-form">
