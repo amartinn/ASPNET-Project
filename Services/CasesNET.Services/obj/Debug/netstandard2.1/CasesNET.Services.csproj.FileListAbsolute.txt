@@ -1,8 +1,0 @@
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\bin\Debug\netstandard2.1\CasesNET.Services.deps.json
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\bin\Debug\netstandard2.1\CasesNET.Services.dll
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\bin\Debug\netstandard2.1\CasesNET.Services.pdb
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.AssemblyInfoInputs.cache
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.csproj.CoreCompileInputs.cache
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.dll
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.pdb
