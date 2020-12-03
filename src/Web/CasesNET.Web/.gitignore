@@ -262,4 +262,3 @@ __pycache__/
 
 #custom
 *.Production.json
-appsettings.Development.json
