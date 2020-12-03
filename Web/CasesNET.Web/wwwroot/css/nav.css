@@ -1,19 +1,21 @@
 #search-input {
     position: relative;
-    width: 100%;
     height: 40px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 1rem;
     text-align: left;
-    padding-right: 6px;
+}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+    .search-wrapper {
+        width: 60%
+    }
+    #search-input{
+        width:60%;
+    }
 }
 .search-wrapper {
     border: 1px solid lightblue !important;
     border-radius: 20px;
-    padding: 0 30px
+    padding: 0 30px;
 }
-
 .search-input::before {
     font-family: "Font Awesome 5 Free";
     content: "\f002";
@@ -22,10 +24,6 @@
 }
 nav li form input{
     border:none!important;
-}
-}
-.search-form {
-    order: 2!important;
 }
 
 nav .sign-in:hover  
@@ -96,4 +94,39 @@ nav {
     -ms-transform: translateY(-10px) rotate(-45deg);
     -o-transform: translateY(-10px) rotate(-45deg);
     transform: translateY(-10px) rotate(-45deg);
+}
+
+#hamburger:focus,
+#hamburger:active,
+#hamburger:hover {
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+input[type="search"]:focus,
+input[type="search"]:active,
+input[type="search"]:hover {
+    outline: none !important;
+    text-decoration: none !important;
+    border: none !important;
+}
+
+input[type=search]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type=search]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
 }

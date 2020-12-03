@@ -1,4 +1,4 @@
-﻿    namespace CasesNET.Web
+﻿        namespace CasesNET.Web
 {
     using System.Reflection;
 

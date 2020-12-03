@@ -5,7 +5,7 @@
     [Area("api")]
     [ApiController]
     [Route("api/[controller]")]
-    public abstract class ApiController : Controller
+    public abstract class ApiController : ControllerBase
     {
     }
 }

@@ -427,9 +427,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.csproj.CoreCompileInputs.cache
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.RazorAssemblyInfo.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.RazorAssemblyInfo.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.TagHelpers.input.cache
@@ -444,7 +441,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Error.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CookieConsentPartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_Layout.cshtml.g.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\_ViewStart.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.RazorTargetAssemblyInfo.cache
@@ -461,7 +457,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Http.Features.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\System.IO.Pipelines.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CasePartial.cshtml.g.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_SubmenuPartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_CategoryPartial.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\ByCategory.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Search\ByTerm.cshtml.g.cs
@@ -472,4 +467,13 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\ByManufacturer.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\Latest.cshtml.g.cs
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cases\Details.cshtml.g.cs
-C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_OurSelectionCasePartial.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Cart\Index.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\CasesNET.Web.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_LoginPartial.cshtml.g.cs

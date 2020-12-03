@@ -12,7 +12,36 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
+#nullable restore
+#line 1 "C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\Areas\Identity\Pages\_ViewImports.cshtml"
+using Microsoft.AspNetCore.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 2 "C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\Areas\Identity\Pages\_ViewImports.cshtml"
+using CasesNET.Web.Areas.Identity;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\Areas\Identity\Pages\_ViewImports.cshtml"
+using CasesNET.Web.Areas.Identity.Pages;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 5 "C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\Web\CasesNET.Web\Areas\Identity\Pages\_ViewImports.cshtml"
+using CasesNET.Data.Models;
+
+#line default
+#line hidden
+#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"27614b1dbc7ec860502963b2c30d27790f312063", @"/Areas/Identity/Pages/_ViewStart.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"172b398ac98ff4cd3ac719662afaf93fec462ebf", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages__ViewStart : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
     {
         #pragma warning disable 1998

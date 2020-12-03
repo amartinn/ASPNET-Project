@@ -1,6 +1,5 @@
 ﻿namespace CasesNET.Web.ViewModels.Categories
 {
-
     using System.Collections.Generic;
 
     using CasesNET.Web.ViewModels.Shared;

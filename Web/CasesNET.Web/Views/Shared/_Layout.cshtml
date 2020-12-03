@@ -35,11 +35,10 @@
     <title>@this.ViewData["Title"] - @SystemName</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
-    <link rel="stylesheet" href="~/css/reset.css?version=1">
-    <link href="~/css/nav.css?version=3" rel="stylesheet" />
+    <link href="~/css/nav.css" rel="stylesheet" />
     <link href="~/css/footer.css" rel="stylesheet" />
     <link href="~/css/site.css" rel="stylesheet" />
-    <link href="~/css/card.css?version=3" rel="stylesheet" />
+    <link href="~/css/card.css" rel="stylesheet" />
     <link href="~/css/home.css" rel="stylesheet" />
     <style>
     </style>
@@ -48,10 +47,10 @@
     <nav class="container-fluid shadow main-nav navbar navbar-expand-xl fixed-top bg-white" style="z-index:1">
         <a class="navbar-brand ml-lg-5 d-sm-inline-block  d-none " asp-area="" asp-controller="Home" asp-action="Index">Cases.NET</a>
 
-        <ul class="navbar-nav flex-row search-wrapper mr-xl-4">
+        <ul class="navbar-nav flex-row search-wrapper">
             <li class="nav-item">
                 <form method="post" asp-area="" asp-controller="Search" asp-action="ByTerm">
-                    <input name="term" id="term search-input" class="term input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
+                    <input name="term" id="search-input" class="term input-sm mr-sm-2" type="search" placeholder="Search " aria-label="Search ">
                 </form>
             </li>
         </ul>
@@ -120,7 +119,7 @@
                     <button type="submit" class=" border-0 hoverable btn sign-in nav-link text-center mr-xl-2" style=" font-size: 1.3rem;font-weight:bold">Logout</button>
                 </form>
             </li>
-                      
+                     
                     }
                     else
                     {
@@ -129,7 +128,7 @@
             </li>
                     }
                 <li class="nav-item ">
-                    <a class="nav-link text-center mr-xl-2 shopping-bag " asp-area="API" asp-controller="ShoppingCart" asp-action="AllItems ">Bag</a>
+                    <a class="nav-link text-center mr-xl-2 shopping-bag" asp-area="" asp-controller="Cart" asp-action="Index">Bag</a>
                 </li>
             </ul>
         </div>
@@ -194,7 +193,7 @@
         </div>
     </footer>
     <partial name="_CookieConsentPartial" />
-
+    <div id="loadingDiv"> <img src="~/loading.gif"/></div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
@@ -211,6 +210,14 @@
             GetCount().then(function (count) {
                 updateBagQuantity(count);
             })
+            $('#loadingDiv')
+                .hide()
+                .ajaxStart(function () {
+                    $(this).show();
+                })
+                .ajaxStop(function () {
+                    $(this).hide();
+                })
         })
     </script>
     @await this.RenderSectionAsync("Scripts", required: false)

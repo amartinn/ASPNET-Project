@@ -66,14 +66,17 @@
         }
 
         public IEnumerable<T> GetAllItemsByUserId<T>(string userId)
-            => this.cartRepository
+        {
+            var userCart = this.cartRepository
               .All()
               .Where(x => x.UserId == userId)
-              .FirstOrDefault()
-              .Items
+              .FirstOrDefault();
+
+            return userCart == null ? new List<T>() : userCart.Items
               .AsQueryable()
               .To<T>()
               .ToList();
+        }
 
         public int GetItemsCountByUserId(string userId)
         {
@@ -92,11 +95,10 @@
             return items ?? 0;
         }
 
-        public async Task RemoveItemByIdAndUserIdAsync(string caseId, string userId)
+        public async Task RemoveItemByIdAndUserIdAsync(string cartItemId, string userId)
         {
             var cartItem = this.cartItemRepository.All()
-                .FirstOrDefault(x => x.CaseId == caseId && x.Cart.UserId == userId);
-
+                .Where(x => x.Id == cartItemId && x.Cart.UserId == userId).FirstOrDefault();
             this.cartItemRepository.Delete(cartItem);
             await this.cartItemRepository.SaveChangesAsync();
         }

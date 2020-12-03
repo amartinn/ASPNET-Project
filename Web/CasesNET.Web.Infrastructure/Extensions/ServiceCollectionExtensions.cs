@@ -56,7 +56,7 @@
             return services;
         }
 
-        public static IServiceCollection AddThirdPartyAuthentication(this IServiceCollection services,IConfiguration configuration)
+        public static IServiceCollection AddThirdPartyAuthentication(this IServiceCollection services, IConfiguration configuration)
         {
             services.AddAuthentication()
                 .AddFacebook(opt =>

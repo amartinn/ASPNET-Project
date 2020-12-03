@@ -1,0 +1,64 @@
+﻿@using CasesNET.Web.ViewModels.Cart
+@using System.Linq
+@model CartItemListingViewModel
+
+@{
+    this.ViewData["title"] = "Shopping Cart";
+}
+
+@if (Model.Items.Any())
+{
+    <h1 class="text-center text-uppercase">Shopping Cart Items </h1>
+    <table class="table" id="cartItemsTable">
+        <thead class="thead-light">
+            <tr>
+                <th scope="col">Image</th>
+                <th scope="col">Name</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Price</th>
+                <th scope="col">Remove Item</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Items)
+            {
+                <tr>
+                    <th scope="row"><img class="thumbnail-img" width="50" height="50" src="~/Images/Cases/@item.CaseImageUrl" /></th>
+                    <td>@item.CaseManufacturerName @item.CaseDeviceName</td>
+                    <td>
+                        <input readonly class="form-control quantity-input text-center" type="number" name="quantity" value="@item.Quantity" />
+                    </td>
+                    <td>$@item.CasePrice</td>
+                    <td>
+                        <form method="post" class="form-inline removeItem-form" asp-area="Api" asp-controller="Cart" asp-action="RemoveItem" asp-route-id="@item.Id">
+                            <button name="Id" class="btn Id hoverable" type="submit" aria-label="Remove-Item">X</button>
+                        </form>
+                    
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <h1>Total: <span class="font-italic text-primary"> @Model.TotalPrice$</span></h1>
+    <h3>Proceed to <a class="hoverable" href="#">Checkout ></a></h3>
+}
+else
+{
+    <h1 class="text-center text-uppercase">Your Cart Is Empty...</h1>
+
+    <div class="container" align="center">
+        <a class="btn btn-outline-warning" asp-area="" asp-controller="Categories" asp-action="All">Continue shopping </a>
+    </div>
+}
+
+<style>
+    .quantity-input {
+        max-width: 20%
+    }
+</style>
+
+<script>
+    window.addEventListener('DOMContentLoaded', function () {
+        new Zooming().listen('.thumbnail-img')
+    })
+</script>

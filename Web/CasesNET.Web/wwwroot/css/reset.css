@@ -5,13 +5,7 @@
     font-weight: bold;
 }
 
-*:focus,
-*:active,
-*:hover {
-    outline: none!important;
-    text-decoration: none!important;
-    border: none!important;
-}
+
 
 input[type=search]::-ms-clear {
     display: none;
