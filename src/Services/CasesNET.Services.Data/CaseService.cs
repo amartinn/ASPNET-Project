@@ -38,11 +38,6 @@
             .To<T>()
             .FirstOrDefault();
 
-        public bool Exists(string id)
-            => this.caseRepository
-            .AllAsNoTracking()
-            .Any(x => x.Id == id);
-
         public int GetItemsCountByCategoryId(string categoryId)
             => this.caseRepository
             .AllAsNoTracking()
@@ -77,10 +72,10 @@
             .To<T>()
             .ToList();
 
-        public int CountByManufacturer(string manufacturerId)
+        public int GetCountByManufacturer(string manufacturerId)
             => this.caseRepository
             .AllAsNoTracking()
-            .Where(x => x.Device.Manufactorer.Id == manufacturerId)
+            .Where(x => x.Device.ManufacturerId == manufacturerId)
             .Count();
     }
 }

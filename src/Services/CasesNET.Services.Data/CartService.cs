@@ -8,6 +8,7 @@
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
     using Microsoft.AspNetCore.Identity;
+    using Microsoft.EntityFrameworkCore;
 
     public class CartService : ICartService
     {
@@ -69,39 +70,32 @@
         }
 
         public IEnumerable<T> GetAllItemsByUserId<T>(string userId)
-        {
-            var userCart = this.cartRepository
+            => this.cartRepository
               .All()
               .Where(x => x.UserId == userId)
-              .FirstOrDefault();
-
-            return userCart == null ? new List<T>() : userCart.Items
+              .FirstOrDefault()
+              .Items
               .AsQueryable()
               .To<T>()
               .ToList();
-        }
 
         public int GetItemsCountByUserId(string userId)
-        {
-            var items = this.cartRepository
+            => this.cartRepository
            .All()
            .Where(x => x.UserId == userId)
             .ToList()
             .FirstOrDefault()
-            ?.Items
+            .Items
             .Select(x => new
             {
                 x.Quantity,
             })
             .Sum(x => x.Quantity);
 
-            return items ?? 0;
-        }
-
         public async Task RemoveItemByIdAndUserIdAsync(string cartItemId, string userId)
         {
             var cartItem = this.cartItemRepository.All()
-                .Where(x => x.Id == cartItemId && x.Cart.UserId == userId).FirstOrDefault();
+                .FirstOrDefault(x => x.Id == cartItemId && x.Cart.UserId == userId);
             this.cartItemRepository.Delete(cartItem);
             await this.cartItemRepository.SaveChangesAsync();
         }

@@ -7,13 +7,11 @@
     {
         T GetById<T>(string id);
 
-        bool Exists(string id);
-
         Task CreateAsync();
 
         int GetItemsCountByCategoryId(string categoryId);
 
-        int CountByManufacturer(string manufacturerId);
+        int GetCountByManufacturer(string manufacturerId);
 
         IEnumerable<T> GetBestSellers<T>(int count = 4);
 

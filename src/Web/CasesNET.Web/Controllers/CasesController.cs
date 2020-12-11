@@ -47,7 +47,7 @@
                 this.ModelState.AddModelError(string.Empty, ex.Message);
                 var model = new CasesByCategoryViewModel
                 {
-                    CasesCount = this.caseService.CountByManufacturer(id),
+                    CasesCount = this.caseService.GetCountByManufacturer(id),
                     CategoryName = categoryName,
                 };
                 return this.View(model);
@@ -75,7 +75,7 @@
                 {
                     PageNumber = page,
                     ItemsPerPage = ItemsPerPage,
-                    CasesCount = this.caseService.CountByManufacturer(id),
+                    CasesCount = this.caseService.GetCountByManufacturer(id),
                     ManufacturerName = manufacturerName,
                     ManufacturerId = casesByManufacturer.First().ManufacturerId,
                     Cases = casesByManufacturer,
@@ -88,7 +88,7 @@
                 this.ModelState.AddModelError(string.Empty, ex.Message);
                 var model = new CasesByManufacturerViewModel
                 {
-                    CasesCount = this.caseService.CountByManufacturer(id),
+                    CasesCount = this.caseService.GetCountByManufacturer(id),
                     ManufacturerName = manufacturerName,
                 };
                 return this.View(model);

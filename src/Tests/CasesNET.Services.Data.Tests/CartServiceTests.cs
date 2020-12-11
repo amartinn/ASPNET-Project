@@ -3,13 +3,11 @@
     using System.Collections.Generic;
     using System.Linq;
     using System.Reflection;
-    using System.Threading;
     using System.Threading.Tasks;
 
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
-    using Microsoft.AspNetCore.Identity;
     using Moq;
     using Xunit;
 
@@ -18,6 +16,7 @@
         private readonly string userId = "userId";
         private readonly string caseId = "caseId";
         private readonly string cartId = "cartId";
+        private readonly string cartItemId = "cartItemid";
 
         [Fact]
         public async Task AddItemByIdAndUserIdAsyncMethodShouldAddItemToUser()
@@ -54,8 +53,9 @@
 
             // Assert
             var totalItems = user.Cart.Items.Sum(x => x.Quantity);
-            Assert.Equal(2, cartService.GetItemsCountByUserId(this.userId));
-            Assert.Equal(2, totalItems);
+            var expected = 2;
+            Assert.Equal(expected, cartService.GetItemsCountByUserId(this.userId));
+            Assert.Equal(expected, totalItems);
         }
 
         [Fact]
@@ -99,7 +99,8 @@
             var items = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId);
 
             // Assert
-            Assert.Equal(3, items.Count());
+            var expected = 3;
+            Assert.Equal(expected, items.Count());
         }
 
         [Fact]
@@ -124,8 +125,10 @@
             var count = service.GetItemsCountByUserId(this.userId);
 
             // Assert
-            Assert.Equal(0, count);
+            var expected = 0;
+            Assert.Equal(expected, count);
         }
+
 
         [Fact]
         public async Task RemoveItemByIdAndUserIdAsyncMethodShouldRemoveTheItem()
@@ -135,7 +138,7 @@
             {
                         new CartItem
                         {
-                            CaseId = this.caseId,
+                            Id = this.cartItemId,
                             Cart = new Cart
                             {
                                  Id = this.cartId,
@@ -157,11 +160,12 @@
                 });
             var cartService = new CartService(cartItemRepo.Object, null, null,null);
 
-            await cartService.RemoveItemByIdAndUserIdAsync(this.caseId, this.userId);
+            await cartService.RemoveItemByIdAndUserIdAsync(this.cartItemId, this.userId);
 
             // Assert
-            Assert.Equal(2, fakeCart.Count());
-            Assert.DoesNotContain(fakeCart, x => x.CaseId == this.caseId);
+            var expected = 2;
+            Assert.Equal(expected, fakeCart.Count());
+            Assert.DoesNotContain(fakeCart, x => x.Id == this.cartItemId);
         }
     }
 }

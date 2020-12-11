@@ -32,15 +32,16 @@
         [Route(nameof(AddItem))]
         public async Task<IActionResult> AddItem(string id)
         {
-            var caseExists = this.caseService.Exists(id);
-            var userId = this.userManager.GetUserId(this.User);
-            if (caseExists)
+            try
             {
+                var userId = this.userManager.GetUserId(this.User);
                 await this.cartService.AddItemByIdAndUserIdAsync(id, userId);
                 return this.Ok();
             }
-
-            return this.NotFound();
+            catch (Exception)
+            {
+                return this.NotFound();
+            }
         }
 
         [HttpGet]
@@ -48,7 +49,14 @@
         public int Count()
         {
             var userId = this.userManager.GetUserId(this.User);
-            return this.cartService.GetItemsCountByUserId(userId);
+            try
+            {
+                return this.cartService.GetItemsCountByUserId(userId);
+            }
+            catch (Exception)
+            {
+                return 0;
+            }
         }
 
         [HttpPost]

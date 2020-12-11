@@ -1,5 +1,7 @@
 ﻿namespace CasesNET.Web.Controllers
 {
+    using System;
+    using System.Collections.Generic;
     using System.Linq;
 
     using CasesNET.Data.Models;
@@ -23,14 +25,26 @@
 
         public IActionResult Index()
         {
-            var userId = this.userManager.GetUserId(this.User);
-            var cartItems = this.cartService.GetAllItemsByUserId<CartItemViewModel>(userId);
-            var viewModel = new CartItemListingViewModel
+            try
             {
-                Items = cartItems,
-                TotalPrice = cartItems.Sum(x => x.CasePrice * x.Quantity),
-            };
-            return this.View(viewModel);
+                var userId = this.userManager.GetUserId(this.User);
+                var cartItems = this.cartService.GetAllItemsByUserId<CartItemViewModel>(userId);
+                var viewModel = new CartItemListingViewModel
+                {
+                    Items = cartItems,
+                    TotalPrice = cartItems.Sum(x => x.CasePrice * x.Quantity),
+                };
+                return this.View(viewModel);
+            }
+            catch (Exception ex)
+            {
+                this.ModelState.AddModelError(string.Empty, ex.Message);
+                var viewModel = new CartItemListingViewModel
+                {
+                    Items = new List<CartItemViewModel>(),
+                };
+                return this.View(viewModel);
+            }
         }
     }
 }
