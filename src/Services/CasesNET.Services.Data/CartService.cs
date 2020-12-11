@@ -7,62 +7,65 @@
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
+    using Microsoft.AspNetCore.Identity;
 
     public class CartService : ICartService
     {
         private readonly IRepository<CartItem> cartItemRepository;
         private readonly IRepository<Cart> cartRepository;
         private readonly IDeletableEntityRepository<Case> caseRepository;
+        private readonly UserManager<ApplicationUser> userManager;
 
         public CartService(
             IDeletableEntityRepository<CartItem> cartItemRepository,
             IDeletableEntityRepository<Cart> cartRepository,
-            IDeletableEntityRepository<Case> caseRepository)
+            IDeletableEntityRepository<Case> caseRepository, 
+            UserManager<ApplicationUser> userManager)
         {
             this.cartItemRepository = cartItemRepository;
             this.cartRepository = cartRepository;
             this.caseRepository = caseRepository;
+            this.userManager = userManager;
         }
 
         public async Task AddItemByIdAndUserIdAsync(string caseId, string userId)
         {
-            var userCart = this.cartRepository
-                .All()
-                .FirstOrDefault(x => x.UserId == userId);
+            var user = await this.userManager.FindByIdAsync(userId);
             var @case = this.caseRepository.All()
                 .FirstOrDefault(x => x.Id == caseId);
-            if (userCart == null)
+            if (user.Cart == null)
             {
-                userCart = new Cart { UserId = userId };
-                userCart.Items.Add(new CartItem
+                user.Cart = new Cart { UserId = userId };
+                user.Cart.Items.Add(new CartItem
                 {
                     Quantity = 1,
                     CaseId = caseId,
-                    CartId = userCart.Id,
+                    CartId = user.Cart.Id,
                 });
-                await this.cartRepository.AddAsync(userCart);
+                await this.cartRepository.AddAsync(user.Cart);
             }
             else
             {
-                var caseInUserCart = userCart.Items.FirstOrDefault(x => x.CaseId == caseId);
+                var caseInUserCart = user.Cart.Items.FirstOrDefault(x => x.CaseId == caseId);
                 if (caseInUserCart != null)
                 {
                     caseInUserCart.Quantity++;
                 }
                 else
                 {
-                    userCart.Items.Add(new CartItem
+                    user.Cart.Items.Add(new CartItem
                     {
                         Quantity = 1,
-                        CartId = userCart.Id,
+                        CartId = user.Id,
                         CaseId = caseId,
                     });
                 }
 
-                this.cartRepository.Update(userCart);
+                this.cartRepository.Update(user.Cart);
             }
 
             await this.cartRepository.SaveChangesAsync();
+            await this.userManager.UpdateAsync(user);
         }
 
         public IEnumerable<T> GetAllItemsByUserId<T>(string userId)
