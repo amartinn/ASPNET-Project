@@ -6,6 +6,7 @@
     using Microsoft.AspNetCore.Mvc;
 
     using static CasesNET.Common.GlobalConstants.Shared;
+
     public class SearchController : Controller
     {
         private readonly ISearchService searchService;

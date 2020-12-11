@@ -11,7 +11,7 @@
 
         Task CreateAsync();
 
-        int CountByCategory(string categoryId);
+        int GetItemsCountByCategoryId(string categoryId);
 
         int CountByManufacturer(string manufacturerId);
 

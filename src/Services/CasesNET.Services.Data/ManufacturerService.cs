@@ -21,5 +21,11 @@
             .AllAsNoTracking()
             .To<T>()
             .ToList();
+
+        public string GetNameById(string id)
+            => this.manufacturerRepository
+             .AllAsNoTracking()
+             .FirstOrDefault(x => x.Id == id)
+             ?.Name;
     }
 }

@@ -1,5 +1,4 @@
-﻿@using CasesNET.Common
-@using Microsoft.AspNetCore.Identity
+﻿@using Microsoft.AspNetCore.Identity
 @using CasesNET.Data.Common.Repositories
 @using CasesNET.Data.Models
 @using static CasesNET.Common.GlobalConstants.Domain
@@ -26,6 +25,8 @@
 
         }),
     }).ToList();
+
+
 }
 <!DOCTYPE html>
 <html>
@@ -44,6 +45,7 @@
     </style>
 </head>
 <body>
+
     <nav class="container-fluid shadow main-nav navbar navbar-expand-xl fixed-top bg-white" style="z-index:1">
         <a class="navbar-brand ml-lg-5 d-sm-inline-block  d-none " asp-area="" asp-controller="Home" asp-action="Index">Cases.NET</a>
 
@@ -100,33 +102,33 @@
             </ul>
 
             <ul class="list-unstyled mt-xl-3 d-block d-xl-flex">
-                
-                    @if (this.User.IsInRole(AdministratorRoleName))
-                    {
+
+                @if (this.User.IsInRole(AdministratorRoleName))
+                {
                     <li class="nav-item ">
                         <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Administration" asp-controller="Dashboard" asp-action="Index">Admin Panel</a>
                     </li>
 
-                    }
-                    else if (this.SignInManager.IsSignedIn(this.User))
-                    {
-            <li class="nav-item">
-                <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Manage/Index">My Account</a>
-            </li>
+                }
+                else if (this.SignInManager.IsSignedIn(this.User))
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Manage/Index">My Account</a>
+                    </li>
 
-            <li class="nav-item">
-                <form class="form-inline justify-content-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
-                    <button type="submit" class=" border-0 hoverable btn sign-in nav-link text-center mr-xl-2" style=" font-size: 1.3rem;font-weight:bold">Logout</button>
-                </form>
-            </li>
-                     
-                    }
-                    else
-                    {
-            <li class="nav-item">
-                <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Login">Sign In</a>
-            </li>
-                    }
+                    <li class="nav-item">
+                        <form class="form-inline justify-content-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Logout" asp-route-returnUrl="@(this.Url.Action("Index", "Home", new { area = string.Empty }))">
+                            <button type="submit" class=" border-0 hoverable btn sign-in nav-link text-center mr-xl-2" style=" font-size: 1.3rem;font-weight:bold">Logout</button>
+                        </form>
+                    </li>
+
+                }
+                else
+                {
+                    <li class="nav-item">
+                        <a class="nav-link text-center mr-xl-2 sign-in " asp-area="Identity" asp-page="/Account/Login">Sign In</a>
+                    </li>
+                }
                 <li class="nav-item ">
                     <a class="nav-link text-center mr-xl-2 shopping-bag" asp-area="" asp-controller="Cart" asp-action="Index">Bag</a>
                 </li>
@@ -135,12 +137,10 @@
 
     </nav>
     <div class="container">
-        <main role="main" class="pb-3" style="margin-top:100px">
+        <main role="main" class="pb-3" style="margin-top:200px">
             @this.RenderBody()
         </main>
     </div>
-
-
     <footer class="page-footer font-small blue pt-4 container mt-4">
         <div class="footer-widget container">
             <div class="row justify-content-between">
@@ -193,7 +193,7 @@
         </div>
     </footer>
     <partial name="_CookieConsentPartial" />
-    <div id="loadingDiv"> <img src="~/loading.gif"/></div>
+    <div id="loadingDiv"> <img src="~/loading.gif" /></div>
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>

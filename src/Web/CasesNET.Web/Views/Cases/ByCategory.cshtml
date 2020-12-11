@@ -1,4 +1,4 @@
-﻿@using  CasesNET.Web.ViewModels.Cases
+﻿@using CasesNET.Web.ViewModels.Cases
 @using System.Linq
 @using System.Collections.Generic
 @model CasesByCategoryViewModel
@@ -6,18 +6,27 @@
     this.ViewData["title"] = Model.CategoryName.ToUpper();
 }
 
-<div class="cases-selection-wrapper container">
-    <h1 class="text-center m-5 text-uppercase">@Model.CategoryName</h1>
-    <div class="row ">
-        @foreach (var phoneCase in Model.Cases)
-        {
+@if (Model.CasesCount > 0)
+{
+    <div class="cases-selection-wrapper container">
+        <h1 class="text-center m-5 text-uppercase">@Model.CategoryName</h1>
+        <div class="row ">
+            @foreach (var phoneCase in Model.Cases)
+            {
 
-            @await Html.PartialAsync("../Shared/_CasePartial.cshtml", phoneCase)
+                @await Html.PartialAsync("../Shared/_CasePartial.cshtml", phoneCase)
 
-        }
+            }
+        </div>
     </div>
-</div>
-<partial name="_PagingPartial" model="@Model" />
+
+    <partial name="_PagingPartial" model="@Model" />
+}
+else
+{
+    <h1 class="text-uppercase">Currently There are no Cases by Category: <span class="text-danger"> @Model.CategoryName</span></h1>
+    <a class="hoverable" asp-area="" asp-controller="Cases" asp-action="Latest">You can continue shopping by clicking here!</a>
+}
 <style>
     .category-selection-wrapper {
         margin-top: 200px;

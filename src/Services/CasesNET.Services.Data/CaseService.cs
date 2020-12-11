@@ -43,7 +43,7 @@
             .AllAsNoTracking()
             .Any(x => x.Id == id);
 
-        public int CountByCategory(string categoryId)
+        public int GetItemsCountByCategoryId(string categoryId)
             => this.caseRepository
             .AllAsNoTracking()
             .Where(x => x.CategoryId == categoryId)

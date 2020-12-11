@@ -15,23 +15,23 @@
                 <th scope="col">Image</th>
                 <th scope="col">Name</th>
                 <th scope="col">Quantity</th>
-                <th scope="col">Price</th>
+                <th scope="col">Price per 1</th>
                 <th scope="col">Remove Item</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model.Items)
             {
-                <tr>
+                <tr class="cart-item-body">
                     <th scope="row"><img class="thumbnail-img" width="50" height="50" src="~/Images/Cases/@item.CaseImageUrl" /></th>
                     <td>@item.CaseManufacturerName @item.CaseDeviceName</td>
-                    <td>
-                        <input readonly class="form-control quantity-input text-center" type="number" name="quantity" value="@item.Quantity" />
+                    <td class="cart-item-quantity">
+                        @item.Quantity
                     </td>
-                    <td>$@item.CasePrice</td>
+                    <td class="cart-item-price"><span>$</span>@item.CasePrice</td>
                     <td>
                         <form method="post" class="form-inline removeItem-form" asp-area="Api" asp-controller="Cart" asp-action="RemoveItem" asp-route-id="@item.Id">
-                            <button name="Id" class="btn Id hoverable" type="submit" aria-label="Remove-Item">X</button>
+                            <button name="Id" class="btn hoverable remove-cart-item-button" type="submit" aria-label="Remove-Item">X</button>
                         </form>
                     
                     </td>
@@ -39,8 +39,8 @@
             }
         </tbody>
     </table>
-    <h1>Total: <span class="font-italic text-primary"> @Model.TotalPrice$</span></h1>
-    <h3>Proceed to <a class="hoverable" href="#">Checkout ></a></h3>
+    <h3 >Total: <span id="totalPrice" class="text-danger">$@Model.TotalPrice</span></h3>
+    <h3>Proceed to <a class="hoverable" asp-area="" asp-controller="Checkout" asp-action="Index" >Checkout ></a></h3>
 }
 else
 {
@@ -50,13 +50,6 @@ else
         <a class="btn btn-outline-warning" asp-area="" asp-controller="Categories" asp-action="All">Continue shopping </a>
     </div>
 }
-
-<style>
-    .quantity-input {
-        max-width: 20%
-    }
-</style>
-
 <script>
     window.addEventListener('DOMContentLoaded', function () {
         new Zooming().listen('.thumbnail-img')

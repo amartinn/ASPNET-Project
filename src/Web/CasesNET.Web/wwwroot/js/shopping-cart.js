@@ -56,6 +56,22 @@ $('.removeItem-form').submit(async function (e) {
             "RequestVerificationToken": antiForgerytoken
         }
     })
-    const currentRow = $(e.target).parents().get(1);
-    currentRow.remove();
+
+    //get total price without the dollar sign
+    let currentTotalPrice = $('#totalPrice').text().substring(1);
+
+    const currentItem = $(e.target).parents().get(1);
+    const currentItemQuantity = +$(currentItem).children(".cart-item-quantity").text().trim();
+    const currentItemPrice = +$(currentItem).children('.cart-item-price').text().trim().substring(1);
+    const currentItemTotalPrice = currentItemQuantity * currentItemPrice;   
+    currentTotalPrice -= currentItemTotalPrice;
+    $('#totalPrice').text("$" + currentTotalPrice.toFixed(2))
+    currentItem.remove();
+    //updates bad when items are removed
+    const count = await GetCount();
+    updateBagQuantity(count);
+    if (count === 0) {
+        location.reload();
+    }
 });
+

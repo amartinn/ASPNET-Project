@@ -6,8 +6,8 @@
     {
         public IEnumerable<CartItemViewModel> Items { get; set; }
 
-        public decimal TotalPrice { get; set; }
-
         public string CartId { get; set; }
+
+        public decimal TotalPrice { get; set; }
     }
 }

@@ -31,5 +31,11 @@
                 .Take(count)
                 .To<T>()
                 .ToList();
+
+        public string GetNameById(string id)
+            => this.categoryRepository
+            .AllAsNoTracking()
+            .FirstOrDefault(x => x.Id == id)
+            .Name;
     }
 }

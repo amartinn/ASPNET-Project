@@ -5,5 +5,7 @@
     public interface IManufacturerService
     {
         IEnumerable<T> GetAll<T>();
+
+        string GetNameById(string id);
     }
 }

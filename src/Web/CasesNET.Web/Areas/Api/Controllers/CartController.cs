@@ -56,8 +56,15 @@
         public async Task<IActionResult> RemoveItem(string id)
         {
             var userId = this.userManager.GetUserId(this.User);
-            await this.cartService.RemoveItemByIdAndUserIdAsync(id, userId);
-            return this.Ok();
+            try
+            {
+                await this.cartService.RemoveItemByIdAndUserIdAsync(id, userId);
+                return this.Ok();
+            }
+            catch (Exception ex)
+            {
+                return this.BadRequest(ex.Message);
+            }
         }
     }
 }

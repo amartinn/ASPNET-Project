@@ -28,7 +28,7 @@
                    opt.MapFrom(x => $"{x.Image.Url}.{x.Image.Extension}"))
                   .ForMember(m => m.ManufacturerName, opt =>
                   opt.MapFrom(x => x.Device.Manufactorer.Name))
-                 .ForMember(m => m.ManufacturerId, opt => 
+                 .ForMember(m => m.ManufacturerId, opt =>
                  opt.MapFrom(x => x.Device.Manufactorer.Id))
                   .ForMember(m => m.CategoryName, opt =>
                   opt.MapFrom(x => x.Category.Name));

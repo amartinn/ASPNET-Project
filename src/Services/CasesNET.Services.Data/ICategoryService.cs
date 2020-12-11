@@ -8,6 +8,6 @@
 
        IEnumerable<T> GetAll<T>();
 
-        // Task<string> CreateAsync(CategoryInputModel model);
+        string GetNameById(string id);
     }
 }
