@@ -19,7 +19,7 @@
         public virtual ICollection<Device> Devices { get; set; }
 
         [ForeignKey(nameof(Image))]
-        public string ImageUrl { get; set; }
+        public string ImageId { get; set; }
 
         public virtual Image Image { get; set; }
     }

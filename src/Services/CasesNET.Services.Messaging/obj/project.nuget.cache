@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ff4D5ygu/Fw0bzljCfZEvPJ2M9BOHCL/tCdtiyV3s/NG99V1+C1doiGTXqkUXU5AIPx9eHR48bFxVal556UQAw==",
+  "dgSpecHash": "st7F6hKIOFF2Pc7eBfwEXjfkYRd9rA7lNpaD9RVkwIDgbF9ekRRSwOSpgbpz3rNdumOKeR5QHhTj7qC29bs/mw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.csharp\\4.0.1\\microsoft.csharp.4.0.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.netcore.platforms\\1.0.1\\microsoft.netcore.platforms.1.0.1.nupkg.sha512",

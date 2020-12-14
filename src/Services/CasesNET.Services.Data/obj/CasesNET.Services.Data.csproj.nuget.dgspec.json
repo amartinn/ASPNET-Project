@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {}
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
         "projectName": "CasesNET.Attributes",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -66,14 +66,14 @@
         }
       }
     },
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj",
         "projectName": "CasesNET.Data.Common",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -130,14 +130,14 @@
         }
       }
     },
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj",
         "projectName": "CasesNET.Data.Models",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -153,11 +153,11 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
               }
             }
           }
@@ -201,14 +201,14 @@
         }
       }
     },
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
         "projectName": "CasesNET.Services.Data",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -224,17 +224,17 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj"
               }
             }
           }
@@ -278,14 +278,14 @@
         }
       }
     },
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
         "projectName": "CasesNET.Services.Mapping",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -342,14 +342,14 @@
         }
       }
     },
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
         "projectName": "CasesNET.Web.ViewModels",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -365,14 +365,14 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
               },
-              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
-                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
               }
             }
           }

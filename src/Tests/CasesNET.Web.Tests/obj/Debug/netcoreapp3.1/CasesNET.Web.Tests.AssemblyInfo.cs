@@ -12,11 +12,11 @@ using System;
 using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data", "CasesNET.Data.csproj", "0")]
-[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web", "CasesNET.Web.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data", "CasesNET.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Web", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web", "CasesNET.Web.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nul" +
-    "l", "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrast" +
-    "ructure", "CasesNET.Web.Infrastructure.csproj", "0")]
+    "l", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.Infrastructur" +
+    "e", "CasesNET.Web.Infrastructure.csproj", "0")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("CasesNET.Web.Tests")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]

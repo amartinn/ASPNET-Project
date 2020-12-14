@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7B0k2VnxR0PCP28kR//lX3jeMqvfHNLtguIHPAgV0sWEOUxgRcYLoCEDhEDn//w/vetQz6J2B4T+sr3w8UMcrw==",
+  "dgSpecHash": "em1TDsrqKbyt2wyzXEmyBAeS5URty4Fa215DamsNDsgZy1LDo9+5HTvKGbO4COc7yEb/Zqn0jArkpjx7XkN6gQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",

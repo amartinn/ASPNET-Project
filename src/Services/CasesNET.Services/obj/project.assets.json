@@ -65,11 +65,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj",
+      "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj",
       "projectName": "CasesNET.Services",
-      "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj",
+      "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj",
       "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\obj\\",
+      "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",

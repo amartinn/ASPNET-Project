@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {}
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {}
   },
   "projects": {
-    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
         "projectName": "CasesNET.Services.Messaging",
-        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj",
         "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\obj\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",

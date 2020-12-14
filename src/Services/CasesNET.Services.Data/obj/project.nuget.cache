@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jRkVH2OgS4erQlnoSxkHxhVZbsEZL2Tis+ttnb2ZU/K4oJfwFuwh1om40I9wdA3IQFf+wQ9ouqymcFlaRDz9pA==",
+  "dgSpecHash": "AitXv1MFbfuH/V3QYQFnvCOfO/XZWwDqMsYR1YUcYJ6IyqDE/qzb4yh441n37Lts1VXI71lGRQulMyFVowZxRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

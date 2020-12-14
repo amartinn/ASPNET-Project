@@ -379,7 +379,7 @@ namespace CasesNET.Data.Migrations
                     b.Property<DateTime?>("DeletedOn")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("ImageUrl")
+                    b.Property<string>("ImageId")
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<bool>("IsDeleted")
@@ -393,9 +393,7 @@ namespace CasesNET.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ImageUrl")
-                        .IsUnique()
-                        .HasFilter("[ImageUrl] IS NOT NULL");
+                    b.HasIndex("ImageId");
 
                     b.HasIndex("IsDeleted");
 
@@ -613,8 +611,8 @@ namespace CasesNET.Data.Migrations
             modelBuilder.Entity("CasesNET.Data.Models.Manufacturer", b =>
                 {
                     b.HasOne("CasesNET.Data.Models.Image", "Image")
-                        .WithOne()
-                        .HasForeignKey("CasesNET.Data.Models.Manufacturer", "ImageUrl");
+                        .WithMany()
+                        .HasForeignKey("ImageId");
                 });
 
             modelBuilder.Entity("CasesNET.Data.Models.Order", b =>

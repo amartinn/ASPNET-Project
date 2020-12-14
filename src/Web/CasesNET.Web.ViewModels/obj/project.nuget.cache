@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bvTks/v1InGpoBUmrh1IKDa74BNrV72mW+jeISWqdROUvc7e1qDW1O2JT2SOCg0Dha/U8vbys4DIkPWlDu/7+Q==",
+  "dgSpecHash": "FCWbbnMQ242A6IqgKkIOpNrViztO5GmsZGzrzem8n5CAlBeAup8mrlvOaz7iVZF08G903N44SASMwbJ8P8ZtRg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",

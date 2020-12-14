@@ -7,3 +7,12 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\CasesNET.Attributes\obj
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\bin\Debug\netstandard2.1\CasesNET.Attributes.deps.json
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\bin\Debug\netstandard2.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\bin\Debug\netstandard2.1\CasesNET.Attributes.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.csprojAssemblyReference.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.AssemblyInfoInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.AssemblyInfo.cs
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.pdb

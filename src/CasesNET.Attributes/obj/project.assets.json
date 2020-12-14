@@ -156,11 +156,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+      "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
       "projectName": "CasesNET.Attributes",
-      "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+      "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
       "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\obj\\",
+      "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",

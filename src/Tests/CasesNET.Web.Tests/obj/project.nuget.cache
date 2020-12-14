@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "30SeAyXyqu9R9A/B9Ima3veUBloOCZxcHyIDzG2l6xLd2Y0zywBIRjVtjulGRwNHAMjtQ7+xd7QGSMgR8TzwtA==",
+  "dgSpecHash": "XCddxZaXvuN2D9BfT/MZCO6WJxW9zQQgGnKGWJp/lTEIK95ctH9pKRwBMVV01iGF9rGgirjGtlfzBbR+dmBFog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Tests\\CasesNET.Web.Tests\\CasesNET.Web.Tests.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Tests\\CasesNET.Web.Tests\\CasesNET.Web.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\buildbundlerminifier\\3.2.449\\buildbundlerminifier.3.2.449.nupkg.sha512",

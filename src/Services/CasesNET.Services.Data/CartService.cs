@@ -83,13 +83,13 @@
            .All()
            .Where(x => x.UserId == userId)
             .ToList()
-            .FirstOrDefault()
+            .FirstOrDefault()?
             .Items
             .Select(x => new
             {
                 x.Quantity,
             })
-            .Sum(x => x.Quantity);
+            .Sum(x => x.Quantity) ?? 0;
 
         public async Task RemoveItemByIdAndUserIdAsync(string cartItemId, string userId)
         {

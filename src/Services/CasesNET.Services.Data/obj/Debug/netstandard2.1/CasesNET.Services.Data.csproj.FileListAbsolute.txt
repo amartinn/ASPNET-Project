@@ -36,3 +36,23 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Servi
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Services.Data.deps.json
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Services.Data.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Services.Data.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Data.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Data.Models.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Data.Common.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Data.Models.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Services.Mapping.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csprojAssemblyReference.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.AssemblyInfoInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.AssemblyInfo.cs
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CopyComplete
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.pdb

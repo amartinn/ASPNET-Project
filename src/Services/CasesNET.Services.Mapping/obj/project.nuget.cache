@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "27q9wmNLHuZxjtEyX8SzOrR2SZSqbspR/A0/rOY/LWWsQuM9lMs0ucJ9D1ePp+icvpQ8/w6QlDrqJL46iEmJqw==",
+  "dgSpecHash": "LZKdAp04iRUZ7eIZpwAb0xGCNQrJg8tXFBahqueSVOXgP1xJIFEbXN+ISPuVG++5GQP4rst1MgLbwUGEd6xyFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
