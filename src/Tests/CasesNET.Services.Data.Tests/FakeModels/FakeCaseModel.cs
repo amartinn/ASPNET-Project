@@ -1,9 +1,9 @@
 ﻿namespace CasesNET.Services.Data.Tests.FakeModels
 {
+    using System;
+
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
-
-    using System;
 
     public class FakeCaseModel : IMapFrom<Case>
     {

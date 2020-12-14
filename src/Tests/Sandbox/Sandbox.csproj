@@ -21,18 +21,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommandLineParser" Version="2.8.0" />
-    <PackageReference Include="Microsoft.Extensions.Configuration" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.9" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="3.1.9" />
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.9" />
-    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
-    </PackageReference>
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\CasesNET.Common\CasesNET.Common.csproj" />
     <ProjectReference Include="..\..\Data\CasesNET.Data.Common\CasesNET.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\CasesNET.Data.Models\CasesNET.Data.Models.csproj" />
@@ -41,6 +29,7 @@
     <ProjectReference Include="..\..\Services\CasesNET.Services.Mapping\CasesNET.Services.Mapping.csproj" />
     <ProjectReference Include="..\..\Services\CasesNET.Services.Messaging\CasesNET.Services.Messaging.csproj" />
     <ProjectReference Include="..\..\Services\CasesNET.Services\CasesNET.Services.csproj" />
+    <ProjectReference Include="..\..\Web\CasesNET.Web\CasesNET.Web.csproj" />
   </ItemGroup>
 
 </Project>

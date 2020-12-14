@@ -1324,7 +1324,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
@@ -1343,7 +1342,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",
@@ -1371,7 +1369,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

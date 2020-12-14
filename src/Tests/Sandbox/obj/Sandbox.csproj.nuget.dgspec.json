@@ -4,6 +4,68 @@
     "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Tests\\Sandbox\\Sandbox.csproj": {}
   },
   "projects": {
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+        "projectName": "CasesNET.Attributes",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+        "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
+            },
+            "System.ComponentModel.Annotations": {
+              "target": "Package",
+              "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +88,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -38,7 +99,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
@@ -66,7 +126,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -92,7 +152,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -104,7 +163,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -132,7 +190,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -158,7 +216,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
@@ -177,7 +234,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -205,7 +261,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -231,7 +287,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj"
@@ -253,7 +308,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
@@ -305,7 +359,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -331,7 +385,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
@@ -356,7 +409,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Microsoft.AspNetCore.Http.Features": {
               "target": "Package",
@@ -384,7 +436,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -410,7 +462,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -422,7 +473,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "AutoMapper": {
               "target": "Package",
@@ -450,7 +500,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -476,7 +526,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -488,7 +537,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "Sendgrid": {
               "target": "Package",
@@ -516,7 +564,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -542,7 +590,6 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {}
           }
         },
@@ -554,7 +601,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -578,7 +624,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -604,7 +650,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj"
@@ -629,6 +674,9 @@
               },
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj"
               }
             }
           }
@@ -641,31 +689,91 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj",
+        "projectName": "CasesNET.Web.Infrastructure",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
           "dependencies": {
-            "CommandLineParser": {
+            "Microsoft.AspNetCore.Authentication.Facebook": {
               "target": "Package",
-              "version": "[2.8.0, )"
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[3.1.9, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
               "version": "[3.1.9, )"
             },
-            "Microsoft.Extensions.Configuration": {
+            "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
-            "Microsoft.Extensions.Configuration.EnvironmentVariables": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
               "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.Extensions.Configuration.Json": {
-              "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.Extensions.Logging.Console": {
-              "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -692,7 +800,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -718,8 +826,10 @@
         },
         "frameworks": {
           "netstandard2.1": {
-            "targetAlias": "netstandard2.1",
             "projectReferences": {
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj"
+              },
               "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
                 "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
               },
@@ -737,7 +847,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "dependencies": {
             "StyleCop.Analyzers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers",
@@ -761,7 +870,132 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj",
+        "projectName": "CasesNET.Web",
+        "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj",
+        "packagesPath": "C:\\Users\\marto\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\marto\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Common\\CasesNET.Common.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Models\\CasesNET.Data.Models.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Data\\CasesNET.Services.Data.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Mapping\\CasesNET.Services.Mapping.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj"
+              },
+              "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj": {
+                "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BuildBundlerMinifier": {
+              "target": "Package",
+              "version": "[3.2.449, )"
+            },
+            "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.AspNetCore.Identity.UI": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.Web.LibraryManager.Build": {
+              "target": "Package",
+              "version": "[2.1.113, )"
+            },
+            "StyleCop.Analyzers": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.2.0-beta.205, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

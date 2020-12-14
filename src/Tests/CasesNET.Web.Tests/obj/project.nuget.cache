@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gsSxr4D9xHuCbsThsPHrr7sh/8fuiWezd6vAZ0JWg7jM6vcD/uS/IfShW0eSMazgaJUEECzzX6FwHkCiIfmqig==",
+  "dgSpecHash": "30SeAyXyqu9R9A/B9Ima3veUBloOCZxcHyIDzG2l6xLd2Y0zywBIRjVtjulGRwNHAMjtQ7+xd7QGSMgR8TzwtA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Tests\\CasesNET.Web.Tests\\CasesNET.Web.Tests.csproj",
   "expectedPackageFiles": [
@@ -96,7 +96,7 @@
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

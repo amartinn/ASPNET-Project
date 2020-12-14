@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "HROn9OsvqIPHD3rADEpZX2RDIfALrzZPXWfmgzsM09kpSF1twqq2m9hE56q7IksL56eDMPzmtcQFcAwddrtqiA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}

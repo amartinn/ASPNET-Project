@@ -307,6 +307,15 @@
           "lib/netstandard2.0/Microsoft.Extensions.Primitives.dll": {}
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {}
+        }
+      },
       "StyleCop.Analyzers/1.2.0-beta.205": {
         "type": "package",
         "dependencies": {
@@ -425,6 +434,20 @@
           "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
         }
       },
+      "CasesNET.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/CasesNET.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CasesNET.Attributes.dll": {}
+        }
+      },
       "CasesNET.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -470,6 +493,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "CasesNET.Attributes": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0"
         },
@@ -964,6 +988,37 @@
         "version.txt"
       ]
     },
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "type": "package",
+      "path": "newtonsoft.json/12.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/net20/Newtonsoft.Json.dll",
+        "lib/net20/Newtonsoft.Json.xml",
+        "lib/net35/Newtonsoft.Json.dll",
+        "lib/net35/Newtonsoft.Json.xml",
+        "lib/net40/Newtonsoft.Json.dll",
+        "lib/net40/Newtonsoft.Json.xml",
+        "lib/net45/Newtonsoft.Json.dll",
+        "lib/net45/Newtonsoft.Json.xml",
+        "lib/netstandard1.0/Newtonsoft.Json.dll",
+        "lib/netstandard1.0/Newtonsoft.Json.xml",
+        "lib/netstandard1.3/Newtonsoft.Json.dll",
+        "lib/netstandard1.3/Newtonsoft.Json.xml",
+        "lib/netstandard2.0/Newtonsoft.Json.dll",
+        "lib/netstandard2.0/Newtonsoft.Json.xml",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
+        "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
+      ]
+    },
     "StyleCop.Analyzers/1.2.0-beta.205": {
       "sha512": "ORvUXKlJRqAWstZiSH9LgEuM5hBye8mUDDSpMoQhiKLFUtFEGesfr88Qa8jC0KKVaBTUZzdo4fNZM4oHeV/JsQ==",
       "type": "package",
@@ -1390,6 +1445,11 @@
         "version.txt"
       ]
     },
+    "CasesNET.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../CasesNET.Attributes/CasesNET.Attributes.csproj",
+      "msbuildProject": "../../CasesNET.Attributes/CasesNET.Attributes.csproj"
+    },
     "CasesNET.Data.Common/1.0.0": {
       "type": "project",
       "path": "../../Data/CasesNET.Data.Common/CasesNET.Data.Common.csproj",
@@ -1446,7 +1506,6 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "targetAlias": "netstandard2.1",
           "projectReferences": {
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Data\\CasesNET.Data.Common\\CasesNET.Data.Common.csproj"
@@ -1471,7 +1530,6 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "targetAlias": "netstandard2.1",
         "dependencies": {
           "Microsoft.AspNetCore.Http.Features": {
             "target": "Package",
@@ -1499,7 +1557,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

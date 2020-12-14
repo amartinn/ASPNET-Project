@@ -12,5 +12,7 @@
         IEnumerable<T> GetAllItemsByUserId<T>(string userId);
 
         int GetItemsCountByUserId(string userId);
+
+        Task RemoveCartByIdAndUserIdAsync(string cartId, string userId);
     }
 }

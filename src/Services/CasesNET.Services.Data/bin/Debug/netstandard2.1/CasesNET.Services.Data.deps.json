@@ -293,6 +293,14 @@
           }
         }
       },
+      "Newtonsoft.Json/12.0.3": {
+        "runtime": {
+          "lib/netstandard2.0/Newtonsoft.Json.dll": {
+            "assemblyVersion": "12.0.0.0",
+            "fileVersion": "12.0.3.23909"
+          }
+        }
+      },
       "StyleCop.Analyzers/1.2.0-beta.205": {
         "dependencies": {
           "StyleCop.Analyzers.Unstable": "1.2.0.205"
@@ -391,6 +399,15 @@
           }
         }
       },
+      "CasesNET.Attributes/1.0.0": {
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "CasesNET.Attributes.dll": {}
+        }
+      },
       "CasesNET.Data.Common/1.0.0": {
         "dependencies": {
           "System.ComponentModel.Annotations": "4.7.0"
@@ -419,6 +436,7 @@
       },
       "CasesNET.Web.ViewModels/1.0.0": {
         "dependencies": {
+          "CasesNET.Attributes": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0"
         },
@@ -609,6 +627,13 @@
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
     },
+    "Newtonsoft.Json/12.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
+      "path": "newtonsoft.json/12.0.3",
+      "hashPath": "newtonsoft.json.12.0.3.nupkg.sha512"
+    },
     "StyleCop.Analyzers/1.2.0-beta.205": {
       "type": "package",
       "serviceable": true,
@@ -692,6 +717,11 @@
       "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
       "path": "system.threading.tasks.extensions/4.5.4",
       "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
+    "CasesNET.Attributes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "CasesNET.Data.Common/1.0.0": {
       "type": "project",

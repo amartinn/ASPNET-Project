@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "b+diAuvTB4cQ3vYNk1oIQOg7nIPU2tbSyC6KsfadB7200/cuSzjBQCTwHkQDXECeu8McHh/G6i7xDGemwFh5Cw==",
+  "dgSpecHash": "qbn990RHiVwUO1ovHGqP4QxeNb6SbP1ufD1Ma4UkMLv1WCexk4An+tVgadV8RcB3/qZsNv2tymeJXzsG1pYm7g==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.Infrastructure\\CasesNET.Web.Infrastructure.csproj",
   "expectedPackageFiles": [
@@ -64,7 +64,7 @@
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.2\\newtonsoft.json.12.0.2.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json.bson\\1.0.2\\newtonsoft.json.bson.1.0.2.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

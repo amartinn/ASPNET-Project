@@ -68,11 +68,20 @@ namespace CasesNET.Data.Migrations
                     b.Property<int>("AccessFailedCount")
                         .HasColumnType("int");
 
+                    b.Property<string>("Adress")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("CartId")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("City")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
@@ -88,8 +97,14 @@ namespace CasesNET.Data.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<string>("FirstName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
@@ -162,6 +177,9 @@ namespace CasesNET.Data.Migrations
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
 
                     b.Property<string>("UserId")
                         .HasColumnType("nvarchar(max)");
@@ -384,6 +402,39 @@ namespace CasesNET.Data.Migrations
                     b.ToTable("Manufacturers");
                 });
 
+            modelBuilder.Entity("CasesNET.Data.Models.Order", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("CartId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreatedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("OrderStatus")
+                        .HasColumnType("int");
+
+                    b.Property<string>("OrderedById")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CartId")
+                        .IsUnique()
+                        .HasFilter("[CartId] IS NOT NULL");
+
+                    b.HasIndex("OrderedById");
+
+                    b.ToTable("Orders");
+                });
+
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
@@ -564,6 +615,18 @@ namespace CasesNET.Data.Migrations
                     b.HasOne("CasesNET.Data.Models.Image", "Image")
                         .WithOne()
                         .HasForeignKey("CasesNET.Data.Models.Manufacturer", "ImageUrl");
+                });
+
+            modelBuilder.Entity("CasesNET.Data.Models.Order", b =>
+                {
+                    b.HasOne("CasesNET.Data.Models.Cart", "Cart")
+                        .WithOne("Order")
+                        .HasForeignKey("CasesNET.Data.Models.Order", "CartId")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.HasOne("CasesNET.Data.Models.ApplicationUser", "OrderedBy")
+                        .WithMany("Orders")
+                        .HasForeignKey("OrderedById");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

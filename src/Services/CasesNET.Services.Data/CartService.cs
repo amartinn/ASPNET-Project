@@ -8,7 +8,6 @@
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
     using Microsoft.AspNetCore.Identity;
-    using Microsoft.EntityFrameworkCore;
 
     public class CartService : ICartService
     {
@@ -20,7 +19,7 @@
         public CartService(
             IDeletableEntityRepository<CartItem> cartItemRepository,
             IDeletableEntityRepository<Cart> cartRepository,
-            IDeletableEntityRepository<Case> caseRepository, 
+            IDeletableEntityRepository<Case> caseRepository,
             UserManager<ApplicationUser> userManager)
         {
             this.cartItemRepository = cartItemRepository;
@@ -98,6 +97,14 @@
                 .FirstOrDefault(x => x.Id == cartItemId && x.Cart.UserId == userId);
             this.cartItemRepository.Delete(cartItem);
             await this.cartItemRepository.SaveChangesAsync();
+        }
+
+        public async Task RemoveCartByIdAndUserIdAsync(string cartId, string userId)
+        {
+            var cart = this.cartRepository.All()
+                .FirstOrDefault(x => x.Id == cartId && x.UserId == userId);
+            this.cartRepository.Delete(cart);
+            await this.cartRepository.SaveChangesAsync();
         }
     }
 }

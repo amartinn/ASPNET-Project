@@ -38,12 +38,12 @@
             .AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
             .AddScoped<IDbQueryRunner, DbQueryRunner>()
             .AddTransient<IEmailSender, NullMessageSender>()
-            .AddTransient<ISettingsService, SettingsService>()
             .AddTransient<ICaseService, CaseService>()
             .AddTransient<ICategoryService, CategoryService>()
             .AddTransient<ICartService, CartService>()
             .AddTransient<ISearchService, SearchService>()
-            .AddTransient<IManufacturerService, ManufacturerService>();
+            .AddTransient<IManufacturerService, ManufacturerService>()
+            .AddTransient<IOrderService, OrderService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {

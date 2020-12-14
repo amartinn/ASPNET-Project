@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include=".\stylecop.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AdditionalFiles>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\CasesNET.Data.Common\CasesNET.Data.Common.csproj" />
+    <ProjectReference Include="..\CasesNET.Web.Infrastructure\CasesNET.Web.Infrastructure.csproj" />
+  </ItemGroup>
+ <ItemGroup>
+  <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.205" PrivateAssets="all">
+    <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+  </PackageReference>
+ </ItemGroup>
+
+</Project>

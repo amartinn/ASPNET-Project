@@ -29,7 +29,7 @@
             // Arrange
             var fakeCases = new List<Case>
             {
-                new Case { Id = this.caseId},
+                new Case { Id = this.caseId },
                 new Case { Id = this.caseId + "1" },
                 new Case(),
             };

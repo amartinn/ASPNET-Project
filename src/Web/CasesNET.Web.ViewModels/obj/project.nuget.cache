@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "q2U5tE5pAjphdLcw0rXTh6Gec8lH9+F+rQiAULXSO4mhV+gGA+0ocPtYiwOapufms2xS1P+hSu8inrTei+3hew==",
+  "dgSpecHash": "bvTks/v1InGpoBUmrh1IKDa74BNrV72mW+jeISWqdROUvc7e1qDW1O2JT2SOCg0Dha/U8vbys4DIkPWlDu/7+Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web.ViewModels\\CasesNET.Web.ViewModels.csproj",
   "expectedPackageFiles": [
@@ -28,6 +28,7 @@
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.9\\microsoft.extensions.logging.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.extensions.options\\3.1.9\\microsoft.extensions.options.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.9\\microsoft.extensions.primitives.3.1.9.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",

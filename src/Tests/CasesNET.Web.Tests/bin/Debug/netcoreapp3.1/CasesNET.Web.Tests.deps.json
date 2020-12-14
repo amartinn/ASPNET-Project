@@ -3314,6 +3314,7 @@
           "CasesNET.Services.Mapping": "1.0.0",
           "CasesNET.Services.Messaging": "1.0.0",
           "CasesNET.Web.Infrastructure": "1.0.0",
+          "CasesNET.Web.InputModels": "1.0.0",
           "CasesNET.Web.ViewModels": "1.0.0",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.9",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.10",
@@ -3345,6 +3346,18 @@
         },
         "compile": {
           "CasesNET.Web.Infrastructure.dll": {}
+        }
+      },
+      "CasesNET.Web.InputModels/1.0.0": {
+        "dependencies": {
+          "CasesNET.Common": "1.0.0",
+          "CasesNET.Web.Infrastructure": "1.0.0"
+        },
+        "runtime": {
+          "CasesNET.Web.InputModels.dll": {}
+        },
+        "compile": {
+          "CasesNET.Web.InputModels.dll": {}
         }
       },
       "CasesNET.Web.ViewModels/1.0.0": {
@@ -6430,6 +6443,11 @@
       "sha512": ""
     },
     "CasesNET.Web.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CasesNET.Web.InputModels/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

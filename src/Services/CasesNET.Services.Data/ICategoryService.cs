@@ -8,6 +8,6 @@
 
        IEnumerable<T> GetAll<T>();
 
-        string GetNameById(string id);
+       string GetNameById(string id);
     }
 }

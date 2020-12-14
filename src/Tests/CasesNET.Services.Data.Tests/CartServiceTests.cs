@@ -94,7 +94,7 @@
             AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
 
             // Act
-            var cartService = new CartService(null, cartRepo.Object, null,null);
+            var cartService = new CartService(null, cartRepo.Object, null, null);
 
             var items = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId);
 
@@ -120,7 +120,7 @@
                 .Returns(fakeCart.AsQueryable());
 
             // Act
-            var service = new CartService(null, cartRepo.Object, null,null);
+            var service = new CartService(null, cartRepo.Object, null, null);
 
             var count = service.GetItemsCountByUserId(this.userId);
 
@@ -128,7 +128,6 @@
             var expected = 0;
             Assert.Equal(expected, count);
         }
-
 
         [Fact]
         public async Task RemoveItemByIdAndUserIdAsyncMethodShouldRemoveTheItem()
@@ -158,8 +157,7 @@
                 {
                     fakeCart.Remove(item);
                 });
-            var cartService = new CartService(cartItemRepo.Object, null, null,null);
-
+            var cartService = new CartService(cartItemRepo.Object, null, null, null);
             await cartService.RemoveItemByIdAndUserIdAsync(this.cartItemId, this.userId);
 
             // Assert

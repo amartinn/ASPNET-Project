@@ -1,12 +1,13 @@
 ﻿namespace CasesNET.Services.Data.Tests
 {
+    using System;
+    using System.Threading.Tasks;
+
     using CasesNET.Data.Models;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.Extensions.Logging;
     using Microsoft.Extensions.Options;
     using Moq;
-    using System;
-    using System.Threading.Tasks;
 
     public class FakeUserManager : UserManager<ApplicationUser>
     {

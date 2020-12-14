@@ -7,7 +7,7 @@ $(document).ready(function () {
         const antiForgerytoken = $(this.elements['__RequestVerificationToken']).val();
         await $.ajax({
             url,
-            method:"POST",
+            method: "POST",
             headers: {
                 "Accept": "application/json",
                 "Content-Type": "application/json",
@@ -15,13 +15,13 @@ $(document).ready(function () {
             },
             error: function (error) {
                 if (error.status === 401) {
-                    window.location.href ="https://localhost:44319/identity/Account/login"
+                    window.location.href = "https://localhost:44319/identity/Account/login"
                 }
-            }
+            },
         })
-        
         const count = await GetCount();
-            updateBagQuantity(count);
+        updateBagQuantity(count);
+       
     })
 
     

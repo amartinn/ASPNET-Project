@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p8/SbQ9TMNvrepmbqOBPIQozg6rbZSGrVKUF3L8bnO6MTqyECDp7/Rci+a6n+vCDaRt8nDYPVCeSpcmq0DtjZA==",
+  "dgSpecHash": "x1HaxAWSFnmHSCJg5uiCzjK8xNaCG+xpyJrq1halGIELE1bBcyZw8LqATTq5Z7hR4DsDPuV28BR0iY9MgZLnQA==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Tests\\CasesNET.Services.Data.Tests\\CasesNET.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
@@ -56,7 +56,7 @@
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\moq\\4.14.7\\moq.4.14.7.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
-    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

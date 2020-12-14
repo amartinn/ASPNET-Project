@@ -34,3 +34,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Servi
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Attributes.pdb

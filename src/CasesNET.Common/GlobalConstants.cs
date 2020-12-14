@@ -9,7 +9,7 @@
             public const string AdministratorRoleName = "Administrator";
         }
 
-        public class Shared
+        public class Paging
         {
             public const int ItemsPerPage = 12;
         }

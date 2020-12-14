@@ -32,7 +32,7 @@
                 .HasOne(c => c.Cart)
                 .WithOne(u => u.User)
                 .HasForeignKey<ApplicationUser>(u => u.CartId)
-                .OnDelete(DeleteBehavior.Restrict); 
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

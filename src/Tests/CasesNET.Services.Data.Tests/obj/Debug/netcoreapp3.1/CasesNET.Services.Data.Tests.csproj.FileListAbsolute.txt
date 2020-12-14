@@ -336,3 +336,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services.Data.Tests\bin\Debug\netcoreapp3.1\CasesNET.Web.ViewModels.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services.Data.Tests\obj\Debug\netcoreapp3.1\CasesNET.Services.Data.Tests.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services.Data.Tests\obj\Debug\netcoreapp3.1\CasesNET.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services.Data.Tests\bin\Debug\netcoreapp3.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Services.Data.Tests\bin\Debug\netcoreapp3.1\CasesNET.Attributes.pdb

@@ -17,6 +17,7 @@ namespace CasesNET.Data.Models
             this.Roles = new HashSet<IdentityUserRole<string>>();
             this.Claims = new HashSet<IdentityUserClaim<string>>();
             this.Logins = new HashSet<IdentityUserLogin<string>>();
+            this.Orders = new HashSet<Order>();
         }
 
         // Audit info
@@ -39,5 +40,17 @@ namespace CasesNET.Data.Models
         public string CartId { get; set; }
 
         public virtual Cart Cart { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string Adress { get; set; }
+
+        public string Country { get; set; }
+
+        public string City { get; set; }
+
+        public virtual ICollection<Order> Orders { get; set; }
     }
 }

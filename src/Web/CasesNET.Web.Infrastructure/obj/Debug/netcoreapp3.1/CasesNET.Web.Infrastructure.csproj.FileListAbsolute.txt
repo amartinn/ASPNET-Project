@@ -568,3 +568,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infras
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infrastructure\obj\Debug\netcoreapp3.1\CasesNET.Web.Infrastructure.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infrastructure\obj\Debug\netcoreapp3.1\CasesNET.Web.Infrastructure.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infrastructure\obj\Debug\netcoreapp3.1\CasesNET.Web.Infrastructure.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infrastructure\bin\Debug\netcoreapp3.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.Infrastructure\bin\Debug\netcoreapp3.1\CasesNET.Attributes.pdb

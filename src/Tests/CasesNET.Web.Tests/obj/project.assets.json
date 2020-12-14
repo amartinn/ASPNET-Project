@@ -1644,7 +1644,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -3599,6 +3599,20 @@
           "build/netcoreapp2.1/xunit.runner.visualstudio.props": {}
         }
       },
+      "CasesNET.Attributes/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Newtonsoft.Json": "12.0.3",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/CasesNET.Attributes.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CasesNET.Attributes.dll": {}
+        }
+      },
       "CasesNET.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -3770,6 +3784,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "CasesNET.Attributes": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0"
         },
@@ -6215,10 +6230,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -6241,8 +6256,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "Newtonsoft.Json.Bson/1.0.2": {
@@ -11241,6 +11257,11 @@
         "xunit.runner.visualstudio.nuspec"
       ]
     },
+    "CasesNET.Attributes/1.0.0": {
+      "type": "project",
+      "path": "../../CasesNET.Attributes/CasesNET.Attributes.csproj",
+      "msbuildProject": "../../CasesNET.Attributes/CasesNET.Attributes.csproj"
+    },
     "CasesNET.Common/1.0.0": {
       "type": "project",
       "path": "../../CasesNET.Common/CasesNET.Common.csproj",
@@ -11334,7 +11355,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASP.NET CORE Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj"
@@ -11350,7 +11370,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.Testing": {
             "target": "Package",
@@ -11403,7 +11422,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

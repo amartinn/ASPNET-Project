@@ -5,7 +5,7 @@
     using CasesNET.Web.ViewModels.Shared;
     using Microsoft.AspNetCore.Mvc;
 
-    using static CasesNET.Common.GlobalConstants.Shared;
+    using static CasesNET.Common.GlobalConstants.Paging;
 
     public class SearchController : Controller
     {

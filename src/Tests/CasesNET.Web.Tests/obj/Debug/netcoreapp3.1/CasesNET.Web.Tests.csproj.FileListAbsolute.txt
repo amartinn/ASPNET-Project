@@ -1068,4 +1068,7 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Test
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\CasesNET.Web.Tests.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\CasesNET.Web.InputModels.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\CasesNET.Web.InputModels.pdb
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\obj\Debug\netcoreapp3.1\scopedcss\bundle\CasesNET.Web.Tests.styles.css
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Tests\CasesNET.Web.Tests\bin\Debug\netcoreapp3.1\stylecop.json

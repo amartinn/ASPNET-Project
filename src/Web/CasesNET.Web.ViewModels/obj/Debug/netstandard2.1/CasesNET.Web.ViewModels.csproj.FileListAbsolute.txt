@@ -30,3 +30,5 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewMo
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
 C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Attributes.dll
+C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Attributes.pdb
