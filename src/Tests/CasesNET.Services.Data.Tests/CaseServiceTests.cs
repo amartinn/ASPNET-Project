@@ -34,7 +34,6 @@
                 new Case(),
             };
             var mockCaseRepository = new Mock<IRepository<Case>>();
-
             mockCaseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
             var service = new CaseService(mockCaseRepository.Object);
@@ -147,11 +146,11 @@
             // Arrange
             var totalDays = 10;
             var fakeCases = new List<Case>();
-            for (int i = 0; i < totalDays; i++)
+            for (int i = 1; i <= totalDays; i++)
             {
                 fakeCases.Add(new Case
                 {
-                    CreatedOn = DateTime.UtcNow.AddDays(i),
+                    CreatedOn = FakeDateTime.Now(i),
                 });
             }
 
@@ -174,4 +173,6 @@
             }
         }
     }
+
+
 }

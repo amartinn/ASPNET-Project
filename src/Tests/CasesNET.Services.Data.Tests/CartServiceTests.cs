@@ -18,6 +18,10 @@
         private readonly string cartId = "cartId";
         private readonly string cartItemId = "cartItemid";
 
+        public CartServiceTests()
+        {
+            AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
+        }
         [Fact]
         public async Task AddItemByIdAndUserIdAsyncMethodShouldAddItemToUser()
         {
@@ -90,9 +94,6 @@
 
             cartRepo.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
-
-            AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
-
             // Act
             var cartService = new CartService(null, cartRepo.Object, null, null);
 

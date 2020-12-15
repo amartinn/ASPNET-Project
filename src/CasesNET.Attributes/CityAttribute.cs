@@ -17,7 +17,7 @@
         protected override ValidationResult IsValid(object value, ValidationContext validationContext)
         {
             var assemblyPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
-            var path = Path.GetFullPath(Path.Combine(assemblyPath, @"..\..\..\..\CasesNET.Web\wwwroot\country-list.json"));
+            var path = Path.GetFullPath(Path.Combine(assemblyPath, @"..\..\..\..\Web\CasesNET.Web\wwwroot\country-list.json"));
             var json = File.ReadAllText(path);
             var countryData = this.GetCountryData(json);
             var exists = countryData.Any(x => x.Cities.Any(y => y == (string)value));
