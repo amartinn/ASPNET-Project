@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using CasesNET.Services.Data;
-using CasesNET.Web.ViewModels.Orders;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-
-namespace CasesNET.Web.Areas.Identity.Controllers
+﻿namespace CasesNET.Web.Areas.Identity.Controllers
 {
+    using CasesNET.Services.Data;
+    using CasesNET.Web.ViewModels.Orders;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Mvc;
+
     [Authorize]
     [Area("Identity")]
     public class OrdersController : Controller

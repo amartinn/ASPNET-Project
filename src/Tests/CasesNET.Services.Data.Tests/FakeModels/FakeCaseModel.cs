@@ -1,6 +1,7 @@
 ﻿namespace CasesNET.Services.Data.Tests.FakeModels
 {
     using System;
+
     using AutoMapper;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;

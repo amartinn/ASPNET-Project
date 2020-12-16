@@ -22,6 +22,7 @@
         {
             AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
         }
+
         [Fact]
         public async Task AddItemByIdAndUserIdAsyncMethodShouldAddItemToUser()
         {
@@ -94,6 +95,7 @@
 
             cartRepo.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
+
             // Act
             var cartService = new CartService(null, cartRepo.Object, null, null);
 

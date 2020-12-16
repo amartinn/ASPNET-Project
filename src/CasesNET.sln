@@ -41,7 +41,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasesNET.Web.ViewModels", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CasesNET.Attributes", "CasesNET.Attributes\CasesNET.Attributes.csproj", "{B73D5811-04CD-4CC2-9AA3-F2137766EE31}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasesNET.Attributes.Tests", "CasesNET.Attributes.Tests\CasesNET.Attributes.Tests.csproj", "{738CC582-8F79-4E0A-8E17-7AB6F4846F91}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CasesNET.Attributes.Tests", "Tests\CasesNET.Attributes.Tests\CasesNET.Attributes.Tests.csproj", "{738CC582-8F79-4E0A-8E17-7AB6F4846F91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

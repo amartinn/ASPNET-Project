@@ -2,9 +2,7 @@
 {
     using AutoMapper;
     using CasesNET.Data.Models;
-    using CasesNET.Data.Models.Enum;
     using CasesNET.Services.Mapping;
-    using System;
 
     public class OrderViewModel : IMapFrom<Order>, IHaveCustomMappings
     {

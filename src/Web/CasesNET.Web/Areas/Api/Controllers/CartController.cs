@@ -35,14 +35,6 @@
             var userId = this.userManager.GetUserId(this.User);
             await this.cartService.AddItemByIdAndUserIdAsync(id, userId);
             return this.Ok();
-            //try
-            //{
-            //   
-            //}
-            //catch (Exception)
-            //{
-            //    return this.NotFound();
-            //}
         }
 
         [HttpGet]
