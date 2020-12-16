@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "dgSpecHash": "fHxOkXeHrQvOHEe5Y1SOSJRbMVSg9qD8har57rJDr12bRBuPEVT3HzWrdeBLm0U81WE4QlVnPvuujDmP1JIUHg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Common\\CasesNET.Common.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\5.0.0\\system.runtime.compilerservices.unsafe.5.0.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}
