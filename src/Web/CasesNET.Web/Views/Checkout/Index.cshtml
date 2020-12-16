@@ -1,0 +1,108 @@
+﻿@using CasesNET.Web.ViewModels.Checkout;
+@{
+
+    this.ViewData["Title"] = "Checkout";
+}
+@model CheckoutInputModel;
+<div class="container">
+
+    <div class="row">
+        <div class="col-md-4 order-md-2 mb-4">
+            <h4 class="d-flex justify-content-between align-items-center mb-3">
+                <span class="text-muted">Your cart</span>
+                <span class="badge badge-secondary badge-pill">@Model.CartItemsCount</span>
+            </h4>
+            <ul class="list-group mb-3">
+                @foreach (var item in Model.CartItems)
+                {
+
+                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                        <img class="thumbnail-img" width="50" height="50" src="~/Images/Cases/@item.CaseImageUrl" />
+                        <div>
+                            <h6 class="my-0">@item.CaseManufacturerName @item.CaseDeviceName</h6>
+                            <small class="text-muted">Quantity: @item.Quantity</small>
+                        </div>
+                        <span class="text-muted">$@item.CasePrice</span>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="col-md-8 order-md-1">
+            <h4 class="mb-3">Billing Information</h4>
+            <form method="post">
+                <input asp-for="UserId" type="hidden" class="form-control">
+                <input asp-for="CartId" type="hidden" class="form-control">
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="FirstName">First name</label>
+                        <input asp-for="FirstName" type="text" class="form-control" placeholder="" value="" required="">
+                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="LastName">Last name</label>
+                        <input asp-for="LastName" type="text" class="form-control" placeholder="" value="" required="">
+                        <span asp-validation-for="LastName" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Email">Email</label>
+                    <input asp-for="Email" type="text" class="form-control" placeholder="johndoe@gmail.com" value="" required="">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="PhoneNumber">Phone Number</label>
+                    <input asp-for="PhoneNumber" type="text" class="form-control" placeholder="" value="" required="">
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Adress">Adress</label>
+                    <input asp-for="Adress" type="text" class="form-control" placeholder="" value="" required="">
+                    <span asp-validation-for="Adress" class="text-danger"></span>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label for="country">Country</label>
+                        <select name="country" class="custom-select d-block w-100" id="country" required="">
+                            <option value="">Choose...</option>
+                        </select>
+                        <span asp-validation-for="Country" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="city">City</label>
+                        <select name="city" class="custom-select d-block w-100" id="city" required="">
+                            <option value="">Choose...</option>
+                        </select>
+                        <span asp-validation-for="City" class="text-danger"></span>
+                    </div>
+                </div>
+
+
+                <button class="btn btn-primary btn-lg btn-block" type="submit">Continue to checkout</button>
+            </form>
+        </div>
+    </div>
+</div>
+<script>
+    window.addEventListener('DOMContentLoaded', async function () {
+        const data = await fetch('/country-list.json')
+            .then(d => d.json());
+        const countrySelectElement = $("#country");
+        for (let key in data) {
+            const optionElement = $('<option/>');
+            optionElement.attr({ 'value': key }).text(key)
+            countrySelectElement.append(optionElement);
+        }
+        $('#country').change(function (e) {
+            $('#city').children(1).remove().end();
+            const country = $(e.target).val();
+            const cities = data[country];
+            for (let city of cities) {
+                const optionElement = $('<option/>');
+                optionElement.attr({ 'value': city }).text(city)
+                $('#city').append(optionElement);
+            }
+        });
+    })
+</script>

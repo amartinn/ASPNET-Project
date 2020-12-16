@@ -1,0 +1,34 @@
+﻿@using CasesNET.Web.ViewModels.Manufacturers
+@model ManufacturerListingViewModel
+
+@{
+    this.ViewData["title"] = "Manufacturers";
+}
+<div class="container manufacturers-wrapper">
+    <h1 class="text-center text-uppercase">Manufactures</h1>
+    <div class="row ">
+        @foreach (var manufacturer in Model.Manufacturers)
+        {
+
+            <div class="col-6 col-md-6 col-lg-6 col-xl-4 text-center">
+                <div class="card manufacturer-card m-3">
+                    <a asp-area="" asp-controller="Cases" asp-action="ByManufacturer" asp-route-id="@manufacturer.Id">
+                        <img class="card-img-top" src="~/Images/Manufacturers/@manufacturer.ImageUrl" alt="@manufacturer.ImageUrl">
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+</div>
+<style>
+    .manufacturer-card{
+        border: 4px solid white!important;
+    }
+    .manufacturer-card:hover{
+        border-color:lightblue!important;
+    }
+    .manufacturers-wrapper{
+        margin-top:150px!important
+    }
+</style>

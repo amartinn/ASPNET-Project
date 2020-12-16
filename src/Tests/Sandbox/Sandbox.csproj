@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="appsettings.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\CasesNET.Common\CasesNET.Common.csproj" />
+    <ProjectReference Include="..\..\Data\CasesNET.Data.Common\CasesNET.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\CasesNET.Data.Models\CasesNET.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\CasesNET.Data\CasesNET.Data.csproj" />
+    <ProjectReference Include="..\..\Services\CasesNET.Services.Data\CasesNET.Services.Data.csproj" />
+    <ProjectReference Include="..\..\Services\CasesNET.Services.Mapping\CasesNET.Services.Mapping.csproj" />
+    <ProjectReference Include="..\..\Services\CasesNET.Services.Messaging\CasesNET.Services.Messaging.csproj" />
+    <ProjectReference Include="..\..\Services\CasesNET.Services\CasesNET.Services.csproj" />
+    <ProjectReference Include="..\..\Web\CasesNET.Web\CasesNET.Web.csproj" />
+  </ItemGroup>
+
+</Project>

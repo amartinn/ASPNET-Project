@@ -1,0 +1,39 @@
+﻿/* TYPOGRAPHY */
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Raleway:wght@200&display=swap');
+
+* {
+    font-family:  cursive;
+    color: black !important;
+}
+/*Shared Classes*/
+*{
+    transition:0.3s!important;
+}
+.hoverable:hover {
+    color: lightblue !important;
+    background: none;
+}
+.hoverable{
+    color:black!important;
+}
+a{
+    text-decoration:none!important;
+}
+/*AJAX Loading*/
+#loadingDiv {
+    position: fixed;
+    padding: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;  
+}
+#loadingDiv img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    opacity: 0.6;
+} 

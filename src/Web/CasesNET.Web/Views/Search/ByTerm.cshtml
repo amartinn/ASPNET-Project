@@ -1,0 +1,39 @@
+﻿@using CasesNET.Web.ViewModels.Search
+@using System.Linq
+@model SearchViewModel
+
+<div class="category-selection-wrapper container">
+    @if (Model.Cases.Any())
+    {
+        <h1 class="text-center m-5 text-uppercase">Search Results For "@Model.SearchTerm"</h1>
+        <div class="row ">
+            @foreach (var phoneCase in Model.Cases)
+            {
+
+                @await Html.PartialAsync("../Shared/_CasePartial.cshtml", phoneCase)
+
+            }
+        </div>
+        <partial name="_PagingPartial" model="@Model" />
+    }
+    else
+    {
+        <h1 class="text-center m-5 text-uppercase text-danger">Nothing Found For "@Model.SearchTerm"</h1>
+        <h1 class="text-center m-5 text-uppercase">Here are some hidden gems for you</h1>
+        <div class="bestsellers-wrapper mt-4 container">
+            <div class="row">
+                @foreach (var phoneCase in Model.BestSellerCases)
+                {
+                    @await Html.PartialAsync("../Shared/_CasePartial.cshtml", phoneCase)
+                }
+            </div>
+        </div>
+
+    }
+
+</div>
+<style>
+    .category-selection-wrapper {
+        margin-top: 200px;
+    }
+</style>
