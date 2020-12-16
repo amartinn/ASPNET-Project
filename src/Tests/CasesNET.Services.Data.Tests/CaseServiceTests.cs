@@ -27,6 +27,7 @@
         public void GetByIdMethodShouldReturnTheCorrectCase()
         {
             // Arrange
+            var expected = this.caseId;
             var fakeCases = new List<Case>
             {
                 new Case { Id = this.caseId },
@@ -42,7 +43,6 @@
             var @case = service.GetById<FakeCaseModel>(this.caseId);
 
             // Assert
-            var expected = this.caseId;
             Assert.Equal(expected, @case.Id);
         }
 
@@ -50,6 +50,7 @@
         public void GetItemsCountByCategoryIdMethodShouldReturnTheCorrectCount()
         {
             // Arrange
+            const int expected = 2;
             var fakeCases = new List<Case>
             {
                 new Case { Id = this.caseId, CategoryId = this.categoryId },
@@ -66,7 +67,6 @@
             var count = service.GetItemsCountByCategoryId(this.categoryId);
 
             // Assert
-            var expected = 2;
             Assert.Equal(expected, count);
         }
 
@@ -74,6 +74,7 @@
         public void GetCountByManufacturerMethodShouldReturnTheCorrectCount()
         {
             // Arrange
+            const int expected = 2;
             var fakeCases = new List<Case>
             {
                 new Case
@@ -111,7 +112,6 @@
             var count = service.GetCountByManufacturer(this.manufacturerId);
 
             // Assert
-            var expected = 2;
             Assert.Equal(expected, count);
         }
 
@@ -119,6 +119,7 @@
         public void GetAllByCategoryMethodShouldReturnTheCorrectCases()
         {
             // Arrange
+            const int expected = 2;
             var fakeCases = new List<Case>
             {
                 new Case { Id = this.caseId, CategoryId = this.categoryId },
@@ -135,7 +136,6 @@
             var cases = service.GetAllByCategory<FakeCaseModel>(this.categoryId);
 
             // Assert
-            var expected = 2;
             Assert.Equal(expected, cases.Count());
             Assert.True(cases.All(x => x.CategoryId == this.categoryId));
         }
@@ -144,7 +144,7 @@
         public void GetLatestMethodShouldReturnTheCorrectCases()
         {
             // Arrange
-            var totalDays = 10;
+            const int totalDays = 10;
             var fakeCases = new List<Case>();
             for (int i = 1; i <= totalDays; i++)
             {
@@ -153,7 +153,7 @@
                     CreatedOn = FakeDateTime.Now(i),
                 });
             }
-
+            var expectedItems = fakeCases.OrderBy(x => x.CreatedOn).ToList();
             var mockCaseRepository = new Mock<IRepository<Case>>();
 
             mockCaseRepository.Setup(s => s.AllAsNoTracking())
@@ -164,7 +164,6 @@
             var actualItems = service.GetLatest<FakeCaseModel>().ToList();
 
             // Assert
-            var expectedItems = fakeCases.OrderBy(x => x.CreatedOn).ToList();
             for (int i = 0; i < totalDays; i++)
             {
                 var expectedDay = expectedItems[i].CreatedOn.Day;

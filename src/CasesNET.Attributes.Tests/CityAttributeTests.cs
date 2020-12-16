@@ -53,7 +53,7 @@ namespace CasesNET.Attributes.Tests
         public void CityAttributeShouldReturnErrorMessageWhenCityDoesntExists(string cityName)
         {
             // Arrange
-            var errorMessage = "Please enter a valid City!";
+            var expected = "Please enter a valid City!";
             var target = new ValidationTarget { CityName = cityName, CountryName = "Bulgaria" };
             var context = new ValidationContext(target);
             var results = new List<ValidationResult>();
@@ -63,7 +63,7 @@ namespace CasesNET.Attributes.Tests
 
             // Assert
             var actual = results[0].ErrorMessage;
-            Assert.Equal(errorMessage, actual);
+            Assert.Equal(expected, actual);
         }
     }
 }
