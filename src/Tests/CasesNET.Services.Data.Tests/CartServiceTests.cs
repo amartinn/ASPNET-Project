@@ -22,12 +22,10 @@
         {
             AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
         }
-
         [Fact]
         public async Task AddItemByIdAndUserIdAsyncMethodShouldAddItemToUser()
         {
             // Arrange
-            const int expected = 2;
             var cartList = new List<Cart>();
             var caseList = new List<Case> { new Case { Id = this.caseId } };
             var user = new ApplicationUser { Id = this.userId };
@@ -50,16 +48,17 @@
                 .Returns(caseList.AsQueryable());
             usermanager.Setup(s => s.FindByIdAsync(this.userId))
                 .ReturnsAsync(user);
-            var cartService = new CartService(null, cartRepo.Object, caseRepo.Object, usermanager.Object);
 
             // Act
+            var cartService = new CartService(null, cartRepo.Object, caseRepo.Object, usermanager.Object);
+
             await cartService.AddItemByIdAndUserIdAsync(this.caseId, this.userId);
             await cartService.AddItemByIdAndUserIdAsync(this.caseId, this.userId);
-            var totalItems = user.Cart.Items.Sum(x => x.Quantity);
-            var actualItemsCount = cartService.GetItemsCountByUserId(this.userId);
 
             // Assert
-            Assert.Equal(expected, actualItemsCount);
+            var totalItems = user.Cart.Items.Sum(x => x.Quantity);
+            var expected = 2;
+            Assert.Equal(expected, cartService.GetItemsCountByUserId(this.userId));
             Assert.Equal(expected, totalItems);
         }
 
@@ -67,7 +66,6 @@
         public void GetAllItemsByUserIdMethodShouldReturnCorrectItems()
         {
             // Arrange
-            const int expected = 3;
             var fakeCart = new List<Cart>()
             {
                 new Cart
@@ -96,13 +94,14 @@
 
             cartRepo.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
+            // Act
             var cartService = new CartService(null, cartRepo.Object, null, null);
 
-            // Act
-            var actual = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId).Count();
+            var items = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId);
 
             // Assert
-            Assert.Equal(expected,actual);
+            var expected = 3;
+            Assert.Equal(expected, items.Count());
         }
 
         [Fact]
@@ -120,9 +119,10 @@
 
             cartRepo.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
-            var service = new CartService(null, cartRepo.Object, null, null);
 
             // Act
+            var service = new CartService(null, cartRepo.Object, null, null);
+
             var count = service.GetItemsCountByUserId(this.userId);
 
             // Assert
@@ -134,7 +134,6 @@
         public async Task RemoveItemByIdAndUserIdAsyncMethodShouldRemoveTheItem()
         {
             // Arrange
-            const int expected = 2;
             var fakeCart = new List<CartItem>()
             {
                         new CartItem
@@ -149,6 +148,8 @@
                         new CartItem(),
                         new CartItem(),
             };
+
+            // Act
             var cartItemRepo = new Mock<IDeletableEntityRepository<CartItem>>();
             cartItemRepo.Setup(s => s.All())
                .Returns(fakeCart.AsQueryable());
@@ -158,11 +159,10 @@
                     fakeCart.Remove(item);
                 });
             var cartService = new CartService(cartItemRepo.Object, null, null, null);
-
-            // Act
             await cartService.RemoveItemByIdAndUserIdAsync(this.cartItemId, this.userId);
 
             // Assert
+            var expected = 2;
             Assert.Equal(expected, fakeCart.Count());
             Assert.DoesNotContain(fakeCart, x => x.Id == this.cartItemId);
         }
