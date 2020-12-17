@@ -172,5 +172,64 @@
                 Assert.Equal(expectedDay, actualDay);
             }
         }
+
+        [Fact]
+        public void GetByManufacturerIdMethodShouldReturnTheCorrectCases()
+        {
+            // Arrange
+            const int expected = 2;
+            var fakeCases = new List<Case>
+            {
+                new Case
+                {
+                    Id = this.caseId,
+                    Device = new Device
+                    {
+                        ManufacturerId = this.manufacturerId,
+                        Manufactorer = new Manufacturer
+                        {
+                            Id = this.manufacturerId,
+                        },
+                    },
+                },
+                new Case
+                {
+                    Id = this.caseId,
+                    Device = new Device
+                    {
+                        ManufacturerId = this.manufacturerId,
+                        Manufactorer = new Manufacturer
+                        {
+                            Id = this.manufacturerId,
+                        },
+                    },
+                },
+                new Case
+                {
+                    Id = this.caseId,
+                    Device = new Device
+                    {
+                        ManufacturerId = this.manufacturerId + "2",
+                        Manufactorer = new Manufacturer
+                        {
+                            Id = this.manufacturerId + "2",
+                        },
+                    },
+                },
+            };
+            var mockCaseRepository = new Mock<IRepository<Case>>();
+
+            mockCaseRepository.Setup(s => s.AllAsNoTracking())
+                .Returns(fakeCases.AsQueryable());
+            var service = new CaseService(mockCaseRepository.Object);
+
+            // Act
+            var items = service.GetByManufacturerId<FakeCaseModel>(this.manufacturerId, 1, 2);
+
+            // Assert
+            var actual = items.Count();
+            Assert.Equal(expected, actual);
+            Assert.True(items.All(x => x.DeviceManufacturerId == this.manufacturerId));
+        }
     }
 }

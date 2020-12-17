@@ -13,5 +13,7 @@
         public string CategoryId { get; set; }
 
         public DateTime CreatedOn { get; set; }
+
+        public string DeviceManufacturerId { get; set; }
     }
 }
