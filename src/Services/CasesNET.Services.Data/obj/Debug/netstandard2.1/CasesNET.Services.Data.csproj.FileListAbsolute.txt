@@ -56,3 +56,5 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Da
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\obj\Debug\netstandard2.1\CasesNET.Services.Data.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Data\bin\Debug\netstandard2.1\CasesNET.Common.pdb

@@ -95,9 +95,9 @@
             }
         }
 
-        public IActionResult Details(string id)
+        public IActionResult Details(string caseId)
         {
-            var viewModel = this.caseService.GetById<CaseDetailsViewModel>(id);
+            var viewModel = this.caseService.GetById<CaseDetailsViewModel>(caseId);
             viewModel.RelatedCases = this.caseService.GetAllByCategory<CaseViewModel>(viewModel.CategoryId).Take(4);
             return this.View(viewModel);
         }

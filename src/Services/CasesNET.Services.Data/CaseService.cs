@@ -27,7 +27,7 @@
         public IEnumerable<T> GetBestSellers<T>(int count = 4)
             => this.caseRepository
             .AllAsNoTracking()
-            .OrderByDescending(x => x.CartItem.Cart.Items.Where(x => x.Cart.Order != null).ToList().Sum(x => x.Quantity))
+            .OrderByDescending(x => x.CartItem.Cart.Items.Count())
             .To<T>()
             .Take(count)
             .ToList();

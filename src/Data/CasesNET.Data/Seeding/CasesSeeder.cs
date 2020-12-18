@@ -35,6 +35,7 @@
                         Extension = "jpg",
                         Url = "test-case",
                     },
+                    Name = $"random_name_{i}",
                 };
                 await dbContext.Cases.AddAsync(@case);
             }

@@ -10,6 +10,7 @@
             <img class="img-fluid details-img" src="~/Images/Categories/animals-category.jpg" alt="@Model.ImageUrl" />
         </div>
         <div class="col-xl-6 col-sm-12" align="center">
+            <h2 class="text-lg-left  text-sm-center font-weight-bold text-border p-3">@Model.Name</h2>
             <h2 class="text-lg-left  text-sm-center font-weight-bold text-border p-3">@Model.ManufacturerName @Model.DeviceName</h2>
             <h1 class="text-lg-left text-sm-center font-weight-bold text-danger  p-3 text-border">@Model.Price$</h1>
             <h3 class=" description mt-5 text-lg-left  text-sm-center ">@Model.Description</h3>
@@ -19,8 +20,9 @@
                     <button type="submit" class="hoverable btn btn-utility add-to-cart-btn text-uppercase"><i class="hoverable fas fa-shopping-cart"></i>Add To Cart</button>
                 </form>
             </div>
-            <h5 class="text-lg-left mt-5 text-sm-center font-weight-bold text-border p-3">Category: 
-            <a style="color:lightblue!important" class="text-uppercase"  asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@Model.CategoryId" >@Model.CategoryName</a>
+            <h5 class="text-lg-left mt-5 text-sm-center font-weight-bold text-border p-3">
+                Category:
+                <a style="color:lightblue!important" class="text-uppercase" asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@Model.CategoryId">@Model.CategoryName</a>
             </h5>
         </div>
     </div>

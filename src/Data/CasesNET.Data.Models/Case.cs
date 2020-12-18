@@ -5,7 +5,6 @@
     using System.ComponentModel.DataAnnotations.Schema;
 
     using CasesNET.Data.Common.Models;
-    using CasesNET.Data.Models.Enum;
 
     public class Case : BaseDeletableModel<string>
     {
@@ -13,6 +12,8 @@
         {
             this.Id = Guid.NewGuid().ToString();
         }
+
+        public string Name { get; set; }
 
         [ForeignKey(nameof(Image))]
         public string ImageId { get; set; }
@@ -32,8 +33,6 @@
         public decimal Price { get; set; }
 
         public string Description { get; set; }
-
-        public CaseType CaseType { get; set; }
 
         [ForeignKey(nameof(CartItem))]
         public string CartItemId { get; set; }

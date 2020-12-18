@@ -20,6 +20,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\CasesNET.Attributes\CasesNET.Attributes.csproj" />
+    <ProjectReference Include="..\..\CasesNET.Common\CasesNET.Common.csproj" />
     <ProjectReference Include="..\..\Data\CasesNET.Data.Models\CasesNET.Data.Models.csproj" />
     <ProjectReference Include="..\..\Services\CasesNET.Services.Mapping\CasesNET.Services.Mapping.csproj" />
   </ItemGroup>

@@ -3785,6 +3785,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "CasesNET.Attributes": "1.0.0",
+          "CasesNET.Common": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0"
         },

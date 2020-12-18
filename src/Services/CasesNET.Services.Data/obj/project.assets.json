@@ -448,6 +448,19 @@
           "bin/placeholder/CasesNET.Attributes.dll": {}
         }
       },
+      "CasesNET.Common/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "5.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CasesNET.Common.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CasesNET.Common.dll": {}
+        }
+      },
       "CasesNET.Data.Common/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -494,6 +507,7 @@
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
           "CasesNET.Attributes": "1.0.0",
+          "CasesNET.Common": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0"
         },
@@ -1449,6 +1463,11 @@
       "type": "project",
       "path": "../../CasesNET.Attributes/CasesNET.Attributes.csproj",
       "msbuildProject": "../../CasesNET.Attributes/CasesNET.Attributes.csproj"
+    },
+    "CasesNET.Common/1.0.0": {
+      "type": "project",
+      "path": "../../CasesNET.Common/CasesNET.Common.csproj",
+      "msbuildProject": "../../CasesNET.Common/CasesNET.Common.csproj"
     },
     "CasesNET.Data.Common/1.0.0": {
       "type": "project",

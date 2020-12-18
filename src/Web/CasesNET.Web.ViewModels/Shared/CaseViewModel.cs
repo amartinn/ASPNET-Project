@@ -1,12 +1,17 @@
 ﻿namespace CasesNET.Web.ViewModels.Shared
 {
     using AutoMapper;
+    using CasesNET.Common;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
 
-    public class CaseViewModel : IMapFrom<Case>, IHaveCustomMappings
+    public class CaseViewModel : SEOFriendlyModel, IMapFrom<Case>, IHaveCustomMappings
     {
+        public string Name { get; set; }
+
         public string Id { get; set; }
+
+        public override string FriendlyUrl => $@"/Cases/{this.Name.ToSEOFriendlyURL()}";
 
         public string ImageUrl { get; set; }
 

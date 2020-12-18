@@ -50,3 +50,5 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\o
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Common.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Common.pdb
