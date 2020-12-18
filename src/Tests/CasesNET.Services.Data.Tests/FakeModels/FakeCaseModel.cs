@@ -2,7 +2,6 @@
 {
     using System;
 
-    using AutoMapper;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
 

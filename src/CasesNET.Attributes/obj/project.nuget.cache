@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "/W448BT346YlC/OOspV3RERpS+Ukkjgc+AfhwjOOBIPRvBYcEz/iti9ZCYZ1egLkE/v3j3a0x9Gc8mPQ7insew==",
+  "dgSpecHash": "HZkTzWk56ZZi6hwg7BfQaznFGTdIFoiFkcjBi/UFG751+HZofS/2w+B28ms06ZPbA0Axv3arjno6QkWB9DlvQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\CasesNET.Attributes\\CasesNET.Attributes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.205\\stylecop.analyzers.1.2.0-beta.205.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.205\\stylecop.analyzers.unstable.1.2.0.205.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512"
   ],
   "logs": []

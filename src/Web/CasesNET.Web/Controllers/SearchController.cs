@@ -22,18 +22,19 @@
         public IActionResult ByTerm(string term, int page = 1)
         {
             var tempdataValue = this.TempData["term"].ToString();
+            term ??= tempdataValue;
             var casesMatchingSearchTerm =
-                this.searchService.GetAllCasesBySearchTerm<CaseViewModel>(term ?? tempdataValue, page);
+                this.searchService.GetAllCasesBySearchTerm<CaseViewModel>(term, page);
             var viewModel = new SearchViewModel
             {
                 ItemsPerPage = ItemsPerPage,
-                CasesCount = this.searchService.GetCountBySearchTerm(term ?? tempdataValue),
+                CasesCount = this.searchService.GetCountBySearchTerm(term),
                 PageNumber = page,
-                SearchTerm = term ?? tempdataValue,
+                SearchTerm = term,
                 Cases = casesMatchingSearchTerm,
                 BestSellerCases = this.caseService.GetBestSellers<CaseViewModel>(8),
             };
-            this.TempData["term"] = term ?? tempdataValue;
+            this.TempData["term"] = term;
             this.ViewData["id"] = term;
             return this.View(viewModel);
         }

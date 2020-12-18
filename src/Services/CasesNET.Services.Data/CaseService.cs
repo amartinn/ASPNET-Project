@@ -12,12 +12,10 @@
     public class CaseService : ICaseService
     {
         private readonly IRepository<Case> caseRepository;
-        private readonly IRepository<Order> orderRepository;
 
-        public CaseService(IRepository<Case> caseRepository, IRepository<Order> orderRepository)
+        public CaseService(IRepository<Case> caseRepository)
         {
             this.caseRepository = caseRepository;
-            this.orderRepository = orderRepository;
         }
 
         public Task CreateAsync()
