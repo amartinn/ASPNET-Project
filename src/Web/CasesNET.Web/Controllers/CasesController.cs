@@ -47,7 +47,7 @@
                 this.ModelState.AddModelError(string.Empty, ex.Message);
                 var model = new CasesByCategoryViewModel
                 {
-                    CasesCount = this.caseService.GetCountByManufacturer(id),
+                    CasesCount = this.caseService.GetItemsCountByCategoryId(id),
                     CategoryName = categoryName,
                 };
                 return this.View(model);

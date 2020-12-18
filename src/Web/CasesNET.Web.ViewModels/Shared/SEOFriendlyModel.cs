@@ -1,7 +1,14 @@
-﻿namespace CasesNET.Web.ViewModels.Shared
+﻿
+namespace CasesNET.Web.ViewModels.Shared
 {
+    using CasesNET.Common;
+
     public abstract class SEOFriendlyModel
     {
-        public virtual string FriendlyUrl { get; set; }
+        public string Url => $@"/{this.FriendlyUrlPrefix}/{this.FriendlyUrlName.ToSEOFriendlyURL()}";
+
+        public virtual string FriendlyUrlPrefix { get; set; }
+
+        public virtual string FriendlyUrlName { get; set; }
     }
 }

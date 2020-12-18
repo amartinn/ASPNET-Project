@@ -11,5 +11,9 @@
         public string CategoryId { get; set; }
 
         public IEnumerable<CaseViewModel> Cases { get; set; }
+
+        public override string FriendlyUrlName => this.CategoryName;
+
+        public override string FriendlyUrlPrefix => "Categories";
     }
 }

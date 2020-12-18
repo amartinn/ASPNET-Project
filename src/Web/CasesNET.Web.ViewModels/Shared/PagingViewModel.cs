@@ -2,7 +2,7 @@
 {
     using System;
 
-    public class PagingViewModel
+    public class PagingViewModel : SEOFriendlyModel
     {
         public int PageNumber { get; set; }
 

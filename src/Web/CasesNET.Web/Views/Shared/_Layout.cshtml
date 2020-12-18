@@ -75,7 +75,7 @@
 
                             @foreach (var category in categories)
                             {
-                                <li class="dropdown-item text-uppercase"><a asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-Id="@category.Id">@category.Name</a></li>
+                                <li class="dropdown-item text-uppercase"><a href="/Categories/@category.Name?id=@category.Id">@category.Name</a></li>
                             }
                         </ul>
                     </div>

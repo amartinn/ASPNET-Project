@@ -11,7 +11,9 @@
 
         public string Id { get; set; }
 
-        public override string FriendlyUrl => $@"/Cases/{this.Name.ToSEOFriendlyURL()}";
+        public override string FriendlyUrlName => this.Name;
+
+        public override string FriendlyUrlPrefix => "Cases";
 
         public string ImageUrl { get; set; }
 

@@ -1,7 +1,9 @@
 ﻿@using CasesNET.Web.ViewModels.Search
 @using System.Linq
 @model SearchViewModel
-
+@{ 
+    this.ViewData["Title"] = $"Search Results for {Model.SearchTerm}";
+}
 <div class="category-selection-wrapper container">
     @if (Model.Cases.Any())
     {
