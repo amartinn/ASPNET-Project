@@ -1,6 +1,7 @@
 ﻿@using Microsoft.AspNetCore.Identity
 @using CasesNET.Data.Common.Repositories
 @using CasesNET.Data.Models
+@using CasesNET.Common 
 @using static CasesNET.Common.GlobalConstants.Domain
 @inject UserManager<ApplicationUser> UserManager
 @inject SignInManager<ApplicationUser> SignInManager
@@ -12,6 +13,8 @@
         {
             Id = x.Id,
             Name = x.Name,
+            Url = $"/Categories/{x.Name.ToSEOFriendlyURL(20)}?id={x.Id}",
+
         })
         .ToList();
     var manufacturers = ManufacturerRepository.AllAsNoTracking().Select(x => new
@@ -33,6 +36,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A friendly website that has a lot of phone cases"/>
+    <meta name="keywords" content="Phones,Phone,Cases,PhoneCase,Iphone,Samsung,HTC"/>
     <title>- @this.ViewData["Title"] - @SystemName</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
@@ -75,7 +80,7 @@
 
                             @foreach (var category in categories)
                             {
-                                <li class="dropdown-item text-uppercase"><a href="/Categories/@category.Name?id=@category.Id">@category.Name</a></li>
+                                <li class="dropdown-item text-uppercase"><a href="@category.Url">@category.Name</a></li>
                             }
                         </ul>
                     </div>

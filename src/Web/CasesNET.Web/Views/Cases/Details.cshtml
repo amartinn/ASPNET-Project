@@ -22,7 +22,7 @@
             </div>
             <h5 class="text-lg-left mt-5 text-sm-center font-weight-bold text-border p-3">
                 Category:
-                <a style="color:lightblue!important" class="text-uppercase" asp-area="" asp-controller="Cases" asp-action="ByCategory" asp-route-id="@Model.CategoryId">@Model.CategoryName</a>
+                <a style="color:lightblue!important" class="text-uppercase" href="/Categories/@Model.CategoryName?id=@Model.CategoryId  ">@Model.CategoryName</a>
             </h5>
         </div>
     </div>

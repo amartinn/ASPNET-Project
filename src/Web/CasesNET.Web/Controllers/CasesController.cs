@@ -28,14 +28,12 @@
             var categoryName = this.categoryService.GetNameById(id);
             try
             {
-                var cases = this.caseService.GetAllByCategory<CaseViewModel>(id, page, ItemsPerPage);
-
                 var viewModel = new CasesByCategoryViewModel
                 {
                     PageNumber = page,
                     ItemsPerPage = ItemsPerPage,
                     CasesCount = this.caseService.GetItemsCountByCategoryId(id),
-                    Cases = cases,
+                    Cases = this.caseService.GetAllByCategory<CaseViewModel>(id, page, ItemsPerPage),
                     CategoryName = categoryName,
                     CategoryId = id,
                 };
@@ -47,8 +45,8 @@
                 this.ModelState.AddModelError(string.Empty, ex.Message);
                 var model = new CasesByCategoryViewModel
                 {
-                    CasesCount = this.caseService.GetItemsCountByCategoryId(id),
-                    CategoryName = categoryName,
+                    CasesCount = default,
+                    CategoryName = default,
                 };
                 return this.View(model);
             }
@@ -98,7 +96,8 @@
         public IActionResult Details(string caseId)
         {
             var viewModel = this.caseService.GetById<CaseDetailsViewModel>(caseId);
-            viewModel.RelatedCases = this.caseService.GetAllByCategory<CaseViewModel>(viewModel.CategoryId).Take(4);
+            viewModel.RelatedCases = this.caseService.GetAllByCategory<CaseViewModel>(viewModel.CategoryId)
+                .OrderBy(x => Guid.NewGuid()).Take(4);
             return this.View(viewModel);
         }
     }
