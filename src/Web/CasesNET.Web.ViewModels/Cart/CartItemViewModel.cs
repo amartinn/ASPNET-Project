@@ -10,6 +10,8 @@
     {
         public string Id { get; set; }
 
+        public string CaseName { get; set; }
+
         public string CaseImageUrl { get; set; }
 
         public string CaseDeviceName { get; set; }

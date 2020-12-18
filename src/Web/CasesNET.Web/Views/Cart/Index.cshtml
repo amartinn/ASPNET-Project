@@ -14,6 +14,8 @@
             <tr>
                 <th scope="col">Image</th>
                 <th scope="col">Name</th>
+                <th scope="col">Make</th>
+                <th scope="col">Model</th>
                 <th scope="col">Quantity</th>
                 <th scope="col">Price per 1</th>
                 <th scope="col">Remove Item</th>
@@ -24,7 +26,9 @@
             {
                 <tr class="cart-item-body">
                     <th scope="row"><img class="thumbnail-img" width="50" height="50" src="~/Images/Cases/@item.CaseImageUrl" /></th>
-                    <td>@item.CaseManufacturerName @item.CaseDeviceName</td>
+                    <td>@item.CaseName</td>
+                    <td>@item.CaseManufacturerName</td>
+                    <td>@item.CaseDeviceName</td>
                     <td class="cart-item-quantity">
                         @item.Quantity
                     </td>
