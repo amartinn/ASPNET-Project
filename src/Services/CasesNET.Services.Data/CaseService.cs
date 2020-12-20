@@ -2,12 +2,15 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
+    using CasesNET.Web.ViewModels.Administration.Cases;
+    using Microsoft.AspNetCore.Http;
 
     public class CaseService : ICaseService
     {
@@ -18,9 +21,27 @@
             this.caseRepository = caseRepository;
         }
 
-        public Task CreateAsync()
+        public async Task CreateAsync(CreateCaseInputModel model, string imagePath)
         {
-            throw new NotImplementedException();
+            var spliitedImageArgs = model.Image.FileName.Split('.');
+            var imageName = spliitedImageArgs[0];
+            var imageExtension = spliitedImageArgs[1];
+            var item = new Case
+            {
+                CategoryId = model.CategoryId,
+                DeviceId = model.DeviceId,
+                Price = model.Price,
+                Name = model.Name,
+                Description = model.Description,
+                Image = new Image
+                {
+                    Url = imageName,
+                    Extension = imageExtension,
+                },
+            };
+            await this.SaveImageToDiskAsync(model.Image, imagePath);
+            await this.caseRepository.AddAsync(item);
+            await this.caseRepository.SaveChangesAsync();
         }
 
         // TODO: Refactor when order Entity is added.
@@ -78,5 +99,12 @@
             .AllAsNoTracking()
             .Where(x => x.Device.ManufacturerId == manufacturerId)
             .Count();
+
+        private async Task SaveImageToDiskAsync(IFormFile file, string path)
+        {
+            string filePath = Path.Combine(path, file.FileName);
+            using Stream fileStream = new FileStream(filePath, FileMode.Create);
+            await file.CopyToAsync(fileStream);
+        }
     }
 }

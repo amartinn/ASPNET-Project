@@ -1,5 +1,6 @@
 ﻿namespace CasesNET.Services.Data
 {
+    using CasesNET.Web.ViewModels.Administration.Cases;
     using System.Collections.Generic;
     using System.Threading.Tasks;
 
@@ -7,7 +8,7 @@
     {
         T GetById<T>(string id);
 
-        Task CreateAsync();
+        Task CreateAsync(CreateCaseInputModel model, string imagePath);
 
         int GetItemsCountByCategoryId(string categoryId);
 

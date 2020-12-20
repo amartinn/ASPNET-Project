@@ -7,5 +7,9 @@
 
     public class DashboardController : AdministrationController
     {
+        public IActionResult Index()
+        {
+            return this.View();
+        }
     }
 }

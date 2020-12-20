@@ -1,0 +1,235 @@
+﻿@model CasesNET.Web.ViewModels.Administration.Cases.CreateCaseInputModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-md-6 justify-content-center">
+        <h1>Create Case</h1>
+    </div>
+
+    <div class="col-md-6">
+        <ul class="nav nav-tabs justify-content-center d-block">
+            <li class="active"><a data-toggle="tab" href="#Details">Case Details</a></li>
+            <li class="active"><a data-toggle="tab" href="#ImageManipulations">Image Manipulationn</a></li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <canvas width="510" height="965" class="" id="canvas"></canvas>
+    </div>
+
+    <div class="tab-content">
+        <div id="Details" class="tab-pane fade in active show">
+            <form id="create-form" asp-action="Create" enctype="multipart/form-data">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" required class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Image" class="control-label"></label>
+                    <input id="image" class="form-control-file" asp-for="Image" type="file" accept="image/jpeg, image/png, image/jpg" />
+                    <span asp-validation-for="Image" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label for="Device" class="control-label">Device</label>
+                    <select id="deviceSelect" required asp-for="DeviceId" class="form-control" asp-items="ViewBag.DeviceId">
+                        <option value="">Select a device...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="Category" class="control-label">Category</label>
+                    <select id="categorySelect" asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId">
+                        <option value="">Select a Category...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Price" class="control-label"></label>
+                    <input asp-for="Price" type="number" required class="form-control" />
+                    <span asp-validation-for="Price" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description" class="control-label"></label>
+                    <textarea class="form-control" required asp-for="Description" rows="5"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+            <div>
+                <a asp-action="Index">Back to List</a>
+            </div>
+        </div>
+        <div id="ImageManipulations" class="tab-pane fade in">
+            <h3 class="mt-3">Add Simple Shapes</h3>
+            <div class="btn-group" role="group" aria-label="simple shapes">
+                <button type="button" class="add-rectangle btn btn-outline-warning">Rectangle</button>
+                <button type="button" class="add-circle btn btn-outline-warning">Circle</button>
+                <button type="button" class="add-triangle btn btn-outline-warning">Triangle</button>
+                <button type="button" class="add-textbox btn btn-outline-warning">Text</button>
+                <button type="button" class="add-emoji btn btn-outline-warning">Emoji</button>
+            </div>
+            <hr />
+            <h3 class="mt-3">Manipulate Selected Object</h3>
+            <div class="btn-group">
+                <button type="button" class="send-to-back btn btn-outline-warning">Send to Back</button>
+                <button type="button" class="bring-to-front btn btn-outline-warning">Bring to Front</button>
+            </div>
+            <div class="mt-2" >
+                <label for="FontSize">Background Color</label>
+                <input class="change-color" type="color" />
+            </div>
+            <div>
+                <label for="Opacity">Opacity</label>
+                <input class="change-opacity form-control-range" min="0" max="100" type="range" />
+            </div>
+            <hr />
+
+            <h3 class="mt-3">Text Specific Controls</h3>
+            <label class="mt-3" for="FontSize">Font Size</label>
+            <input class="change-fontsize form-control-range" min="0" max="100" type="range" />
+            <div class="mt-5 btn-group" role="group" aria-label="simple shapes">
+                <button type="button" class="change-font-bold btn btn-outline-warning">Bold</button>
+                <button type="button" class="change-font-italic btn btn-outline-warning">Italic</button>
+                <button type="button" class="change-font-underline btn btn-outline-warning">Underline</button>
+                <button type="button" class="change-font-linethrough btn btn-outline-warning">Linethrough</button>
+            </div>
+            <div class="mt-5">  <button type="button" class="lock-image btn btn-outline-danger">Lock Background image</button></div>
+        </div>
+     
+    </div>
+
+
+</div>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0/fabric.min.js"></script>
+<script defer src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
+<script type="module" src="~/js/emoji-picker.js"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
+<script defer>
+    document.addEventListener('DOMContentLoaded', function () {
+        $(document).ready(function () {
+            $('#deviceSelect').selectize({
+                sortField: 'text'
+            });
+            $('#categorySelect').selectize({
+                sortField: 'text'
+            });
+        });
+        const toBase64 = file => new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = () => resolve(reader.result);
+            reader.onerror = error => reject(error);
+        });
+        init('canvas');
+       $('#image').change(async function () {
+           const file = $(this)[0].files[0];
+           const base64 = await toBase64(file);
+           addBackgroundImageFromUrl(base64)
+       })
+        $('.add-rectangle').click(function(){
+            addRectangle();
+        })
+        $('.add-circle').click(function () {
+            addCircle();
+        });
+        $('.add-triangle').click(function() {
+                addTriangle();
+        });
+        $('.add-textbox').click(function () {
+            addTextbox();
+        });      
+        $('.change-opacity').change(function () {
+            const value = $(this).val();
+            setOpacity(value);
+        });
+        $('.change-fontsize').change(function () {
+            const value = $(this).val();
+            setFontSize(value);
+        });
+        $('.change-font-italic').click(function () {
+            toggleItalic();
+        });
+        $('.change-font-bold').click(function () {
+            toggleBold();
+        });
+        $('.change-font-underline').click(function () {
+            toggleUnderline();
+        });
+        $('.change-font-linethrough').click(function () {
+            toggleLinethrough();
+        });
+        $('.change-color').change(function () {
+            const value = $(this).val();
+            setColor(value);
+        });
+        $('.send-to-back').click(function () {
+            sendToBack();
+        });
+        $('.bring-to-front').click(function () {
+            bringToFront();
+        });
+        $('.lock-image').click(function () {
+            lockBackground();
+        });
+        hotkeys('ctrl+c,ctrl+v,del', function (event, handler) {
+            switch (handler.key) {
+                case 'ctrl+c':
+                    Copy();
+                    break;
+                case 'ctrl+v':
+                    Paste();
+                    break;
+                case 'del':
+                    Delete();
+                    break;
+            }
+        });
+        $('#create-form').submit(async function (e) {
+            e.preventDefault();
+            const url = $(this).attr('action');
+            const canvas = document.getElementById('canvas');    
+            if (canvas.toBlob) {
+                const self = this;
+                canvas.toBlob(async function (blob) {
+                    const formData = new FormData();
+                    const name = $(self.elements['Name']).val();
+                    const deviceId = $(self.elements['DeviceId']).val();
+                    const categoryId = $(self.elements['CategoryId']).val();
+                    const price = +$(self.elements['Price']).val();
+                    const description = $(self.elements['Description']).val();
+                    formData.append('Name', name);
+                    formData.append('Image', blob, `${name}.jpg`)
+                    formData.append('DeviceId', deviceId);
+                    formData.append('CategoryId', categoryId);
+                    formData.append('Price', price);
+                    formData.append('Description', description);
+                  const antiForgerytoken = $(self.elements['__RequestVerificationToken']).val();
+                  await $.post({
+                      url,
+                      headers: {
+                          "RequestVerificationToken": antiForgerytoken
+                      },
+                      processData: false,
+                      contentType: false,
+                      data: formData,
+                      success: function (response) {
+                          window.location.href = response.redirectToUrl;
+                      }
+                  });
+                }, 'image/jpeg');
+            }
+         
+         
+       })  
+        
+    })
+
+</script>
+<script defer src="~/js/controller.js"></script>

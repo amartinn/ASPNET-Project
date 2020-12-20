@@ -7,6 +7,10 @@
             public const string SystemName = "CasesNET";
 
             public const string AdministratorRoleName = "Administrator";
+
+            public const string AdminUserEmail = "admin@admin.com";
+
+            public const string AdminUserPassword = "adminpassword";
         }
 
         public class Paging
