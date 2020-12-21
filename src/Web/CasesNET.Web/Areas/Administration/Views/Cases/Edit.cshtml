@@ -1,4 +1,4 @@
-﻿@model CasesNET.Data.Models.Case
+﻿@model CasesNET.Web.ViewModels.Administration.Cases.EditViewModel
 
 @{
     ViewData["Title"] = "Edit";
@@ -18,17 +18,12 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="ImageId" class="control-label"></label>
-                <select asp-for="ImageId" class="form-control" asp-items="ViewBag.ImageId"></select>
-                <span asp-validation-for="ImageId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeviceId" class="control-label"></label>
+                <label for="Device" class="control-label">Device</label>
                 <select asp-for="DeviceId" class="form-control" asp-items="ViewBag.DeviceId"></select>
                 <span asp-validation-for="DeviceId" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CategoryId" class="control-label"></label>
+                <label for="Category" class="control-label">Categorys</label>
                 <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
@@ -42,32 +37,7 @@
                 <input asp-for="Description" class="form-control" />
                 <span asp-validation-for="Description" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="CartItemId" class="control-label"></label>
-                <select asp-for="CartItemId" class="form-control" asp-items="ViewBag.CartItemId"></select>
-                <span asp-validation-for="CartItemId" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="IsDeleted" /> @Html.DisplayNameFor(model => model.IsDeleted)
-                </label>
-            </div>
-            <div class="form-group">
-                <label asp-for="DeletedOn" class="control-label"></label>
-                <input asp-for="DeletedOn" class="form-control" />
-                <span asp-validation-for="DeletedOn" class="text-danger"></span>
-            </div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
-                <input asp-for="CreatedOn" class="form-control" />
-                <span asp-validation-for="CreatedOn" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="ModifiedOn" class="control-label"></label>
-                <input asp-for="ModifiedOn" class="form-control" />
-                <span asp-validation-for="ModifiedOn" class="text-danger"></span>
-            </div>
+            
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>

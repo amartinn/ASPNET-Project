@@ -10,8 +10,10 @@ namespace CasesNET.Web.ViewModels.Administration.Cases
 {
     public class CreateCaseInputModel : IMapTo<Case>
     {
+        [Required]
         public string Name { get; set; }
 
+        [Required]
         public IFormFile Image { get; set; }
 
         [Required]
@@ -20,8 +22,10 @@ namespace CasesNET.Web.ViewModels.Administration.Cases
         [Required]
         public string CategoryId { get; set; }
 
+        [Required]
         public decimal Price { get; set; }
 
+        [Required]
         public string Description { get; set; }
     }
 }

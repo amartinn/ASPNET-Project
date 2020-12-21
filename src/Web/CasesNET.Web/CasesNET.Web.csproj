@@ -9,6 +9,13 @@
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Areas\Administration\Views\NewFolder\**" />
+    <Content Remove="Areas\Administration\Views\NewFolder\**" />
+    <EmbeddedResource Remove="Areas\Administration\Views\NewFolder\**" />
+    <None Remove="Areas\Administration\Views\NewFolder\**" />
+  </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Include="..\..\stylecop.json" />
   </ItemGroup>

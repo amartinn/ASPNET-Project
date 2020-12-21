@@ -11,12 +11,13 @@
     using CasesNET.Services.Mapping;
     using CasesNET.Web.ViewModels.Administration.Cases;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore;
 
     public class CaseService : ICaseService
     {
-        private readonly IRepository<Case> caseRepository;
+        private readonly IDeletableEntityRepository<Case> caseRepository;
 
-        public CaseService(IRepository<Case> caseRepository)
+        public CaseService(IDeletableEntityRepository<Case> caseRepository)
         {
             this.caseRepository = caseRepository;
         }
@@ -100,11 +101,37 @@
             .Where(x => x.Device.ManufacturerId == manufacturerId)
             .Count();
 
+        public IEnumerable<T> All<T>()
+            => this.caseRepository
+            .AllAsNoTracking()
+            .To<T>()
+            .ToList();
+
+        public async Task DeleteByIdAsync(string id)
+        {
+            var item = await this.caseRepository.All().FirstOrDefaultAsync(x => x.Id == id);
+            this.caseRepository.Delete(item);
+            await this.caseRepository.SaveChangesAsync();
+        }
+
         private async Task SaveImageToDiskAsync(IFormFile file, string path)
         {
             string filePath = Path.Combine(path, file.FileName);
             using Stream fileStream = new FileStream(filePath, FileMode.Create);
             await file.CopyToAsync(fileStream);
+        }
+
+        public async Task UpdateAsync(EditViewModel model)
+        {
+            var item = this.caseRepository.All().FirstOrDefault(x => x.Id == model.Id);
+            item.Name = model.Name;
+            item.CategoryId = model.CategoryId;
+            item.DeviceId = model.DeviceId;
+            item.Description = model.Description;
+            item.Price = model.Price;
+
+            this.caseRepository.Update(item);
+            await this.caseRepository.SaveChangesAsync();
         }
     }
 }

@@ -71,12 +71,12 @@
         public IEnumerable<T> GetAllItemsByUserId<T>(string userId)
             => this.cartRepository
               .All()
-              .Where(x => x.UserId == userId)
+              .Where(x => x.UserId == userId && x.IsDeleted == false)
               .FirstOrDefault()
               .Items
-              .AsQueryable()
-              .To<T>()
-              .ToList();
+               .AsQueryable()
+               .To<T>()
+               .ToList();
 
         public int GetItemsCountByUserId(string userId)
             => this.cartRepository

@@ -1,21 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using CasesNET.Data;
-using CasesNET.Data.Models;
-using CasesNET.Web.ViewModels.Administration.Cases;
-using Microsoft.AspNetCore.Hosting;
-using System.IO;
-using CasesNET.Services.Data;
-
-namespace CasesNET.Web.Areas.Administration.Controllers
+﻿namespace CasesNET.Web.Areas.Administration.Controllers
 {
-    [Area("Administration")]
-    public class CasesController : Controller
+    using System;
+    using System.Collections.Generic;
+    using System.IO;
+    using System.Linq;
+    using System.Threading.Tasks;
+
+    using CasesNET.Data;
+    using CasesNET.Data.Models;
+    using CasesNET.Services.Data;
+    using CasesNET.Web.ViewModels.Administration.Cases;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Rendering;
+    using Microsoft.EntityFrameworkCore;
+
+    public class CasesController : AdministrationController
     {
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment webHostEnvironment;
@@ -29,46 +29,24 @@ namespace CasesNET.Web.Areas.Administration.Controllers
         }
 
         // GET: Administration/Cases
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var applicationDbContext = this._context.Cases.Include(c => c.CartItem).Include(c => c.Category).Include(c => c.Device).Include(c => c.Image);
-            return this.View(await applicationDbContext.ToListAsync());
-        }
-
-        // GET: Administration/Cases/Details/5
-        public async Task<IActionResult> Details(string id)
-        {
-            if (id == null)
+            var viewModel = new IndexViewModel
             {
-                return this.NotFound();
-            }
-
-            var @case = await this._context.Cases
-                .Include(c => c.CartItem)
-                .Include(c => c.Category)
-                .Include(c => c.Device)
-                .Include(c => c.Image)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (@case == null)
-            {
-                return this.NotFound();
-            }
-
-            return this.View(@case);
+                Cases = this.caseService.All<CaseViewModel>(),
+            };
+            return this.View(viewModel);
         }
 
         // GET: Administration/Cases/Create
         public IActionResult Create()
         {
-
             this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name");
             this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name");
             return this.View();
         }
 
         // POST: Administration/Cases/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public async Task<IActionResult> Create(CreateCaseInputModel model)
         {
@@ -79,106 +57,90 @@ namespace CasesNET.Web.Areas.Administration.Controllers
                 return this.Json(new { redirectToUrl = this.Url.Action(nameof(this.Index)) });
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Id", model.CategoryId);
-            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Id", model.DeviceId);
+            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name", model.CategoryId);
+            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name", model.DeviceId);
             return this.View(model);
         }
 
         // GET: Administration/Cases/Edit/5
-        public async Task<IActionResult> Edit(string id)
+        public IActionResult Edit(string id)
         {
             if (id == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
-
-            var @case = await _context.Cases.FindAsync(id);
+            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name");
+            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name");
+            var @case = this.caseService.GetById<EditViewModel>(id);
             if (@case == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
-            ViewData["CartItemId"] = new SelectList(_context.CartItems, "Id", "Id", @case.CartItemId);
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", @case.CategoryId);
-            ViewData["DeviceId"] = new SelectList(_context.Devices, "Id", "Id", @case.DeviceId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", @case.ImageId);
-            return View(@case);
+
+            return this.View(@case);
         }
 
         // POST: Administration/Cases/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(string id, [Bind("Name,ImageId,DeviceId,CategoryId,Price,Description,CartItemId,IsDeleted,DeletedOn,Id,CreatedOn,ModifiedOn")] Case @case)
+        public async Task<IActionResult> Edit(EditViewModel model)
         {
-            if (id != @case.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
+            if (this.ModelState.IsValid)
             {
                 try
                 {
-                    _context.Update(@case);
-                    await _context.SaveChangesAsync();
+                    await this.caseService.UpdateAsync(model);
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!CaseExists(@case.Id))
+                    if (!this.CaseExists(model.Id))
                     {
-                        return NotFound();
+                        return this.NotFound();
                     }
                     else
                     {
                         throw;
                     }
                 }
-                return RedirectToAction(nameof(Index));
+
+                return this.RedirectToAction(nameof(this.Index));
             }
-            ViewData["CartItemId"] = new SelectList(_context.CartItems, "Id", "Id", @case.CartItemId);
-            ViewData["CategoryId"] = new SelectList(_context.Categories, "Id", "Id", @case.CategoryId);
-            ViewData["DeviceId"] = new SelectList(_context.Devices, "Id", "Id", @case.DeviceId);
-            ViewData["ImageId"] = new SelectList(_context.Images, "Id", "Id", @case.ImageId);
-            return View(@case);
+
+            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name", model.DeviceId);
+            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name", model.DeviceId);
+            return this.View(model);
         }
 
         // GET: Administration/Cases/Delete/5
-        public async Task<IActionResult> Delete(string id)
+        public IActionResult Delete(string id)
         {
             if (id == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            var @case = await _context.Cases
-                .Include(c => c.CartItem)
-                .Include(c => c.Category)
-                .Include(c => c.Device)
-                .Include(c => c.Image)
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var @case = this.caseService.GetById<CaseDeleteModel>(id);
             if (@case == null)
             {
-                return NotFound();
+                return this.NotFound();
             }
 
-            return View(@case);
+            return this.View(@case);
         }
 
         // POST: Administration/Cases/Delete/5
-        [HttpPost, ActionName("Delete")]
-        [ValidateAntiForgeryToken]
+        [HttpPost]
+        [ActionName("Delete")]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
-            var @case = await _context.Cases.FindAsync(id);
-            _context.Cases.Remove(@case);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            await this.caseService.DeleteByIdAsync(id);
+            return this.RedirectToAction(nameof(this.Index));
         }
 
         private bool CaseExists(string id)
         {
-            return _context.Cases.Any(e => e.Id == id);
+            return this.caseService.All<CaseViewModel>().Any(e => e.Id == id);
         }
     }
 }

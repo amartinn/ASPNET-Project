@@ -61,7 +61,7 @@ function setDefaultOverlayImage() {
 
 function addBackgroundImageFromUrl(data) {
     fabric.Image.fromURL(data, (image) => {
-        image.scale(0.3);
+        image.scale(0.2);
         image.set({
             left: 0,
             top: 0,

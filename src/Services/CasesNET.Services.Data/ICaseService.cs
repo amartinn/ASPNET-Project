@@ -21,5 +21,11 @@
         IEnumerable<T> GetLatest<T>(int count = 12);
 
         IEnumerable<T> GetByManufacturerId<T>(string manufacturerId, int page = 1, int itemsPerPage = 12);
+
+        IEnumerable<T> All<T>();
+
+        Task DeleteByIdAsync(string id);
+
+        Task UpdateAsync(EditViewModel model);
     }
 }
