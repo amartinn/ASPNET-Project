@@ -33,7 +33,7 @@
                     PageNumber = page,
                     ItemsPerPage = ItemsPerPage,
                     CasesCount = this.caseService.GetItemsCountByCategoryId(id),
-                    Cases = this.caseService.GetAllByCategory<CaseViewModel>(id, page, ItemsPerPage),
+                    Cases = this.caseService.GetAllByCategoryId<CaseViewModel>(id, page, ItemsPerPage),
                     CategoryName = categoryName,
                     CategoryId = id,
                 };
@@ -67,7 +67,7 @@
             var manufacturerName = this.manufacturerService.GetNameById(id);
             try
             {
-                var casesByManufacturer = this.caseService.GetByManufacturerId<CaseViewModel>(id);
+                var casesByManufacturer = this.caseService.GetAllByManufacturerId<CaseViewModel>(id);
 
                 var viewModel = new CasesByManufacturerViewModel
                 {
@@ -96,7 +96,7 @@
         public IActionResult Details(string caseId)
         {
             var viewModel = this.caseService.GetById<CaseDetailsViewModel>(caseId);
-            viewModel.RelatedCases = this.caseService.GetAllByCategory<CaseViewModel>(viewModel.CategoryId)
+            viewModel.RelatedCases = this.caseService.GetAllByCategoryId<CaseViewModel>(viewModel.CategoryId)
                 .OrderBy(x => Guid.NewGuid()).Take(4);
             return this.View(viewModel);
         }

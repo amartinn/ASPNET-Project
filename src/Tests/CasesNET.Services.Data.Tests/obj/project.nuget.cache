@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "T2p1KdLmCzxE6Rwp16OIRFtbtkM/IdXzd3Q8rO9rm2e0w8ecRUpHtf/0FTOsCEHSji48rAeUv3VebY2tUnxKBQ==",
+  "dgSpecHash": "BWbW1eI+2n5Dcx8EsgK+yDdF+z8j+vefhm2uqMwMPO4tNIlQqPej7iHsyJ5hjgaBz5v6C1W/rhsoqgw4Sx3h0w==",
   "success": true,
   "projectFilePath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Tests\\CasesNET.Services.Data.Tests\\CasesNET.Services.Data.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\marto\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\castle.core\\4.4.0\\castle.core.4.4.0.nupkg.sha512",
+    "C:\\Users\\marto\\.nuget\\packages\\deepequal\\2.0.0\\deepequal.2.0.0.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.9\\microsoft.aspnetcore.cryptography.internal.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.9\\microsoft.aspnetcore.cryptography.keyderivation.3.1.9.nupkg.sha512",
     "C:\\Users\\marto\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.0\\microsoft.aspnetcore.http.features.5.0.0.nupkg.sha512",

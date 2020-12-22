@@ -509,3 +509,5 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.Tests\obj\Debug\netcoreapp3.1\CasesNET.Services.Data.Tests.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.Tests\obj\Debug\netcoreapp3.1\CasesNET.Services.Data.Tests.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.Tests\obj\Debug\netcoreapp3.1\CasesNET.Services.Data.Tests.genruntimeconfig.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.Tests\bin\Debug\netcoreapp3.1\System.Text.Json.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\CasesNET.Services.Data.Tests\bin\Debug\netcoreapp3.1\DeepEqual.dll

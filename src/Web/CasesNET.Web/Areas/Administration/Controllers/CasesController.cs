@@ -33,7 +33,7 @@
         {
             var viewModel = new IndexViewModel
             {
-                Cases = this.caseService.All<CaseViewModel>(),
+                Cases = this.caseService.GetAll<CaseViewModel>(),
             };
             return this.View(viewModel);
         }
@@ -69,6 +69,7 @@
             {
                 return this.NotFound();
             }
+
             this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name");
             this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name");
             var @case = this.caseService.GetById<EditViewModel>(id);
@@ -81,8 +82,6 @@
         }
 
         // POST: Administration/Cases/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         public async Task<IActionResult> Edit(EditViewModel model)
         {
@@ -140,7 +139,7 @@
 
         private bool CaseExists(string id)
         {
-            return this.caseService.All<CaseViewModel>().Any(e => e.Id == id);
+            return this.caseService.GetAll<CaseViewModel>().Any(e => e.Id == id);
         }
     }
 }

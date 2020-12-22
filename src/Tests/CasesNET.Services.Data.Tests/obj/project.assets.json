@@ -36,6 +36,18 @@
           "lib/netstandard1.5/Castle.Core.dll": {}
         }
       },
+      "DeepEqual/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp2.1/DeepEqual.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/DeepEqual.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
         "type": "package",
         "compile": {
@@ -2813,6 +2825,20 @@
         "lib/netstandard1.5/Castle.Core.dll",
         "lib/netstandard1.5/Castle.Core.xml",
         "readme.txt"
+      ]
+    },
+    "DeepEqual/2.0.0": {
+      "sha512": "f3SSC6jpBHASh9ga92clvuXPNj4uKM7YvEuVlkXcb40Ks7lkQllaRoAz8tLC0vCcpIHV4vxNirmu0458IVas6Q==",
+      "type": "package",
+      "path": "deepequal/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "deepequal.2.0.0.nupkg.sha512",
+        "deepequal.nuspec",
+        "lib/net462/DeepEqual.dll",
+        "lib/netcoreapp2.1/DeepEqual.dll",
+        "lib/netstandard2.0/DeepEqual.dll"
       ]
     },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.9": {
@@ -8802,6 +8828,7 @@
     ".NETCoreApp,Version=v3.1": [
       "CasesNET.Data >= 1.0.0",
       "CasesNET.Services.Data >= 1.0.0",
+      "DeepEqual >= 2.0.0",
       "Microsoft.EntityFrameworkCore.InMemory >= 3.1.9",
       "Microsoft.NET.Test.Sdk >= 16.7.1",
       "Moq >= 4.14.7",
@@ -8856,6 +8883,10 @@
       "netcoreapp3.1": {
         "targetAlias": "netcoreapp3.1",
         "dependencies": {
+          "DeepEqual": {
+            "target": "Package",
+            "version": "[2.0.0, )"
+          },
           "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[3.1.9, )"

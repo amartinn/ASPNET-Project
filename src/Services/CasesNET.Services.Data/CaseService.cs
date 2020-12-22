@@ -1,6 +1,5 @@
 ﻿namespace CasesNET.Services.Data
 {
-    using System;
     using System.Collections.Generic;
     using System.IO;
     using System.Linq;
@@ -11,7 +10,6 @@
     using CasesNET.Services.Mapping;
     using CasesNET.Web.ViewModels.Administration.Cases;
     using Microsoft.AspNetCore.Http;
-    using Microsoft.EntityFrameworkCore;
 
     public class CaseService : ICaseService
     {
@@ -51,8 +49,7 @@
             .AllAsNoTracking()
             .OrderByDescending(x => x.CartItem.Cart.Items.Count())
             .To<T>()
-            .Take(count)
-            .ToList();
+            .Take(count);
 
         public T GetById<T>(string id)
             => this.caseRepository
@@ -67,33 +64,30 @@
             .Where(x => x.CategoryId == categoryId)
             .Count();
 
-        public IEnumerable<T> GetAllByCategory<T>(string categoryId, int page = 1, int itemsPerPage = 12)
-            => this.caseRepository
-            .AllAsNoTracking()
-            .Where(x => x.CategoryId == categoryId)
-            .OrderByDescending(x => x.Id)
-            .Skip((page - 1) * itemsPerPage)
-            .Take(itemsPerPage)
-            .To<T>()
-            .ToList();
-
         public IEnumerable<T> GetLatest<T>(int count = 12)
             => this.caseRepository
-            .AllAsNoTracking()
-            .OrderBy(x => x.CreatedOn)
+             .AllAsNoTracking()
+             .OrderByDescending(x => x.CreatedOn)
             .Take(count)
-            .To<T>()
-            .ToList();
+             .To<T>();
 
-        public IEnumerable<T> GetByManufacturerId<T>(string id, int page, int itemsPerPage = 12)
+        public IEnumerable<T> GetAllByManufacturerId<T>(string id, int page, int itemsPerPage = 12)
             => this.caseRepository
             .AllAsNoTracking()
             .Where(x => x.Device.Manufactorer.Id == id)
             .OrderByDescending(x => x.Id)
             .Skip((page - 1) * itemsPerPage)
             .Take(itemsPerPage)
-            .To<T>()
-            .ToList();
+            .To<T>();
+
+        public IEnumerable<T> GetAllByCategoryId<T>(string categoryId, int page = 1, int itemsPerPage = 12)
+            => this.caseRepository
+            .AllAsNoTracking()
+            .Where(x => x.Category.Id == categoryId)
+            .OrderByDescending(x => x.Id)
+            .Skip((page - 1) * itemsPerPage)
+            .Take(itemsPerPage)
+            .To<T>();
 
         public int GetCountByManufacturer(string manufacturerId)
             => this.caseRepository
@@ -101,24 +95,16 @@
             .Where(x => x.Device.ManufacturerId == manufacturerId)
             .Count();
 
-        public IEnumerable<T> All<T>()
+        public IEnumerable<T> GetAll<T>()
             => this.caseRepository
             .AllAsNoTracking()
-            .To<T>()
-            .ToList();
+            .To<T>();
 
         public async Task DeleteByIdAsync(string id)
         {
-            var item = await this.caseRepository.All().FirstOrDefaultAsync(x => x.Id == id);
+            var item = this.caseRepository.All().FirstOrDefault(x => x.Id == id);
             this.caseRepository.Delete(item);
             await this.caseRepository.SaveChangesAsync();
-        }
-
-        private async Task SaveImageToDiskAsync(IFormFile file, string path)
-        {
-            string filePath = Path.Combine(path, file.FileName);
-            using Stream fileStream = new FileStream(filePath, FileMode.Create);
-            await file.CopyToAsync(fileStream);
         }
 
         public async Task UpdateAsync(EditViewModel model)
@@ -132,6 +118,13 @@
 
             this.caseRepository.Update(item);
             await this.caseRepository.SaveChangesAsync();
+        }
+
+        private async Task SaveImageToDiskAsync(IFormFile file, string path)
+        {
+            string filePath = Path.Combine(path, file.FileName);
+            using Stream fileStream = new FileStream(filePath, FileMode.Create);
+            await file.CopyToAsync(fileStream);
         }
     }
 }

@@ -20,7 +20,6 @@
 
         public virtual Image Image { get; set; }
 
-        [Required]
         public string DeviceId { get; set; }
 
         public virtual Device Device { get; set; }
