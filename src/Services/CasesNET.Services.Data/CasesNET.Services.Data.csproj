@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.1</TargetFramework>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
 
@@ -22,6 +22,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\Data\CasesNET.Data.Common\CasesNET.Data.Common.csproj" />
     <ProjectReference Include="..\..\Data\CasesNET.Data.Models\CasesNET.Data.Models.csproj" />
+    <ProjectReference Include="..\..\Data\CasesNET.Data\CasesNET.Data.csproj" />
     <ProjectReference Include="..\..\Web\CasesNET.Web.ViewModels\CasesNET.Web.ViewModels.csproj" />
     <ProjectReference Include="..\CasesNET.Services.Mapping\CasesNET.Services.Mapping.csproj" />
   </ItemGroup>

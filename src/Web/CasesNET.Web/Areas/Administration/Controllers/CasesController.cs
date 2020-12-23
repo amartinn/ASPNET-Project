@@ -17,7 +17,9 @@
 
     public class CasesController : AdministrationController
     {
+#pragma warning disable SA1309 // Field names should not begin with underscore
         private readonly ApplicationDbContext _context;
+#pragma warning restore SA1309 // Field names should not begin with underscore
         private readonly IWebHostEnvironment webHostEnvironment;
         private readonly ICaseService caseService;
 

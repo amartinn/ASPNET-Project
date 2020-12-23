@@ -36,13 +36,16 @@
             if (user.Cart == null)
             {
                 user.Cart = new Cart { UserId = userId };
-                user.Cart.Items.Add(new CartItem
+                var item = new CartItem
                 {
                     Quantity = 1,
                     CaseId = caseId,
                     CartId = user.Cart.Id,
-                });
+                };
+                user.Cart.Items.Add(item);
+                @case.CartItemId = item.Id;
                 await this.cartRepository.AddAsync(user.Cart);
+                this.caseRepository.Update(@case);
             }
             else
             {
@@ -65,6 +68,7 @@
             }
 
             await this.cartRepository.SaveChangesAsync();
+            await this.caseRepository.SaveChangesAsync();
             await this.userManager.UpdateAsync(user);
         }
 

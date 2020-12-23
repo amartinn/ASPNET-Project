@@ -123,6 +123,9 @@ namespace CasesNET.Data.Migrations
                         .HasColumnType("nvarchar(256)")
                         .HasMaxLength(256);
 
+                    b.Property<int>("OrderId")
+                        .HasColumnType("int");
+
                     b.Property<string>("PasswordHash")
                         .HasColumnType("nvarchar(max)");
 
@@ -249,7 +252,6 @@ namespace CasesNET.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("DeviceId")
-                        .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ImageId")
@@ -568,9 +570,7 @@ namespace CasesNET.Data.Migrations
 
                     b.HasOne("CasesNET.Data.Models.Device", "Device")
                         .WithMany("Cases")
-                        .HasForeignKey("DeviceId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("DeviceId");
 
                     b.HasOne("CasesNET.Data.Models.Image", "Image")
                         .WithMany()

@@ -1,6 +1,7 @@
 ﻿namespace CasesNET.Web.Controllers
 {
     using System.Diagnostics;
+    using System.Threading.Tasks;
 
     using CasesNET.Services.Data;
     using CasesNET.Web.ViewModels;
@@ -25,7 +26,6 @@
         {
             var model = new IndexViewModel
             {
-                BestSellersCases = this.caseService.GetBestSellers<CaseViewModel>(),
                 MostSoldCategories = this.categoryService.GetMostSold<CategoryViewModel>(),
             };
             return this.View(model);

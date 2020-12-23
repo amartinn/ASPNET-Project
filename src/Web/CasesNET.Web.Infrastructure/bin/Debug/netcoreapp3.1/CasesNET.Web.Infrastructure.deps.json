@@ -2305,6 +2305,7 @@
       },
       "CasesNET.Services.Data/1.0.0": {
         "dependencies": {
+          "CasesNET.Data": "1.0.0",
           "CasesNET.Data.Common": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0",

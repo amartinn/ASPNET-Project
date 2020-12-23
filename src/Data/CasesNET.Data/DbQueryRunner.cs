@@ -6,6 +6,7 @@
     using CasesNET.Data.Common;
 
     using Microsoft.EntityFrameworkCore;
+    using Microsoft.EntityFrameworkCore.Infrastructure;
 
     public class DbQueryRunner : IDbQueryRunner
     {

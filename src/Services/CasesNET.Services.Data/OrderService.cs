@@ -14,11 +14,14 @@
     public class OrderService : IOrderService
     {
         private readonly IRepository<Order> orderRepository;
+        private readonly IRepository<Cart> cartRepository;
 
-        public OrderService(IRepository<Order> orderRepository)
+        public OrderService(IRepository<Order> orderRepository, IRepository<Cart> cartRepository)
         {
             this.orderRepository = orderRepository;
+            this.cartRepository = cartRepository;
         }
+
 
         public async Task CreateAsync(CheckoutInputModel model)
         {
@@ -28,7 +31,11 @@
                 OrderStatus = OrderStatus.Pending,
                 OrderedById = model.UserId,
             };
+            var cart = this.cartRepository.All().FirstOrDefault(x => x.Id == model.CartId);
+            cart.OrderId = order.Id;
             await this.orderRepository.AddAsync(order);
+            this.cartRepository.Update(cart);
+            await this.cartRepository.SaveChangesAsync();
             await this.orderRepository.SaveChangesAsync();
         }
 

@@ -37,13 +37,11 @@
             .ToList();
 
         private Func<Case, bool> SearchPredicate(string term)
-        {
-            return x =>
+            => x =>
             x.Name.ToLower().Contains(term) ||
             x.Category.Name.ToLower().Contains(term) ||
             x.Device.Name.ToLower().Contains(term) ||
             x.Device.Manufactorer.Name.ToLower().Contains(term) ||
             x.Description.ToLower().Contains(term);
-        }
     }
 }

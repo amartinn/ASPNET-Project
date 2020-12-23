@@ -17,8 +17,6 @@
 
         int GetCountByManufacturer(string manufacturerId);
 
-        IEnumerable<T> GetBestSellers<T>(int count = 4);
-
         IEnumerable<T> GetAllByCategoryId<T>(string categoryId, int page = 1, int itemsPerPage = ItemsPerPage);
 
         IEnumerable<T> GetLatest<T>(int count = 12);

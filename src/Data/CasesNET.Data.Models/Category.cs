@@ -6,7 +6,7 @@
 
     using CasesNET.Data.Common.Models;
 
-    public class Category : BaseModel<string>
+    public class Category : BaseDeletableModel<string>
     {
         public Category()
         {

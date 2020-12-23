@@ -4,12 +4,13 @@
     using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
-
+    using CasesNET.Data;
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
     using CasesNET.Web.ViewModels.Administration.Cases;
     using Microsoft.AspNetCore.Http;
+    using Microsoft.EntityFrameworkCore;
 
     public class CaseService : ICaseService
     {
@@ -42,14 +43,6 @@
             await this.caseRepository.AddAsync(item);
             await this.caseRepository.SaveChangesAsync();
         }
-
-        // TODO: Refactor when order Entity is added.
-        public IEnumerable<T> GetBestSellers<T>(int count = 4)
-            => this.caseRepository
-            .AllAsNoTracking()
-            .OrderByDescending(x => x.CartItem.Cart.Items.Count())
-            .To<T>()
-            .Take(count);
 
         public T GetById<T>(string id)
             => this.caseRepository

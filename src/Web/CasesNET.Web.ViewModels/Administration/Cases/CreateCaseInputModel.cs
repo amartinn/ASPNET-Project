@@ -1,13 +1,14 @@
-﻿using CasesNET.Data.Models;
-using CasesNET.Services.Mapping;
-using Microsoft.AspNetCore.Http;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Text;
-
-namespace CasesNET.Web.ViewModels.Administration.Cases
+﻿namespace CasesNET.Web.ViewModels.Administration.Cases
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations;
+    using System.Text;
+
+    using CasesNET.Data.Models;
+    using CasesNET.Services.Mapping;
+    using Microsoft.AspNetCore.Http;
+
     public class CreateCaseInputModel : IMapTo<Case>
     {
         [Required]

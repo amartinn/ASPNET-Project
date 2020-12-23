@@ -13,6 +13,8 @@ using System.Reflection;
 
 [assembly: Microsoft.AspNetCore.Identity.UI.UIFrameworkAttribute("Bootstrap4")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data", "CasesNET.Data.csproj", "0")]
+[assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Services.Data, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Dat" +
+    "a", "CasesNET.Services.Data.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web", "CasesNET.Web.csproj", "0")]
 [assembly: Microsoft.AspNetCore.Mvc.Testing.WebApplicationFactoryContentRootAttribute("CasesNET.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=nul" +
     "l", "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web.Infrastructur" +

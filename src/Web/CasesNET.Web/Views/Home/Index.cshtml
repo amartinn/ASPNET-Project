@@ -43,12 +43,3 @@
         }
     </div>
 </div>
-<div class="bestsellers-wrapper mt-4 container">
-    <h1 class="text-center text-uppercase text-weight mt-4">our bestsellers</h1>
-    <div class="row">
-        @foreach (var phoneCase in Model.BestSellersCases)
-        {
-           @await Html.PartialAsync("../Shared/_CasePartial.cshtml",phoneCase)
-        }
-    </div>
-</div>

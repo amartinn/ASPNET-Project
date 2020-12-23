@@ -2687,8 +2687,9 @@
       },
       "CasesNET.Services.Data/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
+        "framework": ".NETCoreApp,Version=v3.1",
         "dependencies": {
+          "CasesNET.Data": "1.0.0",
           "CasesNET.Data.Common": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0",
@@ -8787,7 +8788,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "projectReferences": {
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Data\\CasesNET.Data\\CasesNET.Data.csproj"
@@ -8809,7 +8809,6 @@
     },
     "frameworks": {
       "netcoreapp3.1": {
-        "targetAlias": "netcoreapp3.1",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.Facebook": {
             "target": "Package",
@@ -8856,7 +8855,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

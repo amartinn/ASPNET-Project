@@ -9,9 +9,9 @@
 
     public class ManufacturerService : IManufacturerService
     {
-        private readonly IRepository<Manufacturer> manufacturerRepository;
+        private readonly IDeletableEntityRepository<Manufacturer> manufacturerRepository;
 
-        public ManufacturerService(IRepository<Manufacturer> manufacturerRepository)
+        public ManufacturerService(IDeletableEntityRepository<Manufacturer> manufacturerRepository)
         {
             this.manufacturerRepository = manufacturerRepository;
         }

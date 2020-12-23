@@ -21,7 +21,6 @@
         [HttpGet]
         public IActionResult ByTerm(string term, int page = 1)
         {
-
             if (!this.ModelState.IsValid)
             {
                 var viewModel = new SearchViewModel { CasesCount = 0 };
@@ -37,7 +36,6 @@
                     PageNumber = page,
                     SearchTerm = term,
                     Cases = this.searchService.GetAllCasesBySearchTerm<CaseViewModel>(term, page),
-                    BestSellerCases = this.caseService.GetBestSellers<CaseViewModel>(8),
                 };
                 this.TempData["term"] = term;
                 this.ViewData["id"] = term;

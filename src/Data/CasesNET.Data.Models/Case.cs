@@ -1,4 +1,4 @@
-﻿namespace CasesNET.Data.Models
+﻿    namespace CasesNET.Data.Models
 {
     using System;
     using System.ComponentModel.DataAnnotations;

@@ -111,7 +111,7 @@
         public void GetItemsCountByUserIdMethodShouldReturnZeroIfNoItemsInCart()
         {
             // Arrange
-            const int expected = 2;
+            const int expected = 0;
             var fakeCart = new List<Cart>()
             {
                 new Cart
