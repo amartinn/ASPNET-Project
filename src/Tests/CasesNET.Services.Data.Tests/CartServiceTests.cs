@@ -17,48 +17,52 @@
         private readonly string caseId = "caseId";
         private readonly string cartId = "cartId";
         private readonly string cartItemId = "cartItemid";
+        private readonly Mock<IDeletableEntityRepository<Cart>> cartRepository;
+        private readonly Mock<IDeletableEntityRepository<Case>> caseRepository;
+        private readonly Mock<IDeletableEntityRepository<CartItem>> cartItemRepository;
 
         public CartServiceTests()
         {
             AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
+            this.cartRepository = new Mock<IDeletableEntityRepository<Cart>>();
+            this.caseRepository = new Mock<IDeletableEntityRepository<Case>>();
+            this.cartItemRepository = new Mock<IDeletableEntityRepository<CartItem>>();
         }
 
         [Fact]
         public async Task AddItemByIdAndUserIdAsyncMethodShouldAddItemToUser()
         {
             // Arrange
+            const int expected = 2;
             var cartList = new List<Cart>();
             var caseList = new List<Case> { new Case { Id = this.caseId } };
             var user = new ApplicationUser { Id = this.userId };
-            var cartRepo = new Mock<IDeletableEntityRepository<Cart>>();
-            var caseRepo = new Mock<IDeletableEntityRepository<Case>>();
             var usermanager = new Mock<FakeUserManager>();
 
-            cartRepo.Setup(s => s.All())
+            this.cartRepository.Setup(s => s.All())
                 .Returns(cartList.AsQueryable());
-            cartRepo.Setup(s => s.AddAsync(It.IsAny<Cart>()))
+            this.cartRepository.Setup(s => s.AddAsync(It.IsAny<Cart>()))
                 .Callback((Cart cart) => cartList.Add(cart));
-            cartRepo.Setup(s => s.Update(It.IsAny<Cart>()))
+            this.cartRepository.Setup(s => s.Update(It.IsAny<Cart>()))
                 .Callback((Cart cart) =>
                 {
                     cartList.Remove(cartList[0]);
                     cartList.Add(cart);
                 });
 
-            caseRepo.Setup(s => s.All())
+            this.caseRepository.Setup(s => s.All())
                 .Returns(caseList.AsQueryable());
             usermanager.Setup(s => s.FindByIdAsync(this.userId))
                 .ReturnsAsync(user);
 
             // Act
-            var cartService = new CartService(null, cartRepo.Object, caseRepo.Object, usermanager.Object);
+            var cartService = new CartService(null, this.cartRepository.Object, this.caseRepository.Object, usermanager.Object);
 
             await cartService.AddItemByIdAndUserIdAsync(this.caseId, this.userId);
             await cartService.AddItemByIdAndUserIdAsync(this.caseId, this.userId);
 
             // Assert
             var totalItems = user.Cart.Items.Sum(x => x.Quantity);
-            var expected = 2;
             Assert.Equal(expected, cartService.GetItemsCountByUserId(this.userId));
             Assert.Equal(expected, totalItems);
         }
@@ -67,6 +71,7 @@
         public void GetAllItemsByUserIdMethodShouldReturnCorrectItems()
         {
             // Arrange
+            const int expected = 3;
             var fakeCart = new List<Cart>()
             {
                 new Cart
@@ -91,25 +96,22 @@
                 },
             };
 
-            var cartRepo = new Mock<IDeletableEntityRepository<Cart>>();
-
-            cartRepo.Setup(s => s.All())
+            this.cartRepository.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
+            var cartService = new CartService(null, this.cartRepository.Object, null, null);
 
             // Act
-            var cartService = new CartService(null, cartRepo.Object, null, null);
-
-            var items = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId);
+            var actual = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId).Count();
 
             // Assert
-            var expected = 3;
-            Assert.Equal(expected, items.Count());
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
         public void GetItemsCountByUserIdMethodShouldReturnZeroIfNoItemsInCart()
         {
             // Arrange
+            const int expected = 2;
             var fakeCart = new List<Cart>()
             {
                 new Cart
@@ -117,25 +119,23 @@
                     UserId = this.userId,
                 },
             };
-            var cartRepo = new Mock<IDeletableEntityRepository<Cart>>();
-
-            cartRepo.Setup(s => s.All())
+            this.cartRepository.Setup(s => s.All())
                 .Returns(fakeCart.AsQueryable());
 
             // Act
-            var service = new CartService(null, cartRepo.Object, null, null);
+            var service = new CartService(null, this.cartRepository.Object, null, null);
 
-            var count = service.GetItemsCountByUserId(this.userId);
+            var actual = service.GetItemsCountByUserId(this.userId);
 
             // Assert
-            var expected = 0;
-            Assert.Equal(expected, count);
+            Assert.Equal(expected, actual);
         }
 
         [Fact]
         public async Task RemoveItemByIdAndUserIdAsyncMethodShouldRemoveTheItem()
         {
             // Arrange
+            const int expected = 2;
             var fakeCart = new List<CartItem>()
             {
                         new CartItem
@@ -152,21 +152,50 @@
             };
 
             // Act
-            var cartItemRepo = new Mock<IDeletableEntityRepository<CartItem>>();
-            cartItemRepo.Setup(s => s.All())
+            this.cartItemRepository.Setup(s => s.All())
                .Returns(fakeCart.AsQueryable());
-            cartItemRepo.Setup(s => s.Delete(It.IsAny<CartItem>()))
+            this.cartItemRepository.Setup(s => s.Delete(It.IsAny<CartItem>()))
                 .Callback((CartItem item) =>
                 {
                     fakeCart.Remove(item);
                 });
-            var cartService = new CartService(cartItemRepo.Object, null, null, null);
+            var cartService = new CartService(this.cartItemRepository.Object, null, null, null);
             await cartService.RemoveItemByIdAndUserIdAsync(this.cartItemId, this.userId);
 
             // Assert
-            var expected = 2;
-            Assert.Equal(expected, fakeCart.Count());
+            var actual = fakeCart.Count();
+            Assert.Equal(expected, actual);
             Assert.DoesNotContain(fakeCart, x => x.Id == this.cartItemId);
+        }
+
+        [Fact]
+        public async Task RemoveCartByIdAndUserIdAsyncMethodShouldDeleteTheCart()
+        {
+            // Arrange
+            var fakeCarts = new List<Cart>
+            {
+            new Cart
+            {
+                Id = this.cartId,
+                UserId = this.userId,
+            },
+            };
+            this.cartRepository.Setup(s => s.All())
+                .Returns(fakeCarts.AsQueryable());
+
+            this.cartRepository.Setup(s => s.Delete(It.IsAny<Cart>()))
+                .Callback((Cart cart) =>
+                {
+                    fakeCarts.Remove(cart);
+                });
+
+            var service = new CartService(null, this.cartRepository.Object, null, null);
+
+            // Act
+            await service.RemoveCartByIdAndUserIdAsync(this.cartId, this.userId);
+
+            // Assert
+            Assert.Empty(fakeCarts);
         }
     }
 }
