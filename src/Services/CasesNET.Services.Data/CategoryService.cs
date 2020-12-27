@@ -2,12 +2,16 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.IO;
     using System.Linq;
+    using System.Threading.Tasks;
 
+    using CasesNET.Data;
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
-    using CasesNET.Data;
+    using CasesNET.Web.ViewModels.Administration.Categories;
+    using Microsoft.AspNetCore.Http;
     using Microsoft.EntityFrameworkCore;
 
     public class CategoryService : ICategoryService
@@ -22,11 +26,46 @@
             this.db = db;
         }
 
+        public async Task CreateAsync(CategoryCreateInputModel model,string imagePath)
+        {
+            var spliitedImageArgs = model.Image.FileName.Split('.');
+            var imageName = spliitedImageArgs[0];
+            var imageExtension = spliitedImageArgs[1];
+            var item = new Category
+            {
+                Name = model.Name,
+                Image = new Image
+                {
+                    Url = imageName,
+                    Extension = imageExtension,
+                },
+            };
+            await this.SaveImageToDiskAsync(model.Image, imagePath);
+            await this.categoryRepository.AddAsync(item);
+            await this.categoryRepository.SaveChangesAsync();
+        }
+
+        public async Task DeleteByIdAsync(string id)
+        {
+            var category = this.categoryRepository
+                .All()
+                .FirstOrDefault(x => x.Id == id);
+            this.categoryRepository.Delete(category);
+            await this.categoryRepository.SaveChangesAsync();
+        }
+
         public IEnumerable<T> GetAll<T>()
             => this.categoryRepository
                 .AllAsNoTracking()
                 .To<T>()
                 .ToList();
+
+        public T GetById<T>(string id)
+            => this.categoryRepository
+            .AllAsNoTracking()
+            .Where(x => x.Id == id)
+            .To<T>()
+            .FirstOrDefault();
 
         // TODO: Refactor when implement Order Entity.
         public IEnumerable<T> GetMostSold<T>(int count = 4)
@@ -66,5 +105,39 @@
             .AllAsNoTracking()
             .FirstOrDefault(x => x.Id == id)
             .Name;
+
+        public async Task UpdateAsync(CategoryEditInputModel model, string imagePath)
+        {
+            var item = this.categoryRepository.All().FirstOrDefault(x => x.Id == model.Id);
+            item.Name = model.Name;
+            if (model.Image == null)
+            {
+                this.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
+                var spliitedImageArgs = model.Image.FileName.Split('.');
+                var imageName = spliitedImageArgs[0];
+                var imageExtension = spliitedImageArgs[1];
+                item.Image = new Image
+                {
+                    Url = imageName,
+                    Extension = imageExtension,
+                };
+                await this.SaveImageToDiskAsync(model.Image, imagePath);
+            }
+            this.categoryRepository.Update(item);
+            await this.categoryRepository.SaveChangesAsync();
+        }
+
+        private async Task SaveImageToDiskAsync(IFormFile file, string path)
+        {
+            string filePath = Path.Combine(path, file.FileName);
+            using Stream fileStream = new FileStream(filePath, FileMode.Create);
+            await file.CopyToAsync(fileStream);
+        }
+
+        private void DeleteImageFromDisc(string path, string imageName, string imageExtension)
+        {
+            var imagePath = Path.Combine(path, $"{imageName}.{imageExtension}");
+            File.Delete(imagePath);
+        }
     }
 }

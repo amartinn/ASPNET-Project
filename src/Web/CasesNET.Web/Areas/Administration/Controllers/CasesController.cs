@@ -1,13 +1,9 @@
 ﻿namespace CasesNET.Web.Areas.Administration.Controllers
 {
-    using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Threading.Tasks;
 
-    using CasesNET.Data;
-    using CasesNET.Data.Models;
     using CasesNET.Services.Data;
     using CasesNET.Web.ViewModels.Administration.Cases;
     using CasesNET.Web.ViewModels.Categories;
@@ -40,7 +36,7 @@
         [HttpGet]
         public IActionResult Index()
         {
-            var viewModel = new IndexViewModel
+            var viewModel = new CaseListingViewModel
             {
                 Cases = this.caseService.GetAll<CaseViewModel>(),
             };
@@ -84,7 +80,7 @@
                 return this.NotFound();
             }
 
-            var @case = this.caseService.GetById<EditViewModel>(id);
+            var @case = this.caseService.GetById<CaseEditInputModel>(id);
             @case.Categories = this.GetCategoriesAsSelectList();
             @case.Devices = this.GetDevicesasSelectList();
             if (@case == null)
@@ -97,7 +93,7 @@
 
         // POST: Administration/Cases/Edit/5
         [HttpPost]
-        public async Task<IActionResult> Edit(EditViewModel model)
+        public async Task<IActionResult> Edit(CaseEditInputModel model)
         {
             if (this.ModelState.IsValid)
             {
@@ -133,7 +129,7 @@
                 return this.NotFound();
             }
 
-            var @case = this.caseService.GetById<CaseDeleteModel>(id);
+            var @case = this.caseService.GetById<CaseDeleteViewModel>(id);
             if (@case == null)
             {
                 return this.NotFound();

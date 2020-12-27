@@ -100,7 +100,7 @@
             await this.caseRepository.SaveChangesAsync();
         }
 
-        public async Task UpdateAsync(EditViewModel model)
+        public async Task UpdateAsync(CaseEditInputModel model)
         {
             var item = this.caseRepository.All().FirstOrDefault(x => x.Id == model.Id);
             item.Name = model.Name;

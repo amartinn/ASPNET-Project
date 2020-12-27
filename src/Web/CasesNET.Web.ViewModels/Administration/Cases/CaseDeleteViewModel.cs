@@ -4,7 +4,7 @@
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
 
-    public class CaseDeleteModel : IMapFrom<Case>, IHaveCustomMappings
+    public class CaseDeleteViewModel : IMapFrom<Case>, IHaveCustomMappings
     {
         public string Id { get; set; }
 

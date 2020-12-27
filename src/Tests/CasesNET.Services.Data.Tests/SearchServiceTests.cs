@@ -54,7 +54,7 @@ namespace CasesNET.Services.Data.Tests
                      });
             }
 
-            this.caseRepository.Setup(s => s.AllAsNoTracking())
+            this.caseRepository.Setup(s => s.All())
                 .Returns(fakeCases.AsQueryable());
             var service = new SearchService(this.caseRepository.Object);
 
@@ -98,7 +98,7 @@ namespace CasesNET.Services.Data.Tests
                      });
             }
 
-            this.caseRepository.Setup(s => s.AllAsNoTracking())
+            this.caseRepository.Setup(s => s.All())
                 .Returns(fakeCases.AsQueryable());
             var service = new SearchService(this.caseRepository.Object);
 

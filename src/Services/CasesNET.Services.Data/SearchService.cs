@@ -19,13 +19,13 @@
 
         public int GetCountBySearchTerm(string term)
             => this.caseRepository
-            .AllAsNoTracking()
+            .All()
             .Where(this.SearchPredicate(term.Trim().ToLower()))
             .Count();
 
         public IEnumerable<T> GetAllCasesBySearchTerm<T>(string term, int page = 1, int itemsPerPage = 12)
             => this.caseRepository
-            .AllAsNoTracking()
+            .All()
             .Where(this.SearchPredicate(term.Trim().ToLower()))
             .OrderByDescending(x => x.Id)
             .Skip((page - 1) * itemsPerPage)

@@ -1,6 +1,5 @@
-﻿@using CasesNET.Web.ViewModels.Administration.Cases
-@model CaseListingViewModel
-
+﻿@using CasesNET.Web.ViewModels.Categories;
+@model CategoryListingModel
 @{
     ViewData["Title"] = "Index";
 }
@@ -23,22 +22,12 @@
                 Image
             </th>
             <th>
-                Device
+                Utilities
             </th>
-            <th>
-                Category
-            </th>
-            <th>
-                Price
-            </th>
-            <th>
-                Description
-            </th>
-            <th>Utilities</th>
         </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model.Cases)
+        @foreach (var item in Model.Categories)
         {
             <tr>
                 <td>
@@ -48,22 +37,10 @@
                     @Html.DisplayFor(modelItem => item.Name)
                 </td>
                 <td>
-                    <img width="50" height="50" src="~/Images/Cases/@item.ImageUrl" alt="@item.ImageUrl" />
+                    <img width="50" height="50" src="~/Images/Categories/@item.ImageUrl" alt="@item.ImageUrl" />
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.DeviceName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.CategoryName)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Price)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Description)
-                </td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> | 
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                     <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
                 </td>
             </tr>

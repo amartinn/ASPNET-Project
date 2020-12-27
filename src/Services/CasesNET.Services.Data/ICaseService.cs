@@ -27,6 +27,6 @@
 
         Task DeleteByIdAsync(string id);
 
-        Task UpdateAsync(EditViewModel model);
+        Task UpdateAsync(CaseEditInputModel model);
     }
 }

@@ -1,15 +1,15 @@
 ﻿namespace CasesNET.Web.ViewModels.Administration.Cases
 {
+    using System.ComponentModel.DataAnnotations;
+
     using AutoMapper;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
-    using System.ComponentModel.DataAnnotations;
-
     using static CasesNET.Data.Common.Validation.Case;
 
-    public class EditViewModel : IMapFrom<Case>, IMapTo<Case>, IHaveCustomMappings
+    public class CaseEditInputModel : IMapFrom<Case>, IMapTo<Case>, IHaveCustomMappings
     {
         public string Id { get; set; }
 

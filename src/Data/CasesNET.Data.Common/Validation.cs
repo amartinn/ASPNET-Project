@@ -21,5 +21,9 @@
 
             public const int MaxDescriptionLength = 200;
         }
+        public class Category
+        {
+            public const int MaxNameLength = 30;
+        }
     }
 }

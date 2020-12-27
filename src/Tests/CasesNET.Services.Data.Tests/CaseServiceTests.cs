@@ -444,7 +444,7 @@
                 });
             var service = new CaseService(this.caseRepository.Object);
 
-            var model = new EditViewModel
+            var model = new CaseEditInputModel
             {
                 Id = this.caseId,
                 Name = "Name",
