@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CasesNET.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20201223192500_mandatory")]
-    partial class mandatory
+    [Migration("20201227142407_device as IdeletableEntity")]
+    partial class deviceasIdeletableEntity
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -294,8 +294,14 @@ namespace CasesNET.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("ImageId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
 
                     b.Property<DateTime?>("ModifiedOn")
                         .HasColumnType("datetime2");
@@ -306,6 +312,8 @@ namespace CasesNET.Data.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("ImageId");
+
+                    b.HasIndex("IsDeleted");
 
                     b.ToTable("Categories");
                 });
@@ -318,6 +326,12 @@ namespace CasesNET.Data.Migrations
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");
 
+                    b.Property<DateTime?>("DeletedOn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
                     b.Property<string>("ManufacturerId")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
@@ -329,6 +343,8 @@ namespace CasesNET.Data.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("IsDeleted");
 
                     b.HasIndex("ManufacturerId");
 

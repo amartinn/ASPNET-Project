@@ -32,23 +32,25 @@
         public IEnumerable<T> GetMostSold<T>(int count = 4)
         {
             const string sqlcommand = @"
-	                                    select cat.Id as Id, 
-	                                    cat.CreatedOn as  CreatedOn, 
-	                                    cat.ModifiedOn as ModifiedOn ,
-	                                    cat.Name as Name,
-	                                    cat.ImageId as ImageId
-	                                    from Orders as o
-	                                    join Carts as c 
-	                                    on c.Id = o.CartId
-	                                    join cartitems as ct 
-	                                    on ct.CartId = c.Id
-	                                    join Cases as cases
-	                                    on ct.CaseId = cases.Id
-	                                    join Categories as cat
-	                                    on cases.CategoryId = cat.Id
-	                                    where (cases.CartItemId is not null)
-	                                    GROUP BY cat.Id,cat.CreatedOn,cat.ModifiedOn,cat.Name,cat.ImageId
-	                                    ";
+                       select cat.Id as Id, 
+                    cat.CreatedOn as  CreatedOn, 
+                    cat.ModifiedOn as ModifiedOn ,
+                    cat.DeletedOn as DeletedOn,
+                    cat.IsDeleted as IsDeleted,
+                    cat.Name as Name,
+                    cat.ImageId as ImageId
+                    from Orders as o
+                    join Carts as c 
+                    on c.Id = o.CartId
+                    join cartitems as ct 
+                    on ct.CartId = c.Id
+                    join Cases as cases
+                    on ct.CaseId = cases.Id
+                    join Categories as cat
+                    on cases.CategoryId = cat.Id
+                    where (cases.CartItemId is not null)
+                    GROUP BY cat.Id,cat.CreatedOn,cat.ModifiedOn,cat.DeletedOn,cat.isDeleted,cat.Name,cat.ImageId
+                            ";
 
             var items = this.db.Categories
                 .FromSqlRaw(sqlcommand)

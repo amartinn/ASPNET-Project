@@ -1,14 +1,12 @@
 ﻿namespace CasesNET.Web.ViewModels.Administration.Cases
 {
     using System;
-    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
-    using System.Text;
 
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
     using Microsoft.AspNetCore.Http;
-
+    using Microsoft.AspNetCore.Mvc.Rendering;
     using static CasesNET.Data.Common.Validation.Case;
 
     public class CreateCaseInputModel : IMapTo<Case>
@@ -33,5 +31,9 @@
         [Required]
         [MaxLength(MaxDescriptionLength)]
         public string Description { get; set; }
+
+        public SelectList Categories { get; set; }
+
+        public SelectList Devices { get; set; }
     }
 }

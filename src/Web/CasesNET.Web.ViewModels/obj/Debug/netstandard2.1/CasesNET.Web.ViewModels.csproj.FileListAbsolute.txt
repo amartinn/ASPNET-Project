@@ -46,9 +46,9 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\b
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Common.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\bin\Debug\netstandard2.1\CasesNET.Common.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Web\CasesNET.Web.ViewModels\obj\Debug\netstandard2.1\CasesNET.Web.ViewModels.csproj.CoreCompileInputs.cache

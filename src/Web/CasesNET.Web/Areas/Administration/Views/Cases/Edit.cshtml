@@ -19,12 +19,12 @@
             </div>
             <div class="form-group">
                 <label for="Device" class="control-label">Device</label>
-                <select asp-for="DeviceId" class="form-control" asp-items="ViewBag.DeviceId"></select>
+                <select asp-for="DeviceId" class="form-control" asp-items="@Model.Devices"></select>
                 <span asp-validation-for="DeviceId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label for="Category" class="control-label">Categorys</label>
-                <select asp-for="CategoryId" class="form-control" asp-items="ViewBag.CategoryId"></select>
+                <select asp-for="CategoryId" class="form-control" asp-items="@Model.Categories"></select>
                 <span asp-validation-for="CategoryId" class="text-danger"></span>
             </div>
             <div class="form-group">

@@ -16,7 +16,7 @@
                 return;
             }
 
-            var categories = new List<string>
+            var categoriesNames = new List<string>
             {
                 "shades of autumn",
                 "street style",
@@ -34,7 +34,7 @@
                 "movies",
                 "music",
             };
-            foreach (var categoryName in categories)
+            foreach (var categoryName in categoriesNames)
             {
                 var url = categoryName.Replace(' ', '-');
                 url += "-category";

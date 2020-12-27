@@ -10,6 +10,8 @@
     using CasesNET.Data.Models;
     using CasesNET.Services.Data;
     using CasesNET.Web.ViewModels.Administration.Cases;
+    using CasesNET.Web.ViewModels.Categories;
+    using CasesNET.Web.ViewModels.Devices;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
@@ -17,20 +19,25 @@
 
     public class CasesController : AdministrationController
     {
-#pragma warning disable SA1309 // Field names should not begin with underscore
-        private readonly ApplicationDbContext _context;
-#pragma warning restore SA1309 // Field names should not begin with underscore
         private readonly IWebHostEnvironment webHostEnvironment;
         private readonly ICaseService caseService;
+        private readonly ICategoryService categoryService;
+        private readonly IDeviceService deviceService;
 
-        public CasesController(ApplicationDbContext context, IWebHostEnvironment webHostEnvironment, ICaseService caseService)
+        public CasesController(
+            IWebHostEnvironment webHostEnvironment,
+            ICaseService caseService,
+            ICategoryService categoryService,
+            IDeviceService deviceService)
         {
-            this._context = context;
             this.webHostEnvironment = webHostEnvironment;
             this.caseService = caseService;
+            this.categoryService = categoryService;
+            this.deviceService = deviceService;
         }
 
         // GET: Administration/Cases
+        [HttpGet]
         public IActionResult Index()
         {
             var viewModel = new IndexViewModel
@@ -41,30 +48,35 @@
         }
 
         // GET: Administration/Cases/Create
+        [HttpGet]
         public IActionResult Create()
         {
-            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name");
-            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name");
-            return this.View();
+            var model = new CreateCaseInputModel
+            {
+                Categories = this.GetCategoriesAsSelectList(),
+                Devices = this.GetDevicesasSelectList(),
+            };
+            return this.View(model);
         }
 
         // POST: Administration/Cases/Create
         [HttpPost]
         public async Task<IActionResult> Create(CreateCaseInputModel model)
         {
-            if (this.ModelState.IsValid)
+            if (!this.ModelState.IsValid)
             {
-                var path = Path.Combine(this.webHostEnvironment.WebRootPath, "Images/Cases");
-                await this.caseService.CreateAsync(model, path);
-                return this.Json(new { redirectToUrl = this.Url.Action(nameof(this.Index)) });
+                model.Categories = this.GetCategoriesAsSelectList();
+                model.Devices = this.GetDevicesasSelectList();
+                return this.BadRequest(this.ModelState);
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name", model.CategoryId);
-            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name", model.DeviceId);
-            return this.View(model);
+            var path = Path.Combine(this.webHostEnvironment.WebRootPath, "Images/Cases");
+            await this.caseService.CreateAsync(model, path);
+            return this.Json(new { Url = this.Url.Action(nameof(this.Index)) });
         }
 
         // GET: Administration/Cases/Edit/5
+        [HttpGet]
         public IActionResult Edit(string id)
         {
             if (id == null)
@@ -72,9 +84,9 @@
                 return this.NotFound();
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name");
-            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name");
             var @case = this.caseService.GetById<EditViewModel>(id);
+            @case.Categories = this.GetCategoriesAsSelectList();
+            @case.Devices = this.GetDevicesasSelectList();
             if (@case == null)
             {
                 return this.NotFound();
@@ -108,8 +120,8 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
-            this.ViewData["CategoryId"] = new SelectList(this._context.Categories, "Id", "Name", model.DeviceId);
-            this.ViewData["DeviceId"] = new SelectList(this._context.Devices, "Id", "Name", model.DeviceId);
+            model.Categories = this.GetCategoriesAsSelectList();
+            model.Devices = this.GetDevicesasSelectList();
             return this.View(model);
         }
 
@@ -143,5 +155,11 @@
         {
             return this.caseService.GetAll<CaseViewModel>().Any(e => e.Id == id);
         }
+
+        private SelectList GetCategoriesAsSelectList()
+            => new SelectList(this.categoryService.GetAll<CategorySelectListModel>(), "Id", "Name");
+
+        private SelectList GetDevicesasSelectList()
+            => new SelectList(this.deviceService.GetAll<DeviceSelectListModel>(), "Id", "Name");
     }
 }

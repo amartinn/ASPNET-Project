@@ -36,7 +36,7 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\bin
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.AssemblyInfo.cs
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.csproj.CopyComplete
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Models\obj\Debug\netstandard2.1\CasesNET.Data.Models.csproj.CoreCompileInputs.cache

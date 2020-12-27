@@ -6,7 +6,7 @@
 
     using CasesNET.Data.Common.Models;
 
-    public class Device : BaseModel<string>
+    public class Device : BaseDeletableModel<string>
     {
         public Device()
         {
