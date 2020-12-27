@@ -20,7 +20,7 @@
         {
             configuration.CreateMap<Case, FakeSearchModel>()
                 .ForMember(m => m.ManufacturerName, cfg =>
-                 cfg.MapFrom(x => x.Device.Manufactorer.Name));
+                 cfg.MapFrom(x => x.Device.Manufacturer.Name));
         }
     }
 }

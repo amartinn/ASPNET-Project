@@ -19,7 +19,7 @@
         [Required]
         public string ManufacturerId { get; set; }
 
-        public virtual Manufacturer Manufactorer { get; set; }
+        public virtual Manufacturer Manufacturer { get; set; }
 
         public virtual ICollection<Case> Cases { get; set; }
     }

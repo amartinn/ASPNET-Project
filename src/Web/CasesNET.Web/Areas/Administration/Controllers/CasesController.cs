@@ -50,7 +50,7 @@
             var model = new CreateCaseInputModel
             {
                 Categories = this.GetCategoriesAsSelectList(),
-                Devices = this.GetDevicesasSelectList(),
+                Devices = this.GetDevicesAsSelectList(),
             };
             return this.View(model);
         }
@@ -62,7 +62,7 @@
             if (!this.ModelState.IsValid)
             {
                 model.Categories = this.GetCategoriesAsSelectList();
-                model.Devices = this.GetDevicesasSelectList();
+                model.Devices = this.GetDevicesAsSelectList();
                 return this.BadRequest(this.ModelState);
             }
 
@@ -82,7 +82,7 @@
 
             var @case = this.caseService.GetById<CaseEditInputModel>(id);
             @case.Categories = this.GetCategoriesAsSelectList();
-            @case.Devices = this.GetDevicesasSelectList();
+            @case.Devices = this.GetDevicesAsSelectList();
             if (@case == null)
             {
                 return this.NotFound();
@@ -117,7 +117,7 @@
             }
 
             model.Categories = this.GetCategoriesAsSelectList();
-            model.Devices = this.GetDevicesasSelectList();
+            model.Devices = this.GetDevicesAsSelectList();
             return this.View(model);
         }
 
@@ -155,7 +155,7 @@
         private SelectList GetCategoriesAsSelectList()
             => new SelectList(this.categoryService.GetAll<CategorySelectListModel>(), "Id", "Name");
 
-        private SelectList GetDevicesasSelectList()
+        private SelectList GetDevicesAsSelectList()
             => new SelectList(this.deviceService.GetAll<DeviceSelectListModel>(), "Id", "Name");
     }
 }

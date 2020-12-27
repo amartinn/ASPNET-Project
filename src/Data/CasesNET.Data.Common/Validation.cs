@@ -31,5 +31,10 @@
         {
             public const int MaxNameLength = 30;
         }
+
+        public class Device
+        {
+            public const int MaxNameLength = 30;
+        }
     }
 }

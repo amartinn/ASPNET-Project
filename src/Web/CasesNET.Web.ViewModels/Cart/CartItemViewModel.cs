@@ -29,7 +29,7 @@
                   .ForMember(m => m.CaseImageUrl, opt =>
                    opt.MapFrom(x => $"{x.Case.Image.Url}.{x.Case.Image.Extension}"))
                   .ForMember(m => m.CaseManufacturerName, opt =>
-                  opt.MapFrom(x => x.Case.Device.Manufactorer.Name))
+                  opt.MapFrom(x => x.Case.Device.Manufacturer.Name))
                   .ForMember(m => m.CaseDeviceName, opt =>
                    opt.MapFrom(x => x.Case.Device.Name));
     }

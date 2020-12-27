@@ -68,7 +68,7 @@
         public IEnumerable<T> GetAllByManufacturerId<T>(string id, int page, int itemsPerPage = 12)
             => this.caseRepository
             .AllAsNoTracking()
-            .Where(x => x.Device.Manufactorer.Id == id)
+            .Where(x => x.Device.Manufacturer.Id == id)
             .OrderByDescending(x => x.Id)
             .Skip((page - 1) * itemsPerPage)
             .Take(itemsPerPage)

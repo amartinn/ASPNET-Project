@@ -48,7 +48,7 @@
                          Device = new Device
                          {
                              Name = this.fakePropertyValue,
-                             Manufactorer = new Manufacturer
+                             Manufacturer = new Manufacturer
                              {
                                  Name = this.fakePropertyValue,
                              },
@@ -92,7 +92,7 @@
                          Device = new Device
                          {
                              Name = this.fakePropertyValue,
-                             Manufactorer = new Manufacturer
+                             Manufacturer = new Manufacturer
                              {
                                  Name = this.fakePropertyValue,
                              },
@@ -130,7 +130,7 @@
                     Device = new Device
                     {
                         Name = this.fakePropertyValue,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Name = this.fakePropertyValue,
                         },
@@ -147,7 +147,7 @@
                     Device = new Device
                     {
                         Name = this.fakePropertyValue,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Name = this.fakePropertyValue,
                         },
@@ -164,7 +164,7 @@
                     Device = new Device
                     {
                         Name = this.searchTerm,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Name = this.fakePropertyValue,
                         },
@@ -181,7 +181,7 @@
                     Device = new Device
                     {
                         Name = this.fakePropertyValue,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Name = this.searchTerm,
                         },
@@ -198,7 +198,7 @@
                     Device = new Device
                     {
                         Name = this.fakePropertyValue,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Name = this.fakePropertyValue,
                         },

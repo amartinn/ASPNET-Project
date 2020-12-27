@@ -44,7 +44,7 @@
                     CreatedOn = FakeDateTime.Now(),
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -60,7 +60,7 @@
                     CreatedOn = FakeDateTime.Now(),
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -161,7 +161,7 @@
                     },
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -177,7 +177,7 @@
                     },
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -193,7 +193,7 @@
                     },
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -228,7 +228,7 @@
                     CreatedOn = FakeDateTime.Now(i),
                     Device = new Device
                     {
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -267,7 +267,7 @@
                     Device = new Device
                     {
                         ManufacturerId = this.manufacturerId,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -279,7 +279,7 @@
                     Device = new Device
                     {
                         ManufacturerId = this.manufacturerId,
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId,
                         },
@@ -291,7 +291,7 @@
                     Device = new Device
                     {
                         ManufacturerId = this.manufacturerId + "2",
-                        Manufactorer = new Manufacturer
+                        Manufacturer = new Manufacturer
                         {
                             Id = this.manufacturerId + "2",
                         },
@@ -328,7 +328,7 @@
                      CreatedOn = FakeDateTime.Now(),
                      Device = new Device
                      {
-                         Manufactorer = new Manufacturer
+                         Manufacturer = new Manufacturer
                          {
                              Id = this.manufacturerId,
                          },
@@ -344,7 +344,7 @@
                      CreatedOn = FakeDateTime.Now(),
                      Device = new Device
                      {
-                         Manufactorer = new Manufacturer
+                         Manufacturer = new Manufacturer
                          {
                              Id = this.manufacturerId,
                          },
@@ -360,7 +360,7 @@
                      CreatedOn = FakeDateTime.Now(),
                      Device = new Device
                      {
-                         Manufactorer = new Manufacturer
+                         Manufacturer = new Manufacturer
                          {
                              Id = this.manufacturerId,
                          },
