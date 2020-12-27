@@ -19,22 +19,19 @@
 
         public int GetCountBySearchTerm(string term)
             => this.caseRepository
-            .All()
-            .ToList()
+            .AllAsNoTracking()
             .Where(this.SearchPredicate(term.Trim().ToLower()))
             .Count();
 
         public IEnumerable<T> GetAllCasesBySearchTerm<T>(string term, int page = 1, int itemsPerPage = 12)
             => this.caseRepository
-            .All()
-            .ToList()
+            .AllAsNoTracking()
             .Where(this.SearchPredicate(term.Trim().ToLower()))
-            .AsQueryable()
             .OrderByDescending(x => x.Id)
             .Skip((page - 1) * itemsPerPage)
             .Take(itemsPerPage)
-            .To<T>()
-            .ToList();
+            .AsQueryable()
+            .To<T>();
 
         private Func<Case, bool> SearchPredicate(string term)
             => x =>

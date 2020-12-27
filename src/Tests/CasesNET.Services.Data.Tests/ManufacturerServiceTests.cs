@@ -19,7 +19,7 @@
 
         public ManufacturerServiceTests()
         {
-            AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
+            AutoMapperConfig.RegisterMappings(typeof(FakeCartItemModel).GetTypeInfo().Assembly);
             this.manufacturerRepository = new Mock<IDeletableEntityRepository<Manufacturer>>();
         }
 

@@ -3,7 +3,7 @@
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
 
-    public class FakeCartItem : IMapFrom<CartItem>
+    public class FakeCartItemModel : IMapFrom<CartItem>
     {
     }
 }

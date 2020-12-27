@@ -10,5 +10,16 @@
 
             public const int AdressMaxLength = 20;
         }
+
+        public class Case
+        {
+            public const int NameMaxLength = 30;
+
+            public const double MinPrice = 2D;
+
+            public const double MaxPrice = 100D;
+
+            public const int MaxDescriptionLength = 200;
+        }
     }
 }

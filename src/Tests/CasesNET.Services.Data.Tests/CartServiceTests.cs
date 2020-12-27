@@ -23,7 +23,7 @@
 
         public CartServiceTests()
         {
-            AutoMapperConfig.RegisterMappings(typeof(FakeCartItem).GetTypeInfo().Assembly);
+            AutoMapperConfig.RegisterMappings(typeof(FakeCartItemModel).GetTypeInfo().Assembly);
             this.cartRepository = new Mock<IDeletableEntityRepository<Cart>>();
             this.caseRepository = new Mock<IDeletableEntityRepository<Case>>();
             this.cartItemRepository = new Mock<IDeletableEntityRepository<CartItem>>();
@@ -101,7 +101,7 @@
             var cartService = new CartService(null, this.cartRepository.Object, null, null);
 
             // Act
-            var actual = cartService.GetAllItemsByUserId<FakeCartItem>(this.userId).Count();
+            var actual = cartService.GetAllItemsByUserId<FakeCartItemModel>(this.userId).Count();
 
             // Assert
             Assert.Equal(expected, actual);
