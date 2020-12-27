@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CasesNET.Services.Data
+﻿namespace CasesNET.Services.Data
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     public interface IDeviceService
     {
         IEnumerable<T> GetAll<T>();

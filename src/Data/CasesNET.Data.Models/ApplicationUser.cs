@@ -51,7 +51,6 @@ namespace CasesNET.Data.Models
 
         public string City { get; set; }
 
-
         [ForeignKey(nameof(Order))]
         public int OrderId { get; set; }
 

@@ -46,8 +46,7 @@
         {
             if (this.ModelState.IsValid)
             {
-
-                await this.categoryService.CreateAsync(model,this.webHostEnvironment.WebRootPath);
+                await this.categoryService.CreateAsync(model, this.webHostEnvironment.WebRootPath);
                 return this.RedirectToAction(nameof(this.Index));
             }
 

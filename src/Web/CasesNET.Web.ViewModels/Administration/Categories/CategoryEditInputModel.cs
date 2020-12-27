@@ -1,6 +1,7 @@
 ﻿namespace CasesNET.Web.ViewModels.Administration.Categories
 {
     using System.ComponentModel.DataAnnotations;
+
     using AutoMapper;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;

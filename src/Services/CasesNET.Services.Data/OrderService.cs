@@ -22,7 +22,6 @@
             this.cartRepository = cartRepository;
         }
 
-
         public async Task CreateAsync(CheckoutInputModel model)
         {
             var order = new Order

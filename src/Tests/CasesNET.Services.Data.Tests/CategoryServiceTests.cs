@@ -4,6 +4,7 @@
     using System.Linq;
     using System.Reflection;
     using System.Threading.Tasks;
+
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Services.Data.Tests.FakeModels;
@@ -99,7 +100,6 @@
             var actualId = item.Id;
             Assert.Equal(expectedId, actualId);
             Assert.Equal(expectedName, actualName);
-
         }
 
         [Fact]
@@ -134,7 +134,6 @@
         [Fact]
         public async Task UpdateAsyncMethodShouldUpdateTheEntity()
         {
-
             // Arrange
             var expectedItem = new Category
             {
@@ -143,13 +142,16 @@
             };
             var fakeCategories = new List<Category>
             {
-                new Category { Id = this.categoryId,
-                Image = new Image{
-                Url = "fileName",
-                Extension = "jpg",
+                new Category
+                {
+                    Id = this.categoryId,
+                    Image = new Image
+                    {
+                        Url = "fileName",
+                        Extension = "jpg",
+                    },
                 },
-                 },
-                new Category { Id = this.categoryId + "1", Image = new Image{ } },
+                new Category { Id = this.categoryId + "1", Image = new Image { } },
             };
             this.categoryRepository.Setup(s => s.All())
                 .Returns(fakeCategories.AsQueryable());
@@ -169,11 +171,10 @@
                 Id = this.categoryId,
                 Name = this.categoryName,
                 Image = image.Object,
-
             };
 
             // Act
-            await service.UpdateAsync(model,string.Empty);
+            await service.UpdateAsync(model, string.Empty);
 
             // Assert
             var actualItem = fakeCategories.FirstOrDefault(x => x.Id == this.categoryId);

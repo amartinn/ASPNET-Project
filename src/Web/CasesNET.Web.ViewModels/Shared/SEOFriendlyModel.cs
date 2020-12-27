@@ -1,5 +1,4 @@
-﻿
-namespace CasesNET.Web.ViewModels.Shared
+﻿namespace CasesNET.Web.ViewModels.Shared
 {
     using CasesNET.Common;
 

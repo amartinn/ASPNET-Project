@@ -49,7 +49,7 @@
             }
             else
             {
-                var caseInUserCart = user.Cart.Items.FirstOrDefault(x =>    x.CaseId == caseId);
+                var caseInUserCart = user.Cart.Items.FirstOrDefault(x => x.CaseId == caseId);
                 if (caseInUserCart != null)
                 {
                     caseInUserCart.Quantity++;

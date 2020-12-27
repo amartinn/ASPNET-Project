@@ -1,22 +1,24 @@
-﻿using CasesNET.Data.Common.Repositories;
-using CasesNET.Data.Models;
-using CasesNET.Services.Data.Tests.FakeModels;
-using CasesNET.Services.Mapping;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using Xunit;
-
-namespace CasesNET.Services.Data.Tests
+﻿namespace CasesNET.Services.Data.Tests
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using System.Text;
+
+    using CasesNET.Data.Common.Repositories;
+    using CasesNET.Data.Models;
+    using CasesNET.Services.Data.Tests.FakeModels;
+    using CasesNET.Services.Mapping;
+    using Moq;
+    using Xunit;
+
     public class SearchServiceTests
     {
         private readonly Mock<IDeletableEntityRepository<Case>> caseRepository;
         private string searchTerm = "searchterm";
         private string fakePropertyValue = "test";
+
         public SearchServiceTests()
         {
             AutoMapperConfig.RegisterMappings(typeof(FakeSearchModel).GetTypeInfo().Assembly);

@@ -7,6 +7,7 @@
     using CasesNET.Services.Mapping;
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Mvc.Rendering;
+
     using static CasesNET.Data.Common.Validation.Case;
 
     public class CreateCaseInputModel : IMapTo<Case>

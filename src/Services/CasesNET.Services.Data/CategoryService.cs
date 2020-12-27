@@ -18,7 +18,6 @@
     {
         private readonly IDeletableEntityRepository<Category> categoryRepository;
         private readonly ApplicationDbContext db;
-        private readonly IRepository<Case> caseRepository;
 
         public CategoryService(IDeletableEntityRepository<Category> categoryRepository, ApplicationDbContext db)
         {
@@ -26,7 +25,7 @@
             this.db = db;
         }
 
-        public async Task CreateAsync(CategoryCreateInputModel model,string imagePath)
+        public async Task CreateAsync(CategoryCreateInputModel model, string imagePath)
         {
             var spliitedImageArgs = model.Image.FileName.Split('.');
             var imageName = spliitedImageArgs[0];
@@ -123,6 +122,7 @@
                 };
                 await this.SaveImageToDiskAsync(model.Image, imagePath);
             }
+
             this.categoryRepository.Update(item);
             await this.categoryRepository.SaveChangesAsync();
         }

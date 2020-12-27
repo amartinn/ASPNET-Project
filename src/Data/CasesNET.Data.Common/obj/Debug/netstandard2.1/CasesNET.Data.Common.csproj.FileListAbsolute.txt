@@ -19,7 +19,6 @@ C:\Users\marto\OneDrive\Desktop\ASP.NET CORE Project\src\Data\CasesNET.Data.Comm
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\bin\Debug\netstandard2.1\CasesNET.Data.Common.deps.json
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\bin\Debug\netstandard2.1\CasesNET.Data.Common.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\bin\Debug\netstandard2.1\CasesNET.Data.Common.pdb
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\obj\Debug\netstandard2.1\CasesNET.Data.Common.csprojAssemblyReference.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\obj\Debug\netstandard2.1\CasesNET.Data.Common.AssemblyInfoInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\obj\Debug\netstandard2.1\CasesNET.Data.Common.AssemblyInfo.cs
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Data\CasesNET.Data.Common\obj\Debug\netstandard2.1\CasesNET.Data.Common.csproj.CoreCompileInputs.cache
