@@ -1,14 +1,12 @@
 ﻿namespace CasesNET.Services.Data.Tests
 {
-    using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Text;
     using System.Threading.Tasks;
+
     using Microsoft.AspNetCore.Http;
     using Microsoft.AspNetCore.Http.Internal;
-    using Moq;
     using Xunit;
 
     public class FileServiceTests
@@ -33,7 +31,6 @@
         [Fact]
         public async Task SaveImageToDiskAsyncMethodShouldCreateImage()
         {
-
             // Arrange
             var service = new FileService();
 
@@ -75,8 +72,7 @@
                 baseStreamOffset: 0,
                 length: s_Bytes.Length,
                 name: "Data",
-                fileName: name
-            );
+                fileName: name);
         }
     }
 }

@@ -112,8 +112,10 @@
                 {
                     categories.Add(category);
                 });
-
-            var service = new CategoryService(this.categoryRepository.Object, null, null);
+            var fileService = new Mock<IFileService>();
+            fileService.Setup(s => s.SaveImageToDiskAsync(It.IsAny<IFormFile>(), It.IsAny<string>()))
+                .Callback(() => { });
+            var service = new CategoryService(this.categoryRepository.Object, null, fileService.Object);
             var image = new Mock<IFormFile>();
             image.Setup(s => s.FileName)
                 .Returns("fileName.jpg");

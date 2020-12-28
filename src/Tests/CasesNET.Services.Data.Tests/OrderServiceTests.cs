@@ -160,10 +160,12 @@
                 new Order
                 {
                    Id = this.orderId,
+                   OrderedById = "orderedId",
                 },
                 new Order
                 {
                     Id = this.orderId + 1,
+                    OrderedById = "orderedId",
                 },
             };
 

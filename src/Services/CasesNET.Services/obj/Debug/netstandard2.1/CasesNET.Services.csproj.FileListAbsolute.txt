@@ -23,4 +23,3 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services\ob
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.pdb
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services\obj\Debug\netstandard2.1\CasesNET.Services.csprojAssemblyReference.cache

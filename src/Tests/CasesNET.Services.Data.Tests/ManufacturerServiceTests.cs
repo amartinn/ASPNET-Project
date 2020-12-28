@@ -34,8 +34,8 @@
             const int expected = 2;
             var fakeManufacturers = new List<Manufacturer>
             {
-                new Manufacturer { Id = this.manufacturerId, Name = this.manufacturerName },
-                new Manufacturer { Id = this.manufacturerId, Name = this.manufacturerName },
+                new Manufacturer { Id = this.manufacturerId },
+                new Manufacturer { Id = this.manufacturerId },
             };
             this.manufacturerRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeManufacturers.AsQueryable());
@@ -110,7 +110,10 @@
                 {
                     fakeManufacturers.Add(item);
                 });
-            var service = new ManufacturerService(this.manufacturerRepository.Object, null);
+            var fileService = new Mock<IFileService>();
+            fileService.Setup(s => s.SaveImageToDiskAsync(It.IsAny<IFormFile>(), It.IsAny<string>()))
+                .Callback(() => { });
+            var service = new ManufacturerService(this.manufacturerRepository.Object, fileService.Object);
             var formfile = new Mock<IFormFile>();
             formfile.Setup(s => s.FileName)
                 .Returns("test.jpg");

@@ -474,7 +474,10 @@
                 {
                     cases.Add(item);
                 });
-            var service = new CaseService(this.caseRepository.Object, null);
+            var fileService = new Mock<IFileService>();
+            fileService.Setup(s => s.SaveImageToDiskAsync(It.IsAny<IFormFile>(), It.IsAny<string>()))
+                .Callback(() => { });
+            var service = new CaseService(this.caseRepository.Object, fileService.Object);
             var formfile = new Mock<IFormFile>();
             formfile.Setup(s => s.FileName)
                 .Returns("test.jpg");
