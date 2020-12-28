@@ -11,8 +11,8 @@
 
     public class CartService : ICartService
     {
-        private readonly IRepository<CartItem> cartItemRepository;
-        private readonly IRepository<Cart> cartRepository;
+        private readonly IDeletableEntityRepository<CartItem> cartItemRepository;
+        private readonly IDeletableEntityRepository<Cart> cartRepository;
         private readonly IDeletableEntityRepository<Case> caseRepository;
         private readonly UserManager<ApplicationUser> userManager;
 

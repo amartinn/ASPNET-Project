@@ -1,11 +1,13 @@
 ﻿namespace CasesNET.Web.ViewModels.Administration.Orders
 {
+    using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
 
     using AutoMapper;
     using CasesNET.Attributes;
     using CasesNET.Data.Models;
     using CasesNET.Services.Mapping;
+    using CasesNET.Web.ViewModels.Cart;
     using Microsoft.AspNetCore.Mvc.Rendering;
 
     using static CasesNET.Data.Common.Validation.Checkout;
@@ -46,6 +48,8 @@
         public string OrderStatus { get; set; }
 
         public SelectList Statuses { get; set; }
+
+        public IEnumerable<CartItemViewModel> Items { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
             => configuration.CreateMap<Order, OrderEditInputModel>()

@@ -15,12 +15,12 @@
     public class OrderService : IOrderService
     {
         private readonly IRepository<Order> orderRepository;
-        private readonly IRepository<Cart> cartRepository;
+        private readonly IDeletableEntityRepository<Cart> cartRepository;
         private readonly IRepository<ApplicationUser> userRepository;
 
         public OrderService(
             IRepository<Order> orderRepository,
-            IRepository<Cart> cartRepository,
+            IDeletableEntityRepository<Cart> cartRepository,
             IRepository<ApplicationUser> userRepository)
         {
             this.orderRepository = orderRepository;
@@ -65,6 +65,24 @@
             .Where(x => x.OrderedById == userId)
             .To<T>()
             .ToList();
+
+        public IEnumerable<T> GetAllItemsByOrderId<T>(int orderId)
+        {
+            var cartId = this.orderRepository
+             .AllAsNoTracking()
+             .Where(x => x.Id == orderId)
+             .FirstOrDefault()
+             .CartId;
+
+            var cartItems = this.cartRepository
+                .AllWithDeleted()
+                .FirstOrDefault(x => x.Id == cartId)
+                .Items
+                .AsQueryable()
+                .To<T>();
+
+            return cartItems;
+        }
 
         public T GetById<T>(int id)
               => this.orderRepository

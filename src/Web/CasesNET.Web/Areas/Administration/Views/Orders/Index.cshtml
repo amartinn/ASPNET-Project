@@ -16,25 +16,25 @@
                 Created On
             </th>
             <th>
-              Status
+                Status
             </th>
             <th> Utilities</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model.Orders) {
+@foreach (var order in Model.Orders) {
         <tr>
             <td>
-                @item.Id
+                @order.Id
             </td>
             <td>
-                @item.CreatedOn
+                @order.CreatedOn
             </td>
             <td>
-                @item.OrderStatus
+                @order.OrderStatus
             </td>
             <td>
-                <a class="hoverable" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                <a class="hoverable" asp-action="Edit" asp-route-id="@order.Id">Edit</a>
             </td>
         </tr>
 }

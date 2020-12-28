@@ -8,9 +8,9 @@
             => configuration.GetConnectionString("DefaultConnection");
 
         public static string GetThirdPartyAppId(this IConfiguration configuration, string providerName)
-            => configuration[$"ThirdPartyLogins:{providerName}:AppId"];
+            => configuration[$"ThirdParty:{providerName}:AppId"];
 
         public static string GetThirdPartyAppSecret(this IConfiguration configuration, string providerName)
-            => configuration[$"ThirdPartyLogins:{providerName}:AppSecret"];
+            => configuration[$"ThirdParty:{providerName}:AppSecret"];
     }
 }

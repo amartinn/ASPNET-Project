@@ -37,7 +37,7 @@
             .AddScoped(typeof(IDeletableEntityRepository<>), typeof(EfDeletableEntityRepository<>))
             .AddScoped(typeof(IRepository<>), typeof(EfRepository<>))
             .AddScoped<IDbQueryRunner, DbQueryRunner>()
-            .AddTransient<IEmailSender, NullMessageSender>()
+             .AddTransient<IEmailSender>(x => new SendGridEmailSender(configuration.GetThirdPartyAppId("SendGrid")))
             .AddTransient<ICaseService, CaseService>()
             .AddTransient<ICategoryService, CategoryService>()
             .AddTransient<ICartService, CartService>()

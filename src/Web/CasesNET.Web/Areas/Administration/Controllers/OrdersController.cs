@@ -6,7 +6,9 @@
 
     using CasesNET.Data.Models.Enum;
     using CasesNET.Services.Data;
+    using CasesNET.Services.Messaging;
     using CasesNET.Web.ViewModels.Administration.Orders;
+    using CasesNET.Web.ViewModels.Cart;
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.EntityFrameworkCore;
@@ -28,6 +30,11 @@
             {
                 Orders = this.orderService.GetAll<OrderViewModel>(),
             };
+            foreach (var order in model.Orders)
+            {
+                order.Items = this.orderService.GetAllItemsByOrderId<CartItemViewModel>(order.Id);
+            }
+
             return this.View(model);
         }
 
@@ -47,6 +54,7 @@
             }
 
             order.Statuses = this.GetOrderStatusesAsSelectList();
+            order.Items = this.orderService.GetAllItemsByOrderId<CartItemViewModel>(id.Value);
             return this.View(order);
         }
 
@@ -75,6 +83,7 @@
                 return this.RedirectToAction(nameof(this.Index));
             }
 
+            model.Items = this.orderService.GetAllItemsByOrderId<CartItemViewModel>(model.Id);
             model.Statuses = this.GetOrderStatusesAsSelectList();
             return this.View(model);
         }

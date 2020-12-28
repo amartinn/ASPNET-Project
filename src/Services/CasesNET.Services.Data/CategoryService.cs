@@ -72,7 +72,7 @@
         public IEnumerable<T> GetMostSold<T>(int count = 4)
         {
             const string sqlcommand = @"
-                       select cat.Id as Id, 
+                    select cat.Id as Id, 
                     cat.CreatedOn as  CreatedOn, 
                     cat.ModifiedOn as ModifiedOn ,
                     cat.DeletedOn as DeletedOn,
@@ -111,7 +111,7 @@
         {
             var item = this.categoryRepository.All().FirstOrDefault(x => x.Id == model.Id);
             item.Name = model.Name;
-            if (model.Image == null)
+            if (model.Image != null)
             {
                 this.fileService.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
                 var spliitedImageArgs = model.Image.FileName.Split('.');

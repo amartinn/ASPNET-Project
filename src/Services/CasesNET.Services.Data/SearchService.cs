@@ -35,10 +35,15 @@
 
         private Func<Case, bool> SearchPredicate(string term)
             => x =>
-            x.Name.ToLower().Contains(term) ||
+
+            // Incase any of the properties IsDeleted is true.
+            (x.Name != null && x.Category != null &&
+            x.Device != null && x.Device.Manufacturer != null &&
+            x.Description != null) &&
+            (x.Name.ToLower().Contains(term) ||
             x.Category.Name.ToLower().Contains(term) ||
             x.Device.Name.ToLower().Contains(term) ||
             x.Device.Manufacturer.Name.ToLower().Contains(term) ||
-            x.Description.ToLower().Contains(term);
+            x.Description.ToLower().Contains(term));
     }
 }

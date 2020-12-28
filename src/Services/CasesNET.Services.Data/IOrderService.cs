@@ -10,6 +10,8 @@
     {
         Task CreateAsync(CheckoutInputModel model);
 
+        public IEnumerable<T> GetAllItemsByOrderId<T>(int orderId);
+
         IEnumerable<T> GetAllByUserId<T>(string id);
 
         T GetById<T>(int id);
