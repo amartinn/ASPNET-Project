@@ -21,7 +21,7 @@
         public IFormFile Image { get; set; }
 
         public void CreateMappings(IProfileExpression configuration)
-            => configuration.CreateMap<Category, ManufacturerEditInputModel>()
+            => configuration.CreateMap<Manufacturer, ManufacturerEditInputModel>()
                  .ForMember(m => m.Image, opt => opt.Ignore());
     }
 }

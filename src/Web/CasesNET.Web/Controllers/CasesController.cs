@@ -8,10 +8,10 @@
     using CasesNET.Web.ViewModels.Shared;
     using Microsoft.AspNetCore.Mvc;
 
+    using static CasesNET.Common.GlobalConstants.Paging;
+
     public class CasesController : Controller
     {
-        private const int ItemsPerPage = 12;
-
         private readonly ICaseService caseService;
         private readonly IManufacturerService manufacturerService;
         private readonly ICategoryService categoryService;

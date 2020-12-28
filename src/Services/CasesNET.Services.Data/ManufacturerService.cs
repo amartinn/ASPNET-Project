@@ -38,7 +38,7 @@
         {
             var item = this.manufacturerRepository.All().FirstOrDefault(x => x.Id == model.Id);
             item.Name = model.Name;
-            if (model.Image == null)
+            if (model.Image != null)
             {
                 this.fileService.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
                 var spliitedImageArgs = model.Image.FileName.Split('.');
