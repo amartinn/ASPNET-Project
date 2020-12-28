@@ -36,7 +36,7 @@
                 Manufacturers = this.GetManufacturersAsSelectList(),
             };
 
-            return this.View();
+            return this.View(model);
         }
 
         // POST: Administration/Devices/Create

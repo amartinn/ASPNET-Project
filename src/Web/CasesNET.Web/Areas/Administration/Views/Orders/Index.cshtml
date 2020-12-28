@@ -1,57 +1,40 @@
-﻿@model IEnumerable<CasesNET.Data.Models.Order>
+﻿@model CasesNET.Web.ViewModels.Administration.Orders.OrderListingViewModel
 
 @{
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+<h1>Orders</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
+<table id="table" class="table table-striped">
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.OrderedBy)
+                Id
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cart)
+                Created On
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.OrderStatus)
+              Status
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreatedOn)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ModifiedOn)
-            </th>
-            <th></th>
+            <th> Utilities</th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var item in Model.Orders) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.OrderedBy.Id)
+                @item.Id
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cart.Id)
+                @item.CreatedOn
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.OrderStatus)
+                @item.OrderStatus
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CreatedOn)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedOn)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a>
             </td>
         </tr>
 }

@@ -15,35 +15,35 @@
 <body>
     <div class="container-fluid mt-5">
         <div class="row">
-            <nav class="col-md-2 d-block  bg-light sidebar">
+            <nav class="col-md-2 d-block sidebar">
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Dashboard" asp-action="Index">Dashboard</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Cases" asp-action="Index">Cases</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Cases" asp-action="Index">Cases</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Categories">Categories</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Categories">Categories</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Manufacturers">Manufacturers</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Manufacturers">Manufacturers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Devices">Devices</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Devices">Devices</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-controller="Orders">Orders</a>
+                            <a class="nav-link hoverable" asp-area="Administration" asp-controller="Orders">Orders</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Back to Site</a>
+                            <a class="nav-link hoverable"asp-area="" asp-controller="Home" asp-action="Index">Back to Site</a>
                         </li>
                     </ul>
                 </div>
             </nav>
             <div class="col-md-10">
-                @this.RenderBody();
+                @this.RenderBody()
             </div>
         </div>
     </div>
@@ -57,16 +57,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zooming/2.1.1/zooming.min.js" integrity="sha512-fAw3hLoeRiu86io4KGdDLz/Ed3OiNUMBXamPPmpqswqqJaU2YzbEBbvvr3/OyGPyMl1ZyijMuUI2dSwiDM5RiQ==" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/datatables/1.10.21/js/jquery.dataTables.min.js" integrity="sha512-BkpSL20WETFylMrcirBahHfSnY++H2O1W+UnEEO4yNIl+jI2+zowyoGJpbtk6bx97fBXf++WJHSSK2MV4ghPcg==" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/g/mark.js(jquery.mark.min.js)"></script>
-    <script src="https://cdn.datatables.net/plug-ins/1.10.13/features/mark.js/datatables.mark.js" ></script>
+    <script src="https://cdn.datatables.net/plug-ins/1.10.13/features/mark.js/datatables.mark.js"></script>
+
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+
+
     <script type="text/javascript" src="~/js/pseudo.js"></script>
     <script type="text/javascript" src="~/js/nav.js"></script>
     <script type="text/javascript" src="~/js/shopping-cart.js"></script>
     <script defer>
         $(document).ready(function () {
-            // updates on cart quantity on load
-            GetCount().then(function (count) {
-                updateBagQuantity(count);
-            })
             $('#loadingDiv')
                 .hide()
                 .ajaxStart(function () {
@@ -85,8 +85,11 @@
     </script>
     @await this.RenderSectionAsync("Scripts", required: false)
     <style>
-        mark{
-            background:lightblue!important;
+        mark {
+            background: lightblue !important;
+        }
+        .sidebar{
+            border-right: 3px solid lightblue!important;
         }
     </style>
 </body>

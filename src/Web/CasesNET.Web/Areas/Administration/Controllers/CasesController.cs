@@ -63,12 +63,15 @@
             {
                 model.Categories = this.GetCategoriesAsSelectList();
                 model.Devices = this.GetDevicesAsSelectList();
-                return this.BadRequest(this.ModelState);
+                var message = string.Join(" | ", ModelState.Values
+                                            .SelectMany(v => v.Errors)
+                                            .Select(e => e.ErrorMessage));
+                return this.Json(new {Status = "Error!", Message = message });
             }
 
             var path = Path.Combine(this.webHostEnvironment.WebRootPath, "Images/Cases");
             await this.caseService.CreateAsync(model, path);
-            return this.Json(new { Url = this.Url.Action(nameof(this.Index)) });
+            return this.Json(new {Status = "Success", Url = this.Url.Action(nameof(this.Index)) });
         }
 
         // GET: Administration/Cases/Edit/5

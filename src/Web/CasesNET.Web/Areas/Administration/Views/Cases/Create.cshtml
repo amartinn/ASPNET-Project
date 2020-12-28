@@ -8,7 +8,6 @@
     <div class="col-md-3 justify-content-center">
         <h1>Create Case</h1>
     </div>
-
     <div class="col-md-9">
         <ul class="nav nav-tabs justify-content-center d-block">
             <li class="active"><a data-toggle="tab" href="#Details">Case Details</a></li>
@@ -23,17 +22,16 @@
 
     <div class="tab-content">
         <div id="Details" class="tab-pane fade in active show">
+            <span class="text-danger" id="errors"></span>
             <form id="create-form" asp-action="Create" enctype="multipart/form-data">
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
                 <div class="form-group">
                     <label asp-for="Name" class="control-label"></label>
                     <input asp-for="Name" required class="form-control" />
-                    <span asp-validation-for="Name" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Image" class="control-label"></label>
                     <input id="image" class="form-control-file" asp-for="Image" type="file" accept="image/jpeg, image/png, image/jpg" />
-                    <span asp-validation-for="Image" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label for="Device" class="control-label">Device</label>
@@ -50,12 +48,10 @@
                 <div class="form-group">
                     <label asp-for="Price" class="control-label"></label>
                     <input asp-for="Price" type="number" required class="form-control" value="" />
-                    <span asp-validation-for="Price" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <label asp-for="Description" class="control-label"></label>
                     <textarea class="form-control" required asp-for="Description" rows="5"></textarea>
-                    <span asp-validation-for="Description" class="text-danger"></span>
                 </div>
                 <div class="form-group">
                     <input type="submit" value="Create" class="btn btn-primary" />
@@ -113,7 +109,6 @@
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.2.0/fabric.min.js"></script>
     <script defer src="https://unpkg.com/hotkeys-js/dist/hotkeys.min.js"></script>
     <script type="module" src="~/js/emoji-picker.js"></script>
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
     <script defer src="~/js/controller.js"></script>
     <script defer>
         document.addEventListener('DOMContentLoaded', function () {
@@ -225,7 +220,13 @@
                             contentType: false,
                             data: formData,
                             success: function (d) {
-                                    window.location.href = d.Url;
+                                if (d.status === 'Success') {
+                                    window.location.href = d.url;
+                                }
+                                else {
+                                    $('#errors').text(d.message);
+                                }
+                                  
                             },
                         });
                         

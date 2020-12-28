@@ -1,5 +1,5 @@
-﻿@model CasesNET.Data.Models.Order
-
+﻿@model CasesNET.Web.ViewModels.Administration.Orders.OrderEditInputModel
+@using CasesNET.Data.Models.Enum; 
 @{
     ViewData["Title"] = "Edit";
 }
@@ -12,32 +12,55 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="OrderedById" class="control-label"></label>
-                <select asp-for="OrderedById" class="form-control" asp-items="ViewBag.OrderedById"></select>
-                <span asp-validation-for="OrderedById" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CartId" class="control-label"></label>
-                <select asp-for="CartId" class="form-control" asp-items="ViewBag.CartId"></select>
-                <span asp-validation-for="CartId" class="text-danger"></span>
-            </div>
+
             <div class="form-group">
                 <label asp-for="OrderStatus" class="control-label"></label>
-                <select asp-for="OrderStatus" class="form-control"></select>
+                <select asp-for="OrderStatus" asp-items="Model.Statuses"></select>
                 <span asp-validation-for="OrderStatus" class="text-danger"></span>
             </div>
             <input type="hidden" asp-for="Id" />
             <div class="form-group">
-                <label asp-for="CreatedOn" class="control-label"></label>
-                <input asp-for="CreatedOn" class="form-control" />
-                <span asp-validation-for="CreatedOn" class="text-danger"></span>
+                <label asp-for="FirstName" class="control-label">User First Name</label>
+                <input required asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
+
             <div class="form-group">
-                <label asp-for="ModifiedOn" class="control-label"></label>
-                <input asp-for="ModifiedOn" class="form-control" />
-                <span asp-validation-for="ModifiedOn" class="text-danger"></span>
+                <label asp-for="LastName" class="control-label">User Last Name</label>
+                <input required asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label">User Phone Number</label>
+                <input required asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email" class="control-label">User Email</label>
+                <input required asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Country" class="control-label">User Country</label>
+                <input required asp-for="Country" class="form-control" />
+                <span asp-validation-for="Country" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="City" class="control-label">User City</label>
+                <input required asp-for="City" class="form-control" />
+                <span asp-validation-for="City" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Adress" class="control-label">User Adress</label>
+                <input required asp-for="Adress" class="form-control" />
+                <span asp-validation-for="Adress" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
@@ -49,6 +72,3 @@
     <a asp-action="Index">Back to List</a>
 </div>
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-}
