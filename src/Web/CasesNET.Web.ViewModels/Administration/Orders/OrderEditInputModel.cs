@@ -1,6 +1,7 @@
 ﻿namespace CasesNET.Web.ViewModels.Administration.Orders
 {
     using System.ComponentModel.DataAnnotations;
+
     using AutoMapper;
     using CasesNET.Attributes;
     using CasesNET.Data.Models;

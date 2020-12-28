@@ -14,10 +14,12 @@
     public class ManufacturerService : IManufacturerService
     {
         private readonly IDeletableEntityRepository<Manufacturer> manufacturerRepository;
+        private readonly IFileService fileService;
 
-        public ManufacturerService(IDeletableEntityRepository<Manufacturer> manufacturerRepository)
+        public ManufacturerService(IDeletableEntityRepository<Manufacturer> manufacturerRepository, IFileService fileService)
         {
             this.manufacturerRepository = manufacturerRepository;
+            this.fileService = fileService;
         }
 
         public IEnumerable<T> GetAll<T>()
@@ -38,7 +40,7 @@
             item.Name = model.Name;
             if (model.Image == null)
             {
-                this.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
+                this.fileService.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
                 var spliitedImageArgs = model.Image.FileName.Split('.');
                 var imageName = spliitedImageArgs[0];
                 var imageExtension = spliitedImageArgs[1];
@@ -47,7 +49,7 @@
                     Url = imageName,
                     Extension = imageExtension,
                 };
-                await this.SaveImageToDiskAsync(model.Image, imagePath);
+                await this.fileService.SaveImageToDiskAsync(model.Image, imagePath);
             }
 
             this.manufacturerRepository.Update(item);
@@ -68,7 +70,7 @@
                     Extension = imageExtension,
                 },
             };
-            await this.SaveImageToDiskAsync(model.Image, imagePath);
+            await this.fileService.SaveImageToDiskAsync(model.Image, imagePath);
             await this.manufacturerRepository.AddAsync(item);
             await this.manufacturerRepository.SaveChangesAsync();
         }
@@ -86,18 +88,5 @@
             .Where(x => x.Id == id)
             .To<T>()
             .FirstOrDefault();
-
-        private async Task SaveImageToDiskAsync(IFormFile file, string path)
-        {
-            string filePath = Path.Combine(path, file.FileName);
-            using Stream fileStream = new FileStream(filePath, FileMode.Create);
-            await file.CopyToAsync(fileStream);
-        }
-
-        private void DeleteImageFromDisc(string path, string imageName, string imageExtension)
-        {
-            var imagePath = Path.Combine(path, $"{imageName}.{imageExtension}");
-            File.Delete(imagePath);
-        }
     }
 }

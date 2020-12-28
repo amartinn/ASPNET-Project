@@ -24,3 +24,4 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Me
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Messaging\obj\Debug\netstandard2.1\CasesNET.Services.Messaging.csproj.CoreCompileInputs.cache
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Messaging\obj\Debug\netstandard2.1\CasesNET.Services.Messaging.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Messaging\obj\Debug\netstandard2.1\CasesNET.Services.Messaging.pdb
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Services\CasesNET.Services.Messaging\obj\Debug\netstandard2.1\CasesNET.Services.Messaging.csprojAssemblyReference.cache

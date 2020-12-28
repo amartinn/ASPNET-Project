@@ -11,6 +11,7 @@
     using CasesNET.Services.Mapping;
     using CasesNET.Web.ViewModels.Administration.Cases;
     using DeepEqual.Syntax;
+    using Microsoft.AspNetCore.Http;
     using Moq;
     using Xunit;
 
@@ -70,7 +71,7 @@
 
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var @case = service.GetById<FakeCaseModel>(this.caseId);
@@ -92,7 +93,7 @@
             };
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var count = service.GetItemsCountByCategoryId(this.categoryId);
@@ -135,7 +136,7 @@
             };
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var count = service.GetCountByManufacturer(this.manufacturerId);
@@ -202,7 +203,7 @@
             };
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var items = service.GetAllByCategoryId<FakeCaseModel>(this.categoryId, 1, 2);
@@ -240,7 +241,7 @@
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
 
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var actualItems = service.GetLatest<FakeCaseModel>(20).ToList();
@@ -300,7 +301,7 @@
             };
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var items = service.GetAllByManufacturerId<FakeCaseModel>(this.manufacturerId, 1, 2);
@@ -370,7 +371,7 @@
             this.caseRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCases.AsQueryable());
 
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             var items = service.GetAll<FakeCaseModel>();
@@ -392,16 +393,14 @@
                 new Case { Id = this.caseId + "1" },
                 new Case { Id = this.caseId + "1" },
             };
-            var mockCaseRepository = new Mock<IDeletableEntityRepository<Case>>();
-
-            mockCaseRepository.Setup(s => s.All())
+            this.caseRepository.Setup(s => s.All())
                 .Returns(fakeCases.AsQueryable());
-            mockCaseRepository.Setup(s => s.Delete(It.IsAny<Case>()))
+            this.caseRepository.Setup(s => s.Delete(It.IsAny<Case>()))
                 .Callback((Case item) =>
                 {
                     fakeCases.Remove(item);
                 });
-            var service = new CaseService(mockCaseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             // Act
             await service.DeleteByIdAsync(this.caseId);
@@ -442,7 +441,7 @@
                     searchedItem.Description = item.Description;
                     searchedItem.Price = item.Price;
                 });
-            var service = new CaseService(this.caseRepository.Object);
+            var service = new CaseService(this.caseRepository.Object, null);
 
             var model = new CaseEditInputModel
             {
@@ -463,6 +462,43 @@
             // Assert
             var exception = await Record.ExceptionAsync(() => Task.Run(() => actualItem.ShouldDeepEqual(expectedItem)));
             Assert.Null(exception);
+        }
+
+        [Fact]
+        public async Task CreateAsyncMethodShouldCreateCase()
+        {
+            // Arrange
+            var cases = new List<Case>();
+            this.caseRepository.Setup(s => s.AddAsync(It.IsAny<Case>()))
+                .Callback((Case item) =>
+                {
+                    cases.Add(item);
+                });
+            var service = new CaseService(this.caseRepository.Object, null);
+            var formfile = new Mock<IFormFile>();
+            formfile.Setup(s => s.FileName)
+                .Returns("test.jpg");
+            var createModel = new CreateCaseInputModel
+            {
+                CategoryId = this.categoryId,
+                DeviceId = "deviceId",
+                Price = 3,
+                Name = "Name",
+                Description = "description",
+                Image = formfile.Object,
+            };
+
+            // Act
+            await service.CreateAsync(createModel, string.Empty);
+
+            // Assert
+            var expectedCase = cases[0];
+            Assert.NotNull(expectedCase);
+            Assert.Equal(expectedCase.CategoryId, createModel.CategoryId);
+            Assert.Equal(expectedCase.DeviceId, createModel.DeviceId);
+            Assert.Equal(expectedCase.Price, createModel.Price);
+            Assert.Equal(expectedCase.Name, createModel.Name);
+            Assert.Equal(expectedCase.Description, createModel.Description);
         }
     }
 }

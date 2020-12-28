@@ -15,3 +15,4 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.csproj.CoreCompileInputs.cache
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\CasesNET.Attributes\obj\Debug\netstandard2.1\CasesNET.Attributes.csprojAssemblyReference.cache

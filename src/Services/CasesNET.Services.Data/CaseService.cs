@@ -16,10 +16,12 @@
     public class CaseService : ICaseService
     {
         private readonly IDeletableEntityRepository<Case> caseRepository;
+        private readonly IFileService fileService;
 
-        public CaseService(IDeletableEntityRepository<Case> caseRepository)
+        public CaseService(IDeletableEntityRepository<Case> caseRepository, IFileService fileService)
         {
             this.caseRepository = caseRepository;
+            this.fileService = fileService;
         }
 
         public async Task CreateAsync(CreateCaseInputModel model, string imagePath)
@@ -40,7 +42,7 @@
                     Extension = imageExtension,
                 },
             };
-            await this.SaveImageToDiskAsync(model.Image, imagePath);
+            await this.fileService.SaveImageToDiskAsync(model.Image, imagePath);
             await this.caseRepository.AddAsync(item);
             await this.caseRepository.SaveChangesAsync();
         }
@@ -112,13 +114,6 @@
 
             this.caseRepository.Update(item);
             await this.caseRepository.SaveChangesAsync();
-        }
-
-        private async Task SaveImageToDiskAsync(IFormFile file, string path)
-        {
-            string filePath = Path.Combine(path, file.FileName);
-            using Stream fileStream = new FileStream(filePath, FileMode.Create);
-            await file.CopyToAsync(fileStream);
         }
     }
 }

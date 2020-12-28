@@ -18,11 +18,13 @@
     {
         private readonly IDeletableEntityRepository<Category> categoryRepository;
         private readonly ApplicationDbContext db;
+        private readonly IFileService fileService;
 
-        public CategoryService(IDeletableEntityRepository<Category> categoryRepository, ApplicationDbContext db)
+        public CategoryService(IDeletableEntityRepository<Category> categoryRepository, ApplicationDbContext db, IFileService fileService)
         {
             this.categoryRepository = categoryRepository;
             this.db = db;
+            this.fileService = fileService;
         }
 
         public async Task CreateAsync(CategoryCreateInputModel model, string imagePath)
@@ -39,7 +41,7 @@
                     Extension = imageExtension,
                 },
             };
-            await this.SaveImageToDiskAsync(model.Image, imagePath);
+            await this.fileService.SaveImageToDiskAsync(model.Image, imagePath);
             await this.categoryRepository.AddAsync(item);
             await this.categoryRepository.SaveChangesAsync();
         }
@@ -111,7 +113,7 @@
             item.Name = model.Name;
             if (model.Image == null)
             {
-                this.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
+                this.fileService.DeleteImageFromDisc(imagePath, item.Image.Url, item.Image.Extension);
                 var spliitedImageArgs = model.Image.FileName.Split('.');
                 var imageName = spliitedImageArgs[0];
                 var imageExtension = spliitedImageArgs[1];
@@ -120,24 +122,11 @@
                     Url = imageName,
                     Extension = imageExtension,
                 };
-                await this.SaveImageToDiskAsync(model.Image, imagePath);
+                await this.fileService.SaveImageToDiskAsync(model.Image, imagePath);
             }
 
             this.categoryRepository.Update(item);
             await this.categoryRepository.SaveChangesAsync();
-        }
-
-        private async Task SaveImageToDiskAsync(IFormFile file, string path)
-        {
-            string filePath = Path.Combine(path, file.FileName);
-            using Stream fileStream = new FileStream(filePath, FileMode.Create);
-            await file.CopyToAsync(fileStream);
-        }
-
-        private void DeleteImageFromDisc(string path, string imageName, string imageExtension)
-        {
-            var imagePath = Path.Combine(path, $"{imageName}.{imageExtension}");
-            File.Delete(imagePath);
         }
     }
 }

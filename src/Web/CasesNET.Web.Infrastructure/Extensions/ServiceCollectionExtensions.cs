@@ -44,7 +44,8 @@
             .AddTransient<ISearchService, SearchService>()
             .AddTransient<IManufacturerService, ManufacturerService>()
             .AddTransient<IOrderService, OrderService>()
-            .AddTransient<IDeviceService, DeviceService>();
+            .AddTransient<IDeviceService, DeviceService>()
+            .AddTransient<IFileService, FileService>();
 
         public static IServiceCollection ApplyControllerRules(this IServiceCollection services)
         {

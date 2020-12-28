@@ -41,7 +41,7 @@
             this.categoryRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCategories.AsQueryable());
 
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
 
             // Act
             var items = service.GetAll<FakeCategoryModel>();
@@ -65,7 +65,7 @@
             this.categoryRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCategories.AsQueryable());
 
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
 
             // Act
             var item = service.GetNameById(this.categoryId);
@@ -90,7 +90,7 @@
             this.categoryRepository.Setup(s => s.AllAsNoTracking())
                 .Returns(fakeCategories.AsQueryable());
 
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
 
             // Act
             var item = service.GetById<FakeCategoryModel>(this.categoryId);
@@ -113,7 +113,7 @@
                     categories.Add(category);
                 });
 
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
             var image = new Mock<IFormFile>();
             image.Setup(s => s.FileName)
                 .Returns("fileName.jpg");
@@ -162,7 +162,7 @@
                     searchedItem.Name = item.Name;
                     searchedItem.Id = item.Id;
                 });
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
             var image = new Mock<IFormFile>();
             image.Setup(s => s.FileName)
                 .Returns("fileName.jpg");
@@ -204,7 +204,7 @@
                     categories.Remove(category);
                 });
 
-            var service = new CategoryService(this.categoryRepository.Object, null);
+            var service = new CategoryService(this.categoryRepository.Object, null, null);
 
             // Act
             await service.DeleteByIdAsync(this.categoryId);

@@ -1,10 +1,9 @@
 ﻿namespace CasesNET.Services.Data
 {
-    using CasesNET.Web.ViewModels.Administration.Devices;
-    using System;
     using System.Collections.Generic;
-    using System.Text;
     using System.Threading.Tasks;
+
+    using CasesNET.Web.ViewModels.Administration.Devices;
 
     public interface IDeviceService
     {

@@ -3,6 +3,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+
     using CasesNET.Data.Common.Repositories;
     using CasesNET.Data.Models;
     using CasesNET.Web.ViewModels.Administration.Dashboard;
@@ -25,7 +26,7 @@
         {
             var allOrders = this.ordersRepository.AllAsNoTracking().ToList();
             var model = new IndexViewModel();
-            foreach (DateTime day in this.EachDay(DateTime.UtcNow.AddDays(-5),DateTime.UtcNow))
+            foreach (DateTime day in this.EachDay(DateTime.UtcNow.AddDays(-5), DateTime.UtcNow))
             {
                 var orders = allOrders.Where(x => x.CreatedOn.Day == day.Day &&
                 x.CreatedOn.Month == day.Month).ToList();
@@ -38,6 +39,7 @@
             model.OrderDataCount = "[" + model.OrderDataCount + "]";
             return this.View(model);
         }
+
         private IEnumerable<DateTime> EachDay(DateTime from, DateTime thru)
         {
             for (var day = from.Date; day.Date <= thru.Date; day = day.AddDays(1))

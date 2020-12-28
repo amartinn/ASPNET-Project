@@ -3,6 +3,7 @@
     using System;
     using System.Linq;
     using System.Threading.Tasks;
+
     using CasesNET.Data.Models.Enum;
     using CasesNET.Services.Data;
     using CasesNET.Web.ViewModels.Administration.Orders;
@@ -21,7 +22,7 @@
 
         // GET: Administration/Orders
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
             var model = new OrderListingViewModel
             {
@@ -44,6 +45,7 @@
             {
                 return this.NotFound();
             }
+
             order.Statuses = this.GetOrderStatusesAsSelectList();
             return this.View(order);
         }
@@ -72,6 +74,7 @@
 
                 return this.RedirectToAction(nameof(this.Index));
             }
+
             model.Statuses = this.GetOrderStatusesAsSelectList();
             return this.View(model);
         }
@@ -81,10 +84,12 @@
 
         private SelectList GetOrderStatusesAsSelectList()
         {
-
-            var values = from OrderStatus e in Enum.GetValues(typeof(OrderStatus)) 
-                         select new { Id = (int)Enum.Parse(typeof(OrderStatus), e.ToString()),
-                             Name = e.ToString(), };
+            var values = from OrderStatus e in Enum.GetValues(typeof(OrderStatus))
+                         select new
+                        {
+                            Id = (int)Enum.Parse(typeof(OrderStatus), e.ToString()),
+                            Name = e.ToString(),
+                        };
             return new SelectList(values, "Id", "Name", values);
         }
     }

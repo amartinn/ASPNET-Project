@@ -18,7 +18,8 @@
         private readonly IRepository<Cart> cartRepository;
         private readonly IRepository<ApplicationUser> userRepository;
 
-        public OrderService(IRepository<Order> orderRepository,
+        public OrderService(
+            IRepository<Order> orderRepository,
             IRepository<Cart> cartRepository,
             IRepository<ApplicationUser> userRepository)
         {
