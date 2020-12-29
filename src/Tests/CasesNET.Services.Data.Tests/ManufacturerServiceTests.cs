@@ -180,7 +180,6 @@
             {
                 Id = this.manufacturerId,
                 Name = this.manufacturerName,
-                Image = formFile.Object,
             };
 
             // Act

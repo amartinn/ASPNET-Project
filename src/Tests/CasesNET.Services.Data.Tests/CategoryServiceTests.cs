@@ -172,7 +172,6 @@
             {
                 Id = this.categoryId,
                 Name = this.categoryName,
-                Image = image.Object,
             };
 
             // Act

@@ -19,7 +19,7 @@
     public class OrderServiceTests
     {
         private readonly Mock<IRepository<Order>> orderRepository;
-        private readonly Mock<IRepository<Cart>> cartRepository;
+        private readonly Mock<IDeletableEntityRepository<Cart>> cartRepository;
         private readonly string userId = "userId";
         private readonly string cartId = "cartId";
         private readonly int orderId = 10;
@@ -28,7 +28,7 @@
         {
             AutoMapperConfig.RegisterMappings(typeof(FakeOrderModel).GetTypeInfo().Assembly);
             this.orderRepository = new Mock<IRepository<Order>>();
-            this.cartRepository = new Mock<IRepository<Cart>>();
+            this.cartRepository = new Mock<IDeletableEntityRepository<Cart>>();
         }
 
         [Fact]

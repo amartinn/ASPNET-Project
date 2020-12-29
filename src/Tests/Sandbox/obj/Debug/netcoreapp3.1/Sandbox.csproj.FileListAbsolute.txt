@@ -949,7 +949,6 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netco
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Data.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Data.Models.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Data.dll
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Mapping.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Messaging.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.dll
@@ -962,7 +961,6 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netco
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Data.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Mapping.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.Messaging.pdb
-C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Services.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Attributes.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.Infrastructure.pdb
@@ -1008,3 +1006,21 @@ C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netco
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.pdb
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\CasesNET.Web.StaticWebAssets.xml
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Azure.Core.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Azure.Extensions.AspNetCore.Configuration.Secrets.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Azure.Identity.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Azure.Security.KeyVault.Secrets.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\marto\OneDrive\Desktop\ASPNET-Project\src\Tests\Sandbox\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll

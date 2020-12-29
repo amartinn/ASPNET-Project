@@ -4075,16 +4075,6 @@
           "bin/placeholder/CasesNET.Data.Models.dll": {}
         }
       },
-      "CasesNET.Services/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/CasesNET.Services.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/CasesNET.Services.dll": {}
-        }
-      },
       "CasesNET.Services.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v3.1",
@@ -4139,7 +4129,6 @@
           "CasesNET.Common": "1.0.0",
           "CasesNET.Data": "1.0.0",
           "CasesNET.Data.Models": "1.0.0",
-          "CasesNET.Services": "1.0.0",
           "CasesNET.Services.Data": "1.0.0",
           "CasesNET.Services.Mapping": "1.0.0",
           "CasesNET.Services.Messaging": "1.0.0",
@@ -12149,11 +12138,6 @@
       "path": "../../Data/CasesNET.Data.Models/CasesNET.Data.Models.csproj",
       "msbuildProject": "../../Data/CasesNET.Data.Models/CasesNET.Data.Models.csproj"
     },
-    "CasesNET.Services/1.0.0": {
-      "type": "project",
-      "path": "../../Services/CasesNET.Services/CasesNET.Services.csproj",
-      "msbuildProject": "../../Services/CasesNET.Services/CasesNET.Services.csproj"
-    },
     "CasesNET.Services.Data/1.0.0": {
       "type": "project",
       "path": "../../Services/CasesNET.Services.Data/CasesNET.Services.Data.csproj",
@@ -12191,7 +12175,6 @@
       "CasesNET.Data >= 1.0.0",
       "CasesNET.Data.Common >= 1.0.0",
       "CasesNET.Data.Models >= 1.0.0",
-      "CasesNET.Services >= 1.0.0",
       "CasesNET.Services.Data >= 1.0.0",
       "CasesNET.Services.Mapping >= 1.0.0",
       "CasesNET.Services.Messaging >= 1.0.0",
@@ -12247,9 +12230,6 @@
             },
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services.Messaging\\CasesNET.Services.Messaging.csproj"
-            },
-            "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj": {
-              "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Services\\CasesNET.Services\\CasesNET.Services.csproj"
             },
             "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj": {
               "projectPath": "C:\\Users\\marto\\OneDrive\\Desktop\\ASPNET-Project\\src\\Web\\CasesNET.Web\\CasesNET.Web.csproj"
