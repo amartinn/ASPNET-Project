@@ -1,6 +1,8 @@
 ﻿namespace CasesNET.Web.Controllers
 {
+    using System;
     using System.Diagnostics;
+    using System.Linq;
     using System.Threading.Tasks;
 
     using CasesNET.Services.Data;
@@ -24,9 +26,21 @@
 
         public IActionResult Index()
         {
+            const int totalItems = 4;
+            var mostSoldCategories = this.categoryService.GetMostSold<CategoryViewModel>(totalItems).ToList();
+
+            // if there arent any items sold for at least 4 categories, we add random categories up to 4.
+            // if there is sold category we make sure that there are no duplicates.
+            var itemsToBeAdded = totalItems - mostSoldCategories.Count();
+            var categories = this.categoryService.GetAll<CategoryViewModel>()
+                .Where(x => mostSoldCategories.Select(y => y.Id).Contains(x.Id) == false)
+                .OrderBy(_ => Guid.NewGuid())
+                .Take(itemsToBeAdded);
+
+            mostSoldCategories.AddRange(categories);
             var model = new IndexViewModel
             {
-                MostSoldCategories = this.categoryService.GetMostSold<CategoryViewModel>(),
+                MostSoldCategories = mostSoldCategories,
             };
             return this.View(model);
         }

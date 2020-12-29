@@ -602,7 +602,7 @@ namespace CasesNET.Data.Migrations
 
             modelBuilder.Entity("CasesNET.Data.Models.Device", b =>
                 {
-                    b.HasOne("CasesNET.Data.Models.Manufacturer", "Manufactorer")
+                    b.HasOne("CasesNET.Data.Models.Manufacturer", "Manufacturer")
                         .WithMany("Devices")
                         .HasForeignKey("ManufacturerId")
                         .OnDelete(DeleteBehavior.Restrict)

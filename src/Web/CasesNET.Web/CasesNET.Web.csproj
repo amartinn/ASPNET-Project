@@ -8,6 +8,7 @@
 
   <PropertyGroup>
     <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+    <ApplicationInsightsResourceId>/subscriptions/cf7f273b-1f9f-4b19-a0cf-b76d31807f7e/resourceGroups/CasesNET/providers/microsoft.insights/components/casesnet</ApplicationInsightsResourceId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.0.0" />
+    <PackageReference Include="Azure.Identity" Version="1.2.2" />
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.15.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="3.1.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.10" />
@@ -48,5 +52,9 @@
     <ProjectReference Include="..\..\Services\CasesNET.Services\CasesNET.Services.csproj" />
     <ProjectReference Include="..\CasesNET.Web.Infrastructure\CasesNET.Web.Infrastructure.csproj" />
     <ProjectReference Include="..\CasesNET.Web.ViewModels\CasesNET.Web.ViewModels.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Properties\PublishProfiles\" />
   </ItemGroup>
 </Project>
