@@ -67,7 +67,7 @@ $('.removeItem-form').submit(async function (e) {
     currentTotalPrice -= currentItemTotalPrice;
     $('#totalPrice').text("$" + currentTotalPrice.toFixed(2))
     currentItem.remove();
-    //updates bad when items are removed
+    //updates bag when items are removed
     const count = await GetCount();
     updateBagQuantity(count);
     if (count === 0) {
