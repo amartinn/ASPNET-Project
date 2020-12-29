@@ -21,7 +21,8 @@ It is a ready to use Ecommerse application build with .NET
 - SelectizeJS
 - PopperJS
 - HotkeysJS
-
+- Emoji-buttonJS
+- FontAwesome
 - Boostrap
 
 ## :unlock: Used Techniques
